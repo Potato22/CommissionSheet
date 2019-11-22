@@ -1,0 +1,23 @@
+#imageSwipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.webmBanner {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+}
+.videoBanner {
+    width: 100%;
+}
+.loadVideoError {
+    font-family: "IBM PLex Sans", sans-serif;
+    position: absolute;
+    text-align: center;
+}
