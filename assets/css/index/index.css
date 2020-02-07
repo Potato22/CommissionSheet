@@ -56,7 +56,19 @@
     min-height: 290px;
     background: rgb(117, 117, 117);
     border-radius: 5px;
+    transition: all 0.2s;
+    cursor: zoom-in;
 }
+
+
+.zoom {
+    position: relative;
+    min-width: 500px;
+    min-height: 500px;
+    cursor: zoom-out;
+}
+
+
 .slotInfo {
     max-width: 50%;
 }
@@ -103,9 +115,15 @@
     transform: scale(1.1);
 }
 
+
+
+.endOfPage {
+    display: flex;
+    justify-content: center;
+}
 .end {
     width: 90%;
-    margin-bottom: 2em;
+    margin: 2em 0;
 }
 
 @media screen and (max-width:1000px) {
@@ -136,3 +154,10 @@
         align-items: center;
     }
 }
+@media screen and (max-width:540px) {
+    .zoom {
+        min-height: 340px;
+        min-width: 340px;
+    }
+}
+

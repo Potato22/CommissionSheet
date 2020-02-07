@@ -15,6 +15,7 @@ a, a:visited {
     background: white;
     z-index: 100;
     transition: all 0.2s cubic-bezier(0,.82,.64,.98);
+    overflow: hidden;
 }
 .hide {
     transform: translate(0, -80px);
@@ -29,6 +30,7 @@ a, a:visited {
     align-items: center;
     margin-top: 0em;
     box-shadow: rgba(0,0,0, 0.25) 0 0 12px;
+    overflow: hidden;
 }
 
 .logo {
@@ -53,36 +55,42 @@ a, a:visited {
 #navButton {
     font-size: 1.2em;
     color: black;
-    transition: all 0.4s;
+    transition: transform 1s cubic-bezier(.44,0,.25,.99);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100px;
     height: 100%;
-    border: rgba(0, 0, 0, 0) solid 1px;
+    height: 30px;
+    background: rgba(0,0,0,0);
 }
 #navButton::before {
     content:'';
-    width: 100px;
+    width: 30px;
     height: 30px;
     transition: all 0.4s;
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.836);
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     visibility: hidden;
     opacity: 0;
-}
-#navButton:hover::before {
-    transition: 0.2s cubic-bezier(0,1.08,1,1);
-    visibility: visible;
-    opacity: 1;
-    transform: translate(8px,8px);
+    border-radius: 100%;
+    pointer-events: none;
+    
 }
 #navButton:hover {
     transition: 0.2s cubic-bezier(0,1.08,1,1);
     color: white;
-    border: black solid 2px;
+    z-index: 4;
 }
+#navButton:hover::before {
+    transition: transform 0.3s cubic-bezier(.71,0,.75,1);
+    visibility: visible;
+    opacity: 1;
+    transform: scale(90);
+    z-index: -1;
+}
+
 
 @media screen and (max-width:800px) {
     .logo {
