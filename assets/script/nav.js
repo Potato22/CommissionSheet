@@ -7,5 +7,12 @@ $(function(){
     var scrollTop = $window.scrollTop();
     nav.toggleClass('hide', scrollTop > prev);
     prev = scrollTop;
+    $('.dialogueFrame').removeClass('show');  
+    $('#navButton.connect').removeClass('stay'); 
+    })
+
+    $('.connect').click(function(){
+        $('#navButton.connect').toggleClass('stay');
+        $('.dialogueFrame').toggleClass('show');
     })
 })

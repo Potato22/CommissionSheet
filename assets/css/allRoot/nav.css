@@ -1,13 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline:0;
-    max-width: 100%;
-}
-a, a:visited {
-    text-decoration: none;
-}
 .nav { 
     position: -webkit-sticky;
     position: sticky;
@@ -15,7 +5,7 @@ a, a:visited {
     background: white;
     z-index: 100;
     transition: all 0.2s cubic-bezier(0,.82,.64,.98);
-    overflow: hidden;
+    max-height: 60px;
 }
 .hide {
     transform: translate(0, -80px);
@@ -24,12 +14,12 @@ a, a:visited {
 
 .flex-nav {
     width: 100%;
-    height: 65px;
     display:flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 0em;
     box-shadow: rgba(0,0,0, 0.25) 0 0 12px;
+    max-height: 65px;
     overflow: hidden;
 }
 
@@ -46,50 +36,96 @@ a, a:visited {
     display: flex;
     padding-right: 2em;
     font-family: IBM Plex Mono;
+    height: 60px;
 }
 .navLink {
-    margin: 0 1em;
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 #navButton {
     font-size: 1.2em;
     color: black;
-    transition: transform 1s cubic-bezier(.44,0,.25,.99);
+    transition: all 0.2s cubic-bezier(.44,0,.25,.99);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100px;
     height: 100%;
-    height: 30px;
     background: rgba(0,0,0,0);
+    padding: 0 1em;
 }
-#navButton::before {
-    content:'';
-    width: 30px;
-    height: 30px;
-    transition: all 0.4s;
-    background: rgba(0, 0, 0, 0.836);
-    position: absolute;
-    z-index: 1;
-    visibility: hidden;
-    opacity: 0;
-    border-radius: 100%;
-    pointer-events: none;
-    
+.aButtonIsActive {
+    color: rgba(0, 0, 0, 0.438);
+    transform: scale(0.9);
 }
 #navButton:hover {
-    transition: 0.2s cubic-bezier(0,1.08,1,1);
     color: white;
     z-index: 4;
+    background: black;
 }
-#navButton:hover::before {
-    transition: transform 0.3s cubic-bezier(.71,0,.75,1);
+
+#navButton.stay {
+    transition: 0.2s cubic-bezier(0,1.08,1,1);
+    z-index: 4;
+    background: black;
+    color: white;
+}
+.connect {
+    cursor: pointer;;
+}
+.dialogueFrame {
+    position: absolute;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    transition: all 0.2s;
+    visibility: collapse;
+    opacity: 0;
+}
+.show {
     visibility: visible;
     opacity: 1;
-    transform: scale(90);
-    z-index: -1;
 }
+.connectCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    transition: 0.2s;
+}
+.connectTitle {
+    color: white;
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+.connectCont:hover {
+    transform: scale(1.1);
+}
+.twitter {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: url(../../img/localIcon/twitter.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.deviantart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: url(../../img/localIcon/deviantart.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 
 @media screen and (max-width:800px) {

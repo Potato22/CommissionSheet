@@ -86,7 +86,6 @@
     transition: all 0.2s;
 }
 .purchase.onL {
-    width: 100px;
     border: grey solid 1px;
     color: grey;
     font-family: 'IBM Plex Sans';
@@ -97,7 +96,6 @@
     align-items: center;
 }
 .purchase.onR {
-    width: 100px;
     border: grey solid 1px;
     color: grey;
     font-family: 'IBM Plex Sans';
