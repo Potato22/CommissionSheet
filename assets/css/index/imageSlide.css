@@ -15,6 +15,7 @@
 }
 .videoBanner {
     width: 100%;
+    z-index: 2;
 }
 .loadVideoError {
     font-family: "IBM PLex Sans", sans-serif;
