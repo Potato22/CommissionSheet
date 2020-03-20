@@ -66,25 +66,25 @@
     cursor: zoom-in;
 }
 .imgfor-headshot {
-    background: url("../../img/showcase/framebanner2_cr.png");
+    background: url("../../img/showcase/framebanner2_cr.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .imgfor-bust {
-    background: url("../../img/showcase/WinterMary_rez.png");
+    background: url("../../img/showcase/WinterMary_rez.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .imgfor-fullbody {
-    background: url("../../img/showcase/everylittlecompliments.png");
+    background: url("../../img/showcase/everylittlecompliments.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .imgfor-pirl {
-    background: url("../../img/showcase/skywards.png");
+    background: url("../../img/showcase/skywards.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
