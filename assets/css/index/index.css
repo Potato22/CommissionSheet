@@ -7,6 +7,12 @@
     justify-content: center;
     align-items: center;
 }
+@media screen and (max-width:760px) {
+    .bannerOpen {
+        visibility: collapse;
+        height: 0;
+    }
+}
 .imageSwipe-Flex {
     display: flex;
     position: absolute;
@@ -52,19 +58,42 @@
 
 
 .sampleImage {
-    min-width: 290px;
-    min-height: 290px;
+    min-width:380px;
+    min-height: 380px;
     background: rgb(117, 117, 117);
     border-radius: 5px;
     transition: all 0.2s;
     cursor: zoom-in;
 }
-
+.imgfor-headshot {
+    background: url("../../img/showcase/framebanner2_cr.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.imgfor-bust {
+    background: url("../../img/showcase/WinterMary_rez.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.imgfor-fullbody {
+    background: url("../../img/showcase/everylittlecompliments.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.imgfor-pirl {
+    background: url("../../img/showcase/skywards.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 .zoom {
     position: relative;
-    min-width: 500px;
-    min-height: 500px;
+    min-width: 600px;
+    min-height: 600px;
     cursor: zoom-out;
 }
 
@@ -123,7 +152,13 @@
     width: 90%;
     margin: 2em 0;
 }
-
+.smallDisclaimer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    text
+}
 @media screen and (max-width:1000px) {
     .slotAlignLeft, .slotAlignRight {
         display: flex;
