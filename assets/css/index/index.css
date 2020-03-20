@@ -157,8 +157,9 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1em;
-    text
+    text-align: center;
 }
+
 @media screen and (max-width:1000px) {
     .slotAlignLeft, .slotAlignRight {
         display: flex;
