@@ -13,6 +13,42 @@
         height: 0;
     }
 }
+.notification.status,.tip {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    transition: all 0.2s;
+    overflow: hidden;
+}
+.tip {
+    animation: fade10 0.2s 10s forwards;
+}
+@keyframes fade10 {
+    from {
+        opacity: 1;
+        height: 1em;
+        padding: 0.5em;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: collapse;
+        padding: 0;
+        height: 0;
+    }
+}
+.statusText {
+    background: rgb(245, 77, 77);
+    color: white;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+.tipText {
+    background: rgb(253, 186, 40);
+    color: rgb(255, 255, 255);
+    padding: 0.5em;
+    border-radius: 10px;
+}
 .imageSwipe-Flex {
     display: flex;
     position: absolute;
@@ -44,14 +80,14 @@
 
 .slotAlignLeft {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     text-align: right;
 }
 .slotAlignRight {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
 }
@@ -99,6 +135,7 @@
 
 
 .slotInfo {
+    margin: 0 1em;
     max-width: 50%;
 }
 .slotTitle {
