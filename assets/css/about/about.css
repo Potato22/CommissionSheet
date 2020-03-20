@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+.abcont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    width: 100%;
+    height: 100vh;
+}
+.abtext {
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
