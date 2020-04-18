@@ -2,7 +2,8 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background: white;
+    background: rgba(255, 255, 255, 0.863);
+    backdrop-filter: blur(4px);
     z-index: 100;
     transition: all 0.2s cubic-bezier(0,.82,.64,.98);
     max-height: 60px;
@@ -174,5 +175,94 @@
     }
     .welcome {
         margin-top: 0;
+    }
+}
+.tosStick {
+    position: sticky;
+    top:60px;
+    z-index: 90;
+}
+.tosBound {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.tosNotice {
+    text-align: center;
+}
+.tosBar {
+    padding: 0.5em 1em;
+    background: rgba(255, 255, 255, 0.863);
+    backdrop-filter: blur(5px);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "IBM Plex Sans", sans-serif;
+    box-shadow: rgba(0,0,0,0.25) 0 2px 6px;
+    transition: 0.2s all;
+    z-index: 2;
+    flex-wrap: wrap;
+    user-select: none;
+}
+.tosButton {
+    border: solid 1px black;
+    padding: 0.5rem;
+    transition: all 0.2s cubic-bezier(.49,.07,.16,1);
+    margin-left: 1em;
+    cursor: pointer;
+}
+.tosButton:hover {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.dismiss {
+    font-size: 0.75rem;
+    margin-left: 1em;
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ohno {
+    animation: 0.4s shake ease-in-out forwards;
+}
+
+.accept {
+    background: rgba(255, 255, 255, 0.863) !important;
+    animation: none !important;
+}
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0);
+    }
+    20% {
+        transform: translate(15px, 0);
+        background: rgb(255, 141, 141);
+    }
+    40% {
+        transform: translate(-10px, 0);
+    }
+    80% {
+        transform: translate(5px, 0);
+    }
+    100% {
+        transform: translate(0px, 0);
+        background: rgba(255, 255, 255, 0.863);
+    }
+}
+.tosButtonWrap {
+    position: relative;
+    display: flex;
+    height: 40px;
+}
+@media screen and (max-width:800px) {
+    .tosButtonWrap {
+        margin-top: 0.5em;
     }
 }
