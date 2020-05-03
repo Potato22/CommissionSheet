@@ -156,6 +156,7 @@
 .purchase {
     transition: all 0.2s;
 }
+
 .purchase.onL {
     border: grey solid 1px;
     color: grey;
@@ -181,7 +182,7 @@
     border: black solid 1px;
     background: black;
     color: white;
-    transform: scale(1.1);
+    transform: translate(0, 2px);
 }
 
 
@@ -204,6 +205,54 @@
     flex-direction: column;
 }
 
+
+.tagList {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+.tagList.tlr {
+    justify-content: flex-end;
+}
+.tag {
+    margin: 0 0.5em 0.5em 0;
+    padding: 0.1em 0.3em;
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 0.8rem;
+    border-radius: 0.2em;
+    font-weight: bolder;
+    background: rgb(48, 48, 48);
+    color: white;
+}
+.tag.tr {
+    margin: 0 0 0.5em 0.5em;
+}
+
+@media screen and (max-width:700px) {
+    .slotInfo {
+        min-width: 300px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+@media screen and (max-width:380px) {
+    .sampleImage {
+        min-height: 340px;
+        min-width: 340px;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .zoom {
+        min-height: 340px;
+        min-width: 340px;
+    }
+}
+
 @media screen and (max-width:1000px) {
     .slotAlignLeft, .slotAlignRight {
         display: flex;
@@ -221,27 +270,10 @@
     .onL, .onR {
         float: none;
     }
-}
-
-@media screen and (max-width:700px) {
-    .slotInfo {
-        min-width: 300px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .tagList, .tagList.tlr {
+        justify-content: center;
     }
-}
-@media screen and (max-width:380px) {
-    .sampleImage {
-        min-height: 340px;
-        min-width: 340px;
-    }
-}
-
-@media screen and (max-width:540px) {
-    .zoom {
-        min-height: 340px;
-        min-width: 340px;
+    .tag, .tag.tr {
+        margin: 0.5em;
     }
 }
