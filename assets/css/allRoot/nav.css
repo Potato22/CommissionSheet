@@ -8,9 +8,7 @@
     transition: all 0.2s cubic-bezier(0,.82,.64,.98);
     max-height: 60px;
 }
-.navButtonHighlight {
-    background: black;
-}
+
 .hide {
     transform: translate(0, -80px);
     transition: all 0.2s cubic-bezier(.64,0,.8,.48);
@@ -36,7 +34,7 @@
     background-repeat:no-repeat;
     margin-left: 2em;
 }
-.flex-nav-buttons {
+/* .flex-nav-buttons {
     display: flex;
     padding-right: 2em;
     font-family: IBM Plex Mono;
@@ -47,39 +45,7 @@
     justify-content: center;
     height: 100%;
 }
-#navButton {
-    font-size: 1.2em;
-    color: black;
-    transition: all 0.2s cubic-bezier(.44,0,.25,.99);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100%;
-    background: rgba(0,0,0,0);
-    padding: 0 1em;
-}
-.aButtonIsActive {
-    color: rgba(0, 0, 0, 0.438);
-    transform: scale(0.9);
-}
-#navButton:hover {
-    color: white;
-    z-index: 4;
-    background: black;
-    transform: scale(1.1);
-}
 
-#navButton.stay {
-    transition: 0.2s cubic-bezier(0,1.08,1,1);
-    z-index: 4;
-    background: black;
-    color: white;
-    transform: scale(1.1);
-}
-.connect {
-    cursor: pointer;;
-}
 .dialogueFrame {
     position: absolute;
     position: sticky;
@@ -130,7 +96,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 .treshold {
     visibility: collapse;
     position: fixed;
@@ -209,6 +175,7 @@
     z-index: 2;
     flex-wrap: wrap;
     user-select: none;
+    border-radius: 5px;
 }
 .tosButton {
     border: solid 1px black;
@@ -216,10 +183,15 @@
     transition: all 0.2s cubic-bezier(.49,.07,.16,1);
     margin-left: 1em;
     cursor: pointer;
+    border-radius: 5px;
 }
 .tosButton:hover {
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
+}
+.tosIcon {
+    font-size: 2rem;
+    margin-right: 0.5em;
 }
 .dismiss {
     font-size: 0.75rem;

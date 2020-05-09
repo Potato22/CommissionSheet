@@ -9,3 +9,6 @@ a:link, a:visited {
     text-decoration: none;
     color: initial;
 }
+.material-icons-round {
+    vertical-align: middle;
+}

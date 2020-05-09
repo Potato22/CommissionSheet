@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: white;
+  background: rgb(255, 255, 255);
   transition: all 0.2s;
 }
 .tostitle {
@@ -22,6 +22,9 @@
   font-family: 'Roboto', sans-serif;
   align-items: flex-start;
   margin-bottom: 1rem;
+  background: rgb(236, 236, 236);
+  padding: 0 0.8em;
+  border-radius: 5px;
 }
 @media (max-width: 430px) {
   .number-blocks {
@@ -47,6 +50,7 @@
   font-weight: bolder;
   color: rgba(70,151,255,1);
   transition: all 0.2s;
+  border-radius: 5px;
 }
 .tosDone:hover {
   color: white;

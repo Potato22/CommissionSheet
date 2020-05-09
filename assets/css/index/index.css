@@ -13,46 +13,19 @@
         height: 0;
     }
 }
-.notification.status,.tip {
+
+.notification.status {
     display: flex;
     justify-content: center;
-    padding: 0.5em;
-    transition: all 0.2s;
-    overflow: hidden;
-}
-.tip {
-    animation: fade10 0.2s 10s forwards;
-}
-@keyframes fade10 {
-    from {
-        opacity: 1;
-        height: 1em;
-        padding: 0.5em;
-        visibility: visible;
-    }
-    to {
-        opacity: 0;
-        visibility: collapse;
-        padding: 0;
-        height: 0;
-    }
-}
-.statusText {
-    background: rgb(245, 77, 77);
-    color: white;
-    padding: 0.5em;
-    border-radius: 10px;
-    text-align: center;
 }
 .BETAtype {
+    margin-top: 1em;
     font-weight: 800;
     font-family: "IBM Plex Mono", sans-serif;
-}
-.tipText {
-    background: rgb(253, 186, 40);
-    color: rgb(255, 255, 255);
-    padding: 0.5em;
+    background: rgb(245, 77, 77);
+    color: white;
     border-radius: 10px;
+    padding: 0 0.5em;
 }
 .imageSwipe-Flex {
     display: flex;
@@ -64,11 +37,13 @@
     font-family: 'IBM Plex Mono', sans-serif;
     text-align: center;
     word-wrap: break-word;
+    margin-bottom: -0.5em;
 }
 .descWelcome {
     font-family: 'IBM Plex Sans', sans-serif;
     text-align: center;
     word-wrap: break-word;
+    color: rgb(100, 100, 100);
 }
 
 .contentFlexBox {
@@ -85,18 +60,18 @@
 
 .slotAlignLeft {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     text-align: right;
 }
-.slotAlignRight {
+/* .slotAlignRight {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
 }
-
+ */
 
 .sampleImage {
     min-width:380px;
@@ -129,6 +104,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 .zoom {
@@ -148,26 +124,36 @@
 }
 .slotDesc {
     font-family: 'Roboto Condensed';
+    margin-bottom: 0;
+}
+.sub {
+    color: #787878ff;
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 0.8rem;
 }
 .slotPrice {
     font-family: 'IBM Plex Mono';
     font-size: 1.1rem;
+    color: #363636ff;
 }
 .purchase {
     transition: all 0.2s;
 }
 
 .purchase.onL {
-    border: grey solid 1px;
-    color: grey;
+    color: rgb(0, 0, 0);
+    background: white;
     font-family: 'IBM Plex Sans';
-    padding: 1em;
+    padding: 0.8em;
     float: right;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.192) 0 4px 6px;
 }
-.purchase.onR {
+/* .purchase.onR {
     border: grey solid 1px;
     color: grey;
     font-family: 'IBM Plex Sans';
@@ -176,13 +162,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .purchase:hover {
-    border: black solid 1px;
-    background: black;
+    background: rgb(53,53,53);
     color: white;
     transform: translate(0, 2px);
+    box-shadow: rgba(0, 0, 0, 0.301) 0 2px 3px;
+}
+.purchase:active {
+    background: rgb(204, 204, 204);
+    color: rgb(255, 255, 255);
+    transform: translate(0, 4px);
 }
 
 
@@ -195,7 +186,7 @@
     width: 90%;
     margin: 2em 0;
 }
-.smallDisclaimer {
+/* .smallDisclaimer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -203,10 +194,46 @@
     margin-bottom: 1em;
     text-align: center;
     flex-direction: column;
+} */
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
 }
+.socials {
+    display: flex;
+    justify-content: center;
+    
+}
+.flexbox1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.twitter {
+    position: relative;
+    font-size: 24px;
+    color: #363636ff;
+    margin-right: 0.5em;
 
-
-.tagList {
+}
+.deviantart {
+    position: relative;
+    font-size: 24px;
+    color: #363636ff;
+}
+.copyright {
+    color: #363636ff;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 0.6rem;
+    margin-bottom: 0.2em;
+}
+.tosPageLink {
+    font-family: "IBM Plex Sans", sans-serif;
+    text-decoration: underline !important;
+    font-size: 0.8rem;
+}
+/* .tagList {
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -227,7 +254,7 @@
 }
 .tag.tr {
     margin: 0 0 0.5em 0.5em;
-}
+} */
 
 @media screen and (max-width:700px) {
     .slotInfo {
@@ -270,10 +297,10 @@
     .onL, .onR {
         float: none;
     }
-    .tagList, .tagList.tlr {
+    /* .tagList, .tagList.tlr {
         justify-content: center;
     }
     .tag, .tag.tr {
         margin: 0.5em;
-    }
+    } */
 }
