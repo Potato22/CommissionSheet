@@ -58,6 +58,7 @@
     margin: 2em 0;
 }
 
+
 .slotAlignLeft {
     display: flex;
     justify-content: space-between;
@@ -94,13 +95,13 @@
     background-repeat: no-repeat;
 }
 .imgfor-fullbody {
-    background: url("../../img/showcase/everylittlecompliments.jpg");
+    background: url("../../img/showcase/fullbody.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .imgfor-pirl {
-    background: url("../../img/showcase/skywards.jpg");
+    background: url("../../img/showcase/pirl.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -114,13 +115,49 @@
     cursor: zoom-out;
 }
 
-
+.shadeBoxFlex {
+    margin: 1em 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.shadeBox {
+    border-right: solid 5px #787878ff;
+    width: 130px;
+    height: 35px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'IBM Plex Sans';
+    font-size: 0.8rem;
+    font-weight: 900;
+    border-radius: 5px;
+    color: #787878ff;
+    transition: all 0.2s;
+    user-select: none;
+}
+.shadeBox:hover {
+    border-right: solid 10px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+.shadeIcon {
+    width: 24px;
+    height: 24px;
+    background: url("../../img/localIcon/shader.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    transform: translate(0, -2px);
+}
 .slotInfo {
     margin: 0 1em;
     max-width: 50%;
 }
 .slotTitle {
     font-family: 'IBM Plex Mono';
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .slotDesc {
     font-family: 'Roboto Condensed';
@@ -164,11 +201,23 @@
     align-items: center;
 } */
 
+.purchaseIcon {
+    margin-left: 0rem;
+    width: 0;
+    opacity: 0;
+    transition: width 0.2s 0.1s, opacity 0.2s, margin 0.2s;
+}
 .purchase:hover {
     background: rgb(53,53,53);
     color: white;
-    transform: translate(0, 2px);
+    /* transform: translate(0, 2px); */
     box-shadow: rgba(0, 0, 0, 0.301) 0 2px 3px;
+}
+.purchase:hover .purchaseIcon {
+    transition: width 0.2s, opacity 0.2s 0.1s, margin 0.2s;
+    margin-left: 0.3rem;
+    width: 24px;
+    opacity: 1;
 }
 .purchase:active {
     background: rgb(204, 204, 204);
@@ -176,7 +225,12 @@
     transform: translate(0, 4px);
 }
 
-
+.bestSelling {
+    color: rgb(255, 208, 0);
+    margin-right: 0.5rem;
+    font-size: 32px;
+    user-select: none;
+}
 
 .endOfPage {
     display: flex;
@@ -293,6 +347,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .shadeBox {
+        justify-content: center;
+        border-right: solid 0px #787878ff;
+        border-bottom: solid 5px #787878ff;
+    }
+    .shadeBox:hover {
+        border-right: none;
+        border-bottom: solid 10px rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
     }
     .onL, .onR {
         float: none;

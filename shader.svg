@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 21.997682 21.997683"
+   height="83.140846"
+   width="83.140846">
+  <defs
+     id="defs2">
+    <filter
+       height="1.2022893"
+       y="-0.10114463"
+       width="1.2022893"
+       x="-0.10114463"
+       id="filter836"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur838"
+         stdDeviation="1.783809" />
+    </filter>
+    <clipPath
+       id="clipPath845"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path847"
+         style="fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-miterlimit:20"
+         d="m 157.05517,179.33249 c 0,11.68826 -9.4752,21.16346 -21.16346,21.16346 -11.68826,0 -21.16347,-9.4752 -21.16347,-21.16346 0,-11.68826 9.47521,-21.16346 21.16347,-21.16346 11.68826,0 21.16346,9.4752 21.16346,21.16346 z" />
+    </clipPath>
+    <filter
+       height="2.4259582"
+       y="-0.71297908"
+       width="2.3353891"
+       x="-0.66769457"
+       id="filter857"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur859"
+         stdDeviation="17.931227" />
+    </filter>
+    <filter
+       height="1.3132737"
+       y="-0.15663683"
+       width="1.3132737"
+       x="-0.15663683"
+       id="filter867"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur869"
+         stdDeviation="2.7624817" />
+    </filter>
+    <clipPath
+       id="clipPath875"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         id="path877"
+         style="fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-miterlimit:20"
+         d="m 157.05517,179.33249 a 21.163464,21.163464 0 0 1 -21.16346,21.16346 21.163464,21.163464 0 0 1 -21.16347,-21.16346 21.163464,21.163464 0 0 1 21.16347,-21.16346 21.163464,21.163464 0 0 1 21.16346,21.16346 z" />
+    </clipPath>
+    <filter
+       height="1.1577857"
+       y="-0.07889282"
+       width="1.1465153"
+       x="-0.073257618"
+       id="filter979"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur981"
+         stdDeviation="1.6227842" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-123.98304,-167.42382)"
+     id="layer1">
+    <circle
+       transform="matrix(0.38631636,0,0,0.38631636,82.836172,109.49507)"
+       style="mix-blend-mode:multiply;fill:#100073;fill-opacity:0.225806;stroke:none;stroke-width:4.10933;stroke-miterlimit:20;filter:url(#filter836)"
+       id="circle834"
+       cx="138.00835"
+       cy="181.44913"
+       r="21.163464" />
+    <circle
+       transform="matrix(0.38631636,0,0,0.38631636,82.836172,109.49507)"
+       r="21.163464"
+       cy="177.74501"
+       cx="134.30423"
+       id="circle861"
+       style="mix-blend-mode:hard-light;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.10933;stroke-miterlimit:20;filter:url(#filter867)" />
+    <path
+       d="m 143.50915,178.77414 a 8.1757924,8.1757924 0 0 1 -8.17579,8.1758 8.1757924,8.1757924 0 0 1 -8.17579,-8.1758 8.1757924,8.1757924 0 0 1 8.17579,-8.17579 8.1757924,8.1757924 0 0 1 8.17579,8.17579 z"
+       style="fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:1.5875;stroke-miterlimit:20"
+       id="path830" />
+    <path
+       transform="matrix(0.38631636,0,0,0.38631636,82.836172,109.49507)"
+       clip-path="url(#clipPath845)"
+       id="path841"
+       d="m 159.8923,166.48786 c -4.54747,21.09558 -18.87104,31.24193 -36.67175,37.49389 l 13.08764,12.47245 51.3654,-28.98048 -13.19112,-31.37886 z"
+       style="mix-blend-mode:multiply;fill:#100073;fill-opacity:0.173387;stroke:none;stroke-width:4.10933;stroke-miterlimit:20;filter:url(#filter857)" />
+    <path
+       transform="matrix(0.38631636,0,0,0.38631636,82.836172,109.49507)"
+       clip-path="url(#clipPath875)"
+       id="path871"
+       d="m 151.48052,160.74432 c -24.37114,0.11601 -36.11771,24.86686 -33.77725,32.97779 l -19.38694,-20.38627 31.77859,-28.98048 z"
+       style="mix-blend-mode:hard-light;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.10933;stroke-miterlimit:20;filter:url(#filter979)" />
+  </g>
+</svg>
