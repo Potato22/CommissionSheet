@@ -1,3 +1,14 @@
+body {
+    animation: welcome 0.5s forwards;
+}
+@keyframes welcome {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .bannerOpen {
     height: 400px;
     background: rgb(218, 218, 218);
@@ -18,14 +29,22 @@
     display: flex;
     justify-content: center;
 }
-.BETAtype {
+.notificationStatus {
     margin-top: 1em;
-    font-weight: 800;
-    font-family: "IBM Plex Mono", sans-serif;
-    background: rgb(245, 77, 77);
-    color: white;
+    font-family: "Roboto", sans-serif;
+    background: rgb(255, 246, 168);
+    color: rgb(41, 41, 41);
     border-radius: 10px;
-    padding: 0 0.5em;
+    padding: 0.5em 1em;
+    width: 90%;
+}
+.notificationTitle {
+    font-weight: 700;
+}
+.notifcationContent {
+    font-size: 0.8rem;
+    padding: 0 2em;
+    list-style-type: disc;
 }
 .imageSwipe-Flex {
     display: flex;
@@ -122,7 +141,7 @@
 }
 .shadeBox {
     border-right: solid 5px #787878ff;
-    width: 130px;
+    width: initial;
     height: 35px;
     display: flex;
     justify-content: flex-end;
@@ -136,6 +155,10 @@
     user-select: none;
 }
 .shadeBox:hover {
+    border-right: solid 10px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+.purchaseHover {
     border-right: solid 10px rgb(0, 0, 0);
     color: rgb(0, 0, 0);
 }
@@ -225,11 +248,41 @@
     transform: translate(0, 4px);
 }
 
-.bestSelling {
+.bestSellingBox {
+    overflow: hidden;
+    width: 32px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    background: rgba(0,0,0,0);
+    transition: width 0.2s 0.1s, background 0.2s, margin 0.2s 0.2s, padding 0.2s;
+    height: 30px;
+    border-radius: 10px;
+    user-select: none;
+}
+.bestSellingPrompt {
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: white;
+}
+.bestSellingIcon {
     color: rgb(255, 208, 0);
     margin-right: 0.5rem;
     font-size: 32px;
-    user-select: none;
+    transition: font-size 0.5s, color 0.2s, transform 0.8s;
+}
+.bestSellingBox:hover {
+    background: rgb(255, 208, 0);
+    width: 120px;
+    transition: width 0.2s, background 0.2s;
+    margin-right: 0.3em;
+    padding-left: 0.3em;
+}
+.bestSellingBox:hover .bestSellingIcon {
+    color: white;
+    font-size: 24px;
+    transform: rotate(-360deg);
 }
 
 .endOfPage {
@@ -354,6 +407,11 @@
         border-bottom: solid 5px #787878ff;
     }
     .shadeBox:hover {
+        border-right: none;
+        border-bottom: solid 10px rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
+    }
+    .purchaseHover {
         border-right: none;
         border-bottom: solid 10px rgb(0, 0, 0);
         color: rgb(0, 0, 0);

@@ -110,7 +110,7 @@
 }
 
 
-@media screen and (max-width:800px) {
+/* @media screen and (max-width:800px) {
     .logo {
         width: 100px;
         background: url('../../img/localIcon/Potblack.png');
@@ -118,7 +118,7 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
-}
+} */
 @media screen and (max-width:500px) {
     .flex-nav {
         display: flex;

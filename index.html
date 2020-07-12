@@ -30,10 +30,11 @@
     <link rel="stylesheet" href="assets/css/index/index.css">
     <link rel="stylesheet" href="assets/css/index/imageSlide.css">
     <link rel="stylesheet" href="assets/css/allRoot/rootSettings.css">
+    <link rel="stylesheet" href="assets/css/allRoot/swup.css">
     
     
 </head>
-<body>
+<body id="swup" class="transition-fade">
     <div class="nav">
         <div class="flex-nav">
             <div class="logo"></div>
@@ -46,7 +47,7 @@
                 <span class="tosNotice"><span class="material-icons-round tosIcon">error</span>By proceeding, you agreed to accept my TOS (Terms of Service) and rules.</span>
                 <div class="tosButtonWrap">
                     <a href="tos.html"><div class="tosButton">Open TOS</div></a>
-                    <div class="dismiss">I already read it!</div>
+                    <div class="dismiss"><u>I already read it!</u></div>
                 </div>
             </div>
         </div>
@@ -68,7 +69,16 @@
         <p class="descWelcome">This is where I put my commission prices and samples of how the output should approximately look when they're finished.<br><b>- All prices are shown in USD -</b></p>
         
         
-        <!-- <div class="notification status"><div class="BETAtype"><span>BETA</span></div></div> -->
+        <div class="notification status">
+            <div class="notificationStatus">
+                <span class="notificationTitle">Changelog</span>
+                <ol class="notifcationContent">
+                    <li class="changelist">Removed bust class due to low relevance</li>
+                    <li class="changelist">Updated TOS <a href="tos.html"><b><u>Check here</u></b></a></li>
+                    <li class="changelist">Added Shading toggle option in the Form pages</li>
+                </ol>
+            </div>
+        </div>
         
 
         <div class="contentFlexBox">
@@ -83,7 +93,7 @@
                     <div class="shadeBoxFlex">
                         <div class="shadeBox" title="Optional">
                             <div class="shadeIcon"></div>
-                            <span class="shader">Shaded $3 &nbsp;&nbsp;</span>
+                            <span class="shader">Shaded (optional) $3+ &nbsp;&nbsp;</span>
                         </div>
                     </div>
                     <p class="slotPrice">$10.00+</p>
@@ -94,7 +104,7 @@
             </div>
             <!--moduleEnd [LEFT]-->
             <!--moduleStart [LEFT]-->
-            <div id="slotTypeBox" class="slotAlignLeft">
+            <!-- <div id="slotTypeBox" class="slotAlignLeft">
                 <div class="sampleImage imgfor-bust" title="clicking will toggle the size of the thumbnail."></div>
                 <div class="slotInfo">
                     <h2 class="slotTitle">Bust (A.K.A. Half Body)</h2>
@@ -108,22 +118,27 @@
                     <div class="shadeBoxFlex">
                         <div class="shadeBox" title="Optional">
                             <div class="shadeIcon"></div>
-                            <span class="shader">Shaded $3 &nbsp;&nbsp;</span>
+                            <span class="shader">Shaded (optional) $3 &nbsp;&nbsp;</span>
                         </div>
                     </div>
                     
-                    <p class="slotPrice">$14.00+</p>
+                    <p class="slotPrice">$15.00+</p>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScfEEPSovA8ErMOKXrbypfMtDGR7m1lp2g9xJqtp9OyCow67Q/viewform?usp=sf_link">
                         <div class="purchase onL">Proceed<span class="material-icons-round purchaseIcon">check_circle</span></div>
                     </a>
                 </div>
-            </div>
+            </div> -->
             <!--moduleEnd [LEFT]-->
             <!--moduleStart [LEFT]-->
             <div id="slotTypeBox" class="slotAlignLeft">
                 <div class="sampleImage imgfor-fullbody" title="clicking will toggle the size of the thumbnail."></div>
                 <div class="slotInfo">
-                    <h2 class="slotTitle"><span title="Best selling" class="material-icons-round bestSelling">star</span>Full Body</h2>
+                    <h2 class="slotTitle">
+                        <div class="bestSellingBox">
+                            <div class="material-icons-round bestSellingIcon">star</div>
+                            <span class="bestSellingPrompt">Best Selling</span>
+                        </div>
+                        Full Body</h2>
                     <p class="slotDesc">Full Body class features the character's full body, and lets them charm!</p>
 
                     <span class="slotDesc sub">
@@ -135,10 +150,10 @@
                     <div class="shadeBoxFlex">
                         <div class="shadeBox" title="Optional">
                             <div class="shadeIcon"></div>
-                            <span class="shader">Shaded $3 &nbsp;&nbsp;</span>
+                            <span class="shader">Shaded (optional) $5+ &nbsp;&nbsp;</span>
                         </div>
                     </div>
-                    <p class="slotPrice">$18.00+</p>
+                    <p class="slotPrice">$20.00+</p>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScV9YKbO5tSoydQHN1BB_70mr4TG20kbkjSBZNlnBNFN9mSwg/viewform?usp=sf_link">
                         <div class="purchase onL">Proceed<span class="material-icons-round purchaseIcon">check_circle</span></div>
                     </a>
@@ -162,7 +177,7 @@
                             <span class="shader">Shaded &nbsp;&nbsp;</span>
                         </div>
                     </div>
-                    <p class="slotPrice">$28.00+</p>
+                    <p class="slotPrice">$32.00+</p>
 
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSd3N8LDTLLLS0VHVbe40l81mtvh2CaCs6rWcpwgDAxPVPHqyg/viewform?usp=sf_link">
                         <div class="purchase onL">Proceed<span class="material-icons-round purchaseIcon">check_circle</span></div>
