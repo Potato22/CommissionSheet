@@ -101,14 +101,20 @@ body {
     transition: all 0.2s;
     cursor: zoom-in;
 }
-.imgfor-headshot {
-    background: url("../../img/showcase/framebanner2_cr.jpg");
+.imgfor-sketch {
+    background: url("../../img/showcase/sketch.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.imgfor-bust {
-    background: url("../../img/showcase/WinterMary_rez.jpg");
+.imgfor-lineart {
+    background: url("../../img/showcase/lineart.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.imgfor-headshot {
+    background: url("../../img/showcase/portrait.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -119,13 +125,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.imgfor-pirl {
-    background: url("../../img/showcase/pirl.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
 
 .zoom {
     position: relative;
@@ -134,43 +133,76 @@ body {
     cursor: zoom-out;
 }
 
-.shadeBoxFlex {
+.typesFlex {
     margin: 1em 0;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
-.shadeBox {
-    border-right: solid 5px #787878ff;
-    width: initial;
-    height: 35px;
+.types {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    width: 60px;
+    height: 60px;
+    margin: 0.4em; 
     font-family: 'IBM Plex Sans';
     font-size: 0.8rem;
-    font-weight: 900;
-    border-radius: 5px;
+    font-style: italic;
     color: #787878ff;
-    transition: all 0.2s;
     user-select: none;
+    transition: all 0.2s;
+    border: solid 1px #787878ff;
+    border-radius: 5px;
+    padding: 0.2em;
 }
-.shadeBox:hover {
-    border-right: solid 10px rgb(0, 0, 0);
+.types:hover {
     color: rgb(0, 0, 0);
+    border: solid 1px black;
+    transform: translate(0,-4px);
 }
 .purchaseHover {
     border-right: solid 10px rgb(0, 0, 0);
     color: rgb(0, 0, 0);
 }
-.shadeIcon {
-    width: 24px;
-    height: 24px;
-    background: url("../../img/localIcon/shader.svg");
+.priceType { 
+    font-weight: bolder;
+    font-style: normal;
+}
+.typeIcon {
+    width: 28px;
+    height: 28px;
+}
+.typeIcon.sketch {
+    background: url('../../img/localIcon/typeIcons/sketch.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-right: 0.5em;
-    transform: translate(0, -2px);
+}
+.typeIcon.lineart {
+    background: url('../../img/localIcon/typeIcons/lineart.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.typeIcon.flatcolor {
+    background: url('../../img/localIcon/typeIcons/flatcolor.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.typeIcon.shaded {
+    background: url('../../img/localIcon/typeIcons/shaded.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.typeIcon.bg {
+    background: url('../../img/localIcon/typeIcons/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .slotInfo {
     margin: 0 1em;
@@ -192,13 +224,9 @@ body {
     margin-bottom: 1em;
     font-size: 0.8rem;
 }
-.slotPrice {
-    font-family: 'IBM Plex Mono';
-    font-size: 1.1rem;
-    color: #363636ff;
-}
 .purchase {
     transition: all 0.2s;
+    user-select: none;
 }
 
 .purchase.onL {
@@ -268,7 +296,7 @@ body {
 }
 .bestSellingIcon {
     color: rgb(255, 208, 0);
-    margin-right: 0.5rem;
+    margin-right: 0.3rem;
     font-size: 32px;
     transition: font-size 0.5s, color 0.2s, transform 0.8s;
 }
@@ -401,14 +429,13 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    .shadeBox {
+    .typesFlex {
         justify-content: center;
-        border-right: solid 0px #787878ff;
-        border-bottom: solid 5px #787878ff;
     }
-    .shadeBox:hover {
-        border-right: none;
-        border-bottom: solid 10px rgb(0, 0, 0);
+    .types {
+        justify-content: center;
+    }
+    .types:hover {
         color: rgb(0, 0, 0);
     }
     .purchaseHover {
