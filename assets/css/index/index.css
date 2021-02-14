@@ -53,7 +53,7 @@ body {
     width: 100%;
 }
 .welcome {
-    font-family: 'IBM Plex Mono', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     word-wrap: break-word;
     margin-bottom: -0.5em;
@@ -133,6 +133,11 @@ body {
     cursor: zoom-out;
 }
 
+.optionsbox {
+    margin-top: 1.5em;
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: italic;
+}
 .typesFlex {
     margin: 1em 0;
     display: flex;
@@ -198,8 +203,28 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.typeIcon.bg {
+
+
+.typeIcon.bgsimple {
+    background: url('../../img/localIcon/typeIcons/simple.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.typeIcon.default {
     background: url('../../img/localIcon/typeIcons/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.typeIcon.bgflatcolor {
+    background: url('../../img/localIcon/typeIcons/basic.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.typeIcon.bgfullshade {
+    background: url('../../img/localIcon/typeIcons/fullshaded.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -209,7 +234,7 @@ body {
     max-width: 50%;
 }
 .slotTitle {
-    font-family: 'IBM Plex Mono';
+    font-family: 'Montserrat';
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -380,7 +405,7 @@ body {
 .tag {
     margin: 0 0.5em 0.5em 0;
     padding: 0.1em 0.3em;
-    font-family: "IBM Plex Mono", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
     border-radius: 0.2em;
     font-weight: bolder;

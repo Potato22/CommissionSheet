@@ -17,7 +17,7 @@
 .flex-nav {
     width: 100%;
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 0em;
     box-shadow: rgba(0,0,0, 0.25) 0 0 12px;
@@ -26,13 +26,13 @@
 }
 
 .logo {
-    width: 250px;
+    width: 200px;
     height: 60px;
-    background: url("../../img/localIcon/potcomm.png");
+    background: url("../../img/localIcon/potto.png");
     background-position: center;
     background-size: contain;
     background-repeat:no-repeat;
-    margin-left: 2em;
+    margin-left: 0em;
 }
 /* .flex-nav-buttons {
     display: flex;
