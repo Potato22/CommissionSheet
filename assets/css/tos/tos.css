@@ -42,7 +42,7 @@ body {
   transition: 0.2s;
 }
 .number-blocks:hover {
-  transform: scale(1.005);
+  background: rgb(243, 243, 243);
 }
 @media (max-width: 430px) {
   .number-blocks {
