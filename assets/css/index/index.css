@@ -1,183 +1,275 @@
 body {
-    animation: welcome 0.5s forwards;
+    background: var(--base);
+    animation: welcome 0.8s forwards;
 }
 @keyframes welcome {
   from {
-    opacity: 0;
+        opacity: 0;
+        background: rgb(0, 0, 0);
   }
   to {
-    opacity: 1;
+        opacity: 1;
   }
 }
-.bannerOpen {
-    height: 400px;
-    background: rgb(218, 218, 218);
-    /*margin-top: 2em;*/
-    width: 100%;
+.hello {
     display: flex;
-    justify-content: center;
+    position: relative;
+}
+.videocontainer {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    display:flex;
     align-items: center;
 }
-@media screen and (max-width:760px) {
-    .bannerOpen {
-        visibility: collapse;
-        height: 0;
+.banner {
+    width: 100%;
+} @media screen and (max-width: 740px) {
+    .banner {
+        display: none;
     }
 }
-
-.notification.status {
-    display: flex;
-    justify-content: center;
-}
-.notificationStatus {
-    margin-top: 1em;
-    font-family: "Roboto", sans-serif;
-    background: rgb(255, 246, 168);
-    color: rgb(41, 41, 41);
-    border-radius: 10px;
-    padding: 0.5em 1em;
-    width: 90%;
-}
-.notificationTitle {
-    font-weight: 700;
-}
-.notifcationContent {
-    font-size: 0.8rem;
-    padding: 0 2em;
-    list-style-type: disc;
-}
-.imageSwipe-Flex {
-    display: flex;
-    position: absolute;
-    height: 400px;
+.hero {
+    height: 100vh;
     width: 100%;
-}
-.welcome {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    word-wrap: break-word;
-    margin-bottom: -0.5em;
-}
-.descWelcome {
-    font-family: 'IBM Plex Sans', sans-serif;
-    text-align: center;
-    word-wrap: break-word;
-    color: rgb(100, 100, 100);
-}
-
-.contentFlexBox {
+    background: linear-gradient(rgba(23, 27, 28, 0.733), rgba(23, 27, 28));
     display: flex;
     flex-direction: column;
-    padding: 0 2em;
-    max-width: 100%;
+    justify-content: center;
+    padding: 0em 3em;
 }
-#slotTypeBox {
-    max-width: 100%;
+.logo {
+    width: 250px;
+    height: 220px;
+    background: url(../../img/localIcon/Potto.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 1em;
+}
+.introduction, .message {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--textondark)
+}
+.message {
+    max-width: 400px;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.notificationbox {
+    background: var(--accentfill);
     padding: 1em 2em;
-    margin: 2em 0;
+    border: solid 2px var(--accentsecondary);
+    border-radius: 20px;
+    margin: 0 3em;
+    display: flex;
+    font-family: "IBM Plex Sans", sans-serif;
+} 
+
+.notificationicon {
+    color: var(--textaccent);
+    font-size: 2rem;
+    width: 48px;
+}
+.notificationtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--textaccent);
+    transform: translate(0, 100px);
+}
+ol.notifcationlist {
+    padding: 0 1rem;
+    margin: 0;
 }
 
-
-.slotAlignLeft {
+.maincontentbox {
+    background: white;
+    margin-top: 2em;
+    border-radius: 40px 40px 0 0;
+    padding: 4em 4em;
+}
+.col {
+    color: var(--text);
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    text-align: right;
+    margin: 1em 0;
 }
-/* .slotAlignRight {
+.imgbatch {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    width: 350px;
+    height: 350px;
+    justify-content: center;
+    align-content: center;
+}
+.gridimg {
+    margin: 0.5em;
+    background: rgb(231, 231, 231);
+    width: 145px;
+    height: 145px;
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: .2s all cubic-bezier(.58,.01,.52,1.55);
+    box-shadow: rgba(0,0,0,.25) 0 3px 6px;
+} .gridimg:hover {
+    transition: .2s all cubic-bezier(0,.75,.16,1);
+    transform:scale(1.1);
+    box-shadow: rgba(0,0,0,.25) 0 6px 12px;
+}
+.imgsample{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.zoomindimmer {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.856);
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: grayscale(100);
+    display:none;
+}
+.zoomin {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+    
+}
+.zoomincontent {
+    max-height: 100vh;
+    max-width: 100%;
+    animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
+}
+.zoomincontentAlign {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row-reverse;
-}
- */
-
-.sampleImage {
-    min-width:380px;
-    min-height: 380px;
-    background: rgb(117, 117, 117);
-    border-radius: 5px;
-    transition: all 0.2s;
-    cursor: zoom-in;
-}
-.imgfor-sketch {
-    background: url("../../img/showcase/sketch.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.imgfor-lineart {
-    background: url("../../img/showcase/lineart.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.imgfor-headshot {
-    background: url("../../img/showcase/portrait.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.imgfor-fullbody {
-    background: url("../../img/showcase/fullbody.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.zoom {
-    position: relative;
-    min-width: 600px;
-    min-height: 600px;
     cursor: zoom-out;
 }
-
-.optionsbox {
-    margin-top: 1.5em;
-    font-family: "Roboto Condensed", sans-serif;
-    font-style: italic;
+@keyframes zoom {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
-.typesFlex {
-    margin: 1em 0;
+.infobox {
+    margin: 0 1em;
+    max-width: 600px;
+    text-align: end;
+}
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.slotDesc {
+    margin-bottom: 0;
+}
+.sub {
+    color: var(--textsecondaryonlight);
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 0.8rem;
+}
+.purchase {
+    color: var(--text);
+}
+.optionstitle {
+    margin: 1em 0 0.5em 0;
+}
+.typechoice{
     display: flex;
     justify-content: flex-end;
-    flex-wrap: wrap;
 }
 .types {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: 60px;
-    height: 60px;
-    margin: 0.4em; 
-    font-family: 'IBM Plex Sans';
-    font-size: 0.8rem;
-    font-style: italic;
-    color: #787878ff;
-    user-select: none;
-    transition: all 0.2s;
-    border: solid 1px #787878ff;
-    border-radius: 5px;
+    align-items: center;
     padding: 0.2em;
-}
-.types:hover {
-    color: rgb(0, 0, 0);
-    border: solid 1px black;
-    transform: translate(0,-4px);
-}
-.purchaseHover {
-    border-right: solid 10px rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
+    margin: 0 .5em;
+    background: white;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 10px;
+    width: 110px;
+    box-shadow: rgba(0,0,0,.25) 0 3px 6px;
+    transition: all .2s cubic-bezier(.58,.01,.52,1.55);
+    user-select: none;
+} .types:hover {
+    transition: .2s all cubic-bezier(0,.75,.16,1);
+    transform: scale(1.1);
+    border: 1px solid var(--accentsecondary)
 }
 .priceType { 
     font-weight: bolder;
     font-style: normal;
+    font-family: "IBM Plex Mono", sans-serif
 }
 .typeIcon {
-    width: 28px;
-    height: 28px;
+    width: 38px;
+    height: 38px;
+}
+.typeName {
+    text-align: center;
+}
+
+.nsfw {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nsfwopt {
+    transition: all .2s;
+    opacity: 1;
+    transform: translate(0,0);
+    margin-bottom: 2em;
+}
+.hidensfw {
+    opacity: 0;
+    transform: translate(0,10px)
+}
+.nsfwtoggle {
+    background: rgb(197, 197, 197);
+    width: 40px;
+    height: 20px;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    border-radius: 20px;
+    box-shadow: rgba(0,0,0,.25) 0 2px 3px;
+    cursor: pointer;
+    transition: all .2s;
+}
+.nsfwactive {
+    background: var(--textaccent);
+}
+.switchdot {
+    background: rgb(70, 70, 70);
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    transition: all .2s cubic-bezier(.12,.74,.19,1.33);
+}
+.dotactive {
+    transform: translate(20px, 0);
 }
 .typeIcon.sketch {
     background: url('../../img/localIcon/typeIcons/sketch.png');
@@ -229,252 +321,59 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.slotInfo {
-    margin: 0 1em;
-    max-width: 50%;
+.typeIcon.nsfwcomm {
+    background: url('../../img/localIcon/typeIcons/explicit.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.slotTitle {
-    font-family: 'Montserrat';
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.typeIcon.add {
+    background: url('../../img/localIcon/typeIcons/addsfwnsfw.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.slotDesc {
-    font-family: 'Roboto Condensed';
-    margin-bottom: 0;
+.typeIcon.addnsfw {
+    background: url('../../img/localIcon/typeIcons/addnsfwver.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.sub {
-    color: #787878ff;
-    margin-top: 0;
-    margin-bottom: 1em;
-    font-size: 0.8rem;
-}
-.purchase {
-    transition: all 0.2s;
-    user-select: none;
-}
-
-.purchase.onL {
-    color: rgb(0, 0, 0);
-    background: white;
-    font-family: 'IBM Plex Sans';
-    padding: 0.8em;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.192) 0 4px 6px;
-}
-/* .purchase.onR {
-    border: grey solid 1px;
-    color: grey;
-    font-family: 'IBM Plex Sans';
-    padding: 1em;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-.purchaseIcon {
-    margin-left: 0rem;
-    width: 0;
-    opacity: 0;
-    transition: width 0.2s 0.1s, opacity 0.2s, margin 0.2s;
-}
-.purchase:hover {
-    background: rgb(53,53,53);
-    color: white;
-    /* transform: translate(0, 2px); */
-    box-shadow: rgba(0, 0, 0, 0.301) 0 2px 3px;
-}
-.purchase:hover .purchaseIcon {
-    transition: width 0.2s, opacity 0.2s 0.1s, margin 0.2s;
-    margin-left: 0.3rem;
-    width: 24px;
-    opacity: 1;
-}
-.purchase:active {
-    background: rgb(204, 204, 204);
-    color: rgb(255, 255, 255);
-    transform: translate(0, 4px);
-}
-
-.bestSellingBox {
-    overflow: hidden;
-    width: 32px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    background: rgba(0,0,0,0);
-    transition: width 0.2s 0.1s, background 0.2s, margin 0.2s 0.2s, padding 0.2s;
-    height: 30px;
-    border-radius: 10px;
-    user-select: none;
-}
-.bestSellingPrompt {
-    white-space: nowrap;
-    font-size: 0.9rem;
-    font-family: "IBM Plex Sans", sans-serif;
-    color: white;
-}
-.bestSellingIcon {
-    color: rgb(255, 208, 0);
-    margin-right: 0.3rem;
-    font-size: 32px;
-    transition: font-size 0.5s, color 0.2s, transform 0.8s;
-}
-.bestSellingBox:hover {
-    background: rgb(255, 208, 0);
-    width: 120px;
-    transition: width 0.2s, background 0.2s;
-    margin-right: 0.3em;
-    padding-left: 0.3em;
-}
-.bestSellingBox:hover .bestSellingIcon {
-    color: white;
-    font-size: 24px;
-    transform: rotate(-360deg);
-}
-
 .endOfPage {
     display: flex;
     justify-content: center;
 }
 .end {
     width: 90%;
-    margin: 2em 0;
+    margin: 4em 0 2em 0;
 }
-/* .smallDisclaimer {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 1em;
-    text-align: center;
-    flex-direction: column;
-} */
 .footer {
     display: flex;
     justify-content: center;
-    margin-bottom: 2em;
-}
-.socials {
-    display: flex;
-    justify-content: center;
-    
+    margin-top: 2em;
 }
 .flexbox1 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.twitter {
-    position: relative;
-    font-size: 24px;
-    color: #363636ff;
-    margin-right: 0.5em;
-
-}
-.deviantart {
-    position: relative;
-    font-size: 24px;
-    color: #363636ff;
+.socials {
+    display: flex;
+    justify-content: center;
 }
 .copyright {
-    color: #363636ff;
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 0.6rem;
     margin-bottom: 0.2em;
 }
-.tosPageLink {
+.messageend {
     font-family: "IBM Plex Sans", sans-serif;
-    text-decoration: underline !important;
-    font-size: 0.8rem;
+    font-style: italic;
 }
-/* .tagList {
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    margin-bottom: 1em;
+.socicon {
+    margin: 0 0.2em;
+    font-size: 32px;
 }
-.tagList.tlr {
-    justify-content: flex-end;
-}
-.tag {
-    margin: 0 0.5em 0.5em 0;
-    padding: 0.1em 0.3em;
+.tosPageLink {
     font-family: "Montserrat", sans-serif;
-    font-size: 0.8rem;
-    border-radius: 0.2em;
-    font-weight: bolder;
-    background: rgb(48, 48, 48);
-    color: white;
-}
-.tag.tr {
-    margin: 0 0 0.5em 0.5em;
-} */
-
-@media screen and (max-width:700px) {
-    .slotInfo {
-        min-width: 300px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-}
-@media screen and (max-width:380px) {
-    .sampleImage {
-        min-height: 340px;
-        min-width: 340px;
-    }
-}
-
-@media screen and (max-width:540px) {
-    .zoom {
-        min-height: 340px;
-        min-width: 340px;
-    }
-}
-
-@media screen and (max-width:1000px) {
-    .slotAlignLeft, .slotAlignRight {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .slotInfo {
-        width: 290px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .typesFlex {
-        justify-content: center;
-    }
-    .types {
-        justify-content: center;
-    }
-    .types:hover {
-        color: rgb(0, 0, 0);
-    }
-    .purchaseHover {
-        border-right: none;
-        border-bottom: solid 10px rgb(0, 0, 0);
-        color: rgb(0, 0, 0);
-    }
-    .onL, .onR {
-        float: none;
-    }
-    /* .tagList, .tagList.tlr {
-        justify-content: center;
-    }
-    .tag, .tag.tr {
-        margin: 0.5em;
-    } */
 }
