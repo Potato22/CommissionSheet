@@ -12,8 +12,17 @@ body {
   }
 }
 .hello {
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+.hellospacer {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(23, 27, 28, 0) 60%, rgba(23, 27, 28));
 }
 .videocontainer {
     position: absolute;
@@ -86,7 +95,13 @@ ol.notifcationlist {
     padding: 0 1rem;
     margin: 0;
 }
-
+.bgdropper {
+    background: var(--base);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
 .maincontentbox {
     background: white;
     margin-top: 2em;
@@ -100,7 +115,7 @@ ol.notifcationlist {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1em 0;
+    margin: 2em 0;
 }
 .imgbatch {
     display: inline-grid;
@@ -125,7 +140,7 @@ ol.notifcationlist {
 } .gridimg:hover {
     transition: .2s all cubic-bezier(0,.75,.16,1);
     transform:scale(1.1);
-    box-shadow: rgba(0,0,0,.25) 0 6px 12px;
+    box-shadow: rgba(0, 0, 0, 0.178) 0 6px 12px;
 }
 .imgsample{
     width: 100%;
@@ -191,8 +206,23 @@ ol.notifcationlist {
     margin-bottom: 1em;
     font-size: 0.8rem;
 }
+.purchasebutton {
+    display: flex;
+    justify-content: flex-end;
+}
 .purchase {
-    color: var(--text);
+    font-weight: 500;
+    padding: 0.7em 1em;
+    border-radius: 40px;
+    background: var(--accentimportant);
+    border: 2px solid var(--accentimportant);
+    color: var(--textondark);
+    transition: all .14s cubic-bezier(.26,.06,0,1.01);
+}.purchase:hover {
+    background: var(--accentimportantinteract);
+}
+.inactivensfw {
+    transform: translate(0, -130px);
 }
 .optionstitle {
     margin: 1em 0 0.5em 0;
@@ -216,8 +246,9 @@ ol.notifcationlist {
     user-select: none;
 } .types:hover {
     transition: .2s all cubic-bezier(0,.75,.16,1);
-    transform: scale(1.1);
-    border: 1px solid var(--accentsecondary)
+    transform: scale(1.05);
+    border: 1px solid var(--accentsecondary);
+    box-shadow: rgba(0, 0, 0, 0.178) 0 6 12px;
 }
 .priceType { 
     font-weight: bolder;
@@ -236,6 +267,7 @@ ol.notifcationlist {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-bottom: 0.5em;
 }
 .nsfwopt {
     transition: all .2s;
@@ -245,7 +277,7 @@ ol.notifcationlist {
 }
 .hidensfw {
     opacity: 0;
-    transform: translate(0,10px)
+    transform: translate(-50px,0px)
 }
 .nsfwtoggle {
     background: rgb(197, 197, 197);

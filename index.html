@@ -43,6 +43,7 @@
     <script src="assets/script/tos.js"></script>
     <script src="assets/script/zoomtrigger.js"></script>
     <script src="assets/script/togglensfw.js"></script>
+    <script src="assets/script/disablevid.js"></script>
     <script src="assets/script/aossettings.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="assets/css/allRoot/nav.css">
@@ -80,29 +81,32 @@
             <p class="message">Welcome to my commission sheet!</p>
         </div>
     </div>
-
-    <div class="notificationbox" data-aos="fade-up" data-aos-duration="200">
-        <span class="material-icons-round notificationicon">notifications</span>
-            <div class="notificationcontent">
-                <span class="notificationtitle">Changelog</span>
-
-                <ol class="notifcationlist">
-                    <li class="changelist">Website design revamped</li>
-                    <li class="changelist">Complete change in genre. (vector to digital art)</li>
-                    <li class="changelist">Updated TOS <a href="tos.html"><b><u>Check here</u></b></a></li>
-                    <li class="changelist">Added toggle options in the Form pages</li>
-                    <li class="changelist">Price change</li>
-                    <li class="changelist">NSFW is available</li>
-                </ol>
-
-                <!-- <p class="notificationtext">
-                    this will appear when the notification only consists of plain text.
-                </p> -->
-
-            </div>
-        </div>
+    <div class="hellospacer">
+        
     </div>
 
+    <div class="bgdropper"></div>
+    <div class="notificationbox" data-aos="fade-up" data-aos-duration="200">
+            <span class="material-icons-round notificationicon">notifications</span>
+                <div class="notificationcontent">
+                    <span class="notificationtitle">Changelog</span>
+    
+                    <ol class="notifcationlist">
+                        <li class="changelist">Website design revamped</li>
+                        <li class="changelist">Complete change in genre. (vector to digital art)</li>
+                        <li class="changelist">Updated TOS <a href="tos.html"><b><u>Check here</u></b></a></li>
+                        <li class="changelist">Added toggle options in the Form pages</li>
+                        <li class="changelist">Price change</li>
+                        <li class="changelist">NSFW is available</li>
+                    </ol>
+    
+                    <!-- <p class="notificationtext">
+                        this will appear when the notification only consists of plain text.
+                    </p> -->
+    
+                </div>
+            </div>
+        </div>
     <div class="maincontentbox">
         <div class="col" data-aos="fade-up" data-aos-duration="200">
             <div class="imgbatch">
@@ -141,12 +145,6 @@
                         <span class="priceType">$25.00+</span>
                     </div>
                 </div>
-                <a class="purchasebutton" href="" target="_blank">
-                    <div class="purchase">
-                        <div class="icon"></div>
-                        <span>Purchase</span>
-                    </div>
-                </a>
                 <div class="nsfw">
                     <div class="nsfwtoggle">
                         <div class="switchdot"></div>
@@ -165,6 +163,12 @@
                         <span class="priceType">$5.00+</span>
                     </div>
                 </div>
+                <a class="purchasebutton" href="" target="_blank">
+                    <div class="purchase inactivensfw">
+                        <div class="icon"></div>
+                        <span>Buy</span>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="col" data-aos="fade-up" data-aos-duration="200">
@@ -251,7 +255,12 @@
                         <span class="priceType">$5.00+</span>
                     </div>
                 </div>
-
+                <a class="purchasebutton" href="" target="_blank">
+                    <div class="purchase inactivensfw">
+                        <div class="icon"></div>
+                        <span>Buy</span>
+                    </div>
+                </a>
             </div>
             </div>
             <div class="endOfPage">
