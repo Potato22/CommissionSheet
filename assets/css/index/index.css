@@ -101,10 +101,10 @@ ol.notifcationlist {
     margin: 0;
 }
 .bgdropper {
+    position: absolute !important;
     background: var(--base);
     width: 100%;
     height: 100vh;
-    position: absolute;
     z-index: -1;
 }
 .maincontentbox {
