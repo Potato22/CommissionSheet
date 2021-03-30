@@ -75,7 +75,7 @@ body {
     padding: 1em 2em;
     border: solid 2px var(--accentsecondary);
     border-radius: 20px;
-    margin: 1em 3em;
+    margin: 0em 3em 1em 3em;
     display: flex;
     font-family: "IBM Plex Sans", sans-serif;
 } .redmsg {
@@ -101,11 +101,9 @@ ol.notifcationlist {
     margin: 0;
 }
 .bgdropper {
-    position: absolute !important;
+    position: relative;
     background: var(--base);
     width: 100%;
-    height: 100vh;
-    z-index: -1;
 }
 .maincontentbox {
     background: white;
@@ -263,9 +261,9 @@ ol.notifcationlist {
     user-select: none;
 } .types:hover {
     transition: .2s all cubic-bezier(0,.75,.16,1);
-    transform: scale(1.05);
+    transform: scale(.96);
     border: 1px solid var(--accentsecondary);
-    box-shadow: rgba(0, 0, 0, 0.178) 0 6 12px;
+    box-shadow: rgba(0, 0, 0, 0.178) 0 1px 4px;
 }
 .priceType { 
     font-weight: bolder;
