@@ -200,6 +200,9 @@ body {
 } .collist:hover .coltitle {
     color: var(--textaccent);
 }
+.list {
+    list-style: disc;
+}
 .tosdone {
     background: var(--accentimportant);
     color: var(--textondark);
