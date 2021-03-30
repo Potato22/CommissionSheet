@@ -380,6 +380,25 @@ ol.notifcationlist {
     background-position: center;
     background-repeat: no-repeat;
 }
+@media screen and (max-width: 950px){
+    .col {
+        flex-direction: column;
+    }
+    .infobox {
+        align-items: center;
+        text-align: center;
+    }
+    .desc.sub {
+        text-align: center;
+    }
+    .typechoice {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .types {
+        margin: 0.5em;
+    }
+}
 .endOfPage {
     display: flex;
     justify-content: center;
