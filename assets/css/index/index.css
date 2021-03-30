@@ -75,21 +75,26 @@ body {
     padding: 1em 2em;
     border: solid 2px var(--accentsecondary);
     border-radius: 20px;
-    margin: 0 3em;
+    margin: 1em 3em;
     display: flex;
     font-family: "IBM Plex Sans", sans-serif;
-} 
-
+} .redmsg {
+    background: var(--redcode);
+    border-color: var(--redcodeborder);
+}
 .notificationicon {
     color: var(--textaccent);
     font-size: 2rem;
-    width: 48px;
+    min-width: 48px;
 }
 .notificationtitle {
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--textaccent);
     transform: translate(0, 100px);
+}
+.notificationtitle.redmsg,.notificationicon.redmsg {
+    color: var(--redcodetitle);
 }
 ol.notifcationlist {
     padding: 0 1rem;
@@ -113,7 +118,7 @@ ol.notifcationlist {
     font-family: "Montserrat", sans-serif;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 2em 0;
 }
@@ -154,7 +159,7 @@ ol.notifcationlist {
     height: 100vh;
     width: 100%;
     z-index: 1;
-    backdrop-filter: grayscale(100);
+    backdrop-filter: grayscale(1);
     display:none;
 }
 .zoomin {
@@ -192,6 +197,9 @@ ol.notifcationlist {
     margin: 0 1em;
     max-width: 600px;
     text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 .title {
     font-size: 2rem;
@@ -206,10 +214,11 @@ ol.notifcationlist {
     margin-bottom: 1em;
     font-size: 0.8rem;
 }
-.purchasebutton {
-    display: flex;
-    justify-content: flex-end;
+.typedetail {
+    margin-top: 0.5em;
+    font-style: italic;
 }
+
 .purchase {
     font-weight: 500;
     padding: 0.7em 1em;
@@ -401,6 +410,7 @@ ol.notifcationlist {
 .messageend {
     font-family: "IBM Plex Sans", sans-serif;
     font-style: italic;
+    text-align: center;
 }
 .socicon {
     margin: 0 0.2em;

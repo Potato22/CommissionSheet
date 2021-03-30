@@ -29,8 +29,10 @@ $(function() {
     $( ".tosBound" ).click(function(e) {
         e.preventDefault();
         $('.tosBar').addClass( "ohno" );
+        $('.tosBound').addClass("yikes");
         setTimeout(function() {
             $('.tosBar').removeClass( "ohno" );
+            $('.tosBound').removeClass("yikes");
         }, 400);
     });
 });

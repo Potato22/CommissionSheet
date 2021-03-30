@@ -7,18 +7,20 @@ body {
 }
 :root {
     --base: rgb(23, 27, 28);
+    --basesecondary: rgb(61, 61, 61);
     --textondark: rgb(255, 255, 255);
     --textsecondaryondark: rgba(202, 202, 202, .8);
     --textonlight: rgb(19, 19, 19);
     --textsecondaryonlight: rgb(40,40,40);
     --accent: rgb(125, 201, 252);
     --accentsecondary: rgb(191, 228, 255);
-    --accentfill: rgb(241, 249, 255);
+    --accentfill: rgb(250, 253, 255);
     --textaccent: rgb(94, 186, 255);
     --accentimportant: rgb(52, 133, 255);
     --accentimportantinteract: rgb(68, 143, 255);
     --redcode: rgb(255, 225, 225);
     --redcodeborder: rgb(255, 142, 142);
+    --redcodetitle: rgb(250, 73, 73);
 }
 a:link, a:visited {
     text-decoration: none !important;
@@ -30,19 +32,21 @@ a:link, a:visited {
 
 .tosStick {
     position: sticky;
-    top:60px;
+    top: 0px;
     z-index: 90;
 }
 .tosBound {
     position: absolute;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 .tosNotice {
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 .tosBar {
     padding: 0.5em 1em;
@@ -58,22 +62,29 @@ a:link, a:visited {
     z-index: 2;
     flex-wrap: wrap;
     user-select: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    border: 2px solid rgba(0,0,0,0);
 }
 .tosButton {
-    border: solid 1px black;
+    border: solid 1px var(--basesecondary);
     padding: 0.5rem;
     transition: all 0.2s cubic-bezier(.49,.07,.16,1);
     margin-left: 1em;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 .tosButton:hover {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background: var(--accentimportant);
+    color: var(--textondark);
+    border: solid 1px var(--accentimportant);
 }
 .tosIcon {
-    font-size: 2rem;
+    width: 32px;
+    height: 32px;
+    background: url(../../img/localIcon/typeIcons/exclamation.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;;
     margin-right: 0.5em;
 }
 .dismiss {
@@ -84,6 +95,8 @@ a:link, a:visited {
     display: flex;
     align-items: center;
     cursor: pointer;
+}.dismiss:hover {
+    color: var(--accentimportant)
 }
 
 .ohno {
@@ -100,7 +113,8 @@ a:link, a:visited {
     }
     20% {
         transform: translate(15px, 0);
-        background: rgb(255, 141, 141);
+        background: var(--redcode);
+        border: 2px solid var(--redcodeborder);
     }
     40% {
         transform: translate(-10px, 0);
