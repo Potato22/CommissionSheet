@@ -37,7 +37,7 @@ body {
     width: 100%;
 } @media screen and (max-width: 740px) {
     .banner {
-        display: none;
+        display: none !important;
     }
 }
 .hero {
@@ -125,16 +125,18 @@ ol.notifcationlist {
 .imgbatch {
     display: inline-grid;
     grid-template-columns: auto auto;
-    width: 350px;
-    height: 350px;
+    --imgbatchsize: 450px;
+    width: var(--imgbatchsize);
+    height: var(--imgbatchsize);
     justify-content: center;
     align-content: center;
 }
 .gridimg {
     margin: 0.5em;
     background: rgb(231, 231, 231);
-    width: 145px;
-    height: 145px;
+    --gridimgsize: 225px;
+    width: var(--gridimgsize);
+    height: var(--gridimgsize);
     overflow: hidden;
     border-radius: 15px;
     display: flex;
@@ -146,6 +148,12 @@ ol.notifcationlist {
     transition: .2s all cubic-bezier(0,.75,.16,1);
     transform:scale(1.1);
     box-shadow: rgba(0, 0, 0, 0.178) 0 6px 12px;
+}
+@media screen and (max-width: 1360px) {
+    .imgbatch, .gridimg {
+        --imgbatchsize: 320px;
+        --gridimgsize: 140px;
+    }
 }
 .imgsample{
     width: 100%;
@@ -363,7 +371,7 @@ ol.notifcationlist {
     background-repeat: no-repeat;
 }
 .typeIcon.nsfwcomm {
-    background: url('../../img/localIcon/typeIcons/explicit.png');
+    background: url('../../img/localIcon/typeIcons/18.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

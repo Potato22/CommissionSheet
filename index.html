@@ -38,20 +38,25 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/14f5f92fc3.js" crossorigin="anonymous"></script>
     <script src="assets/script/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/14f5f92fc3.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    $(document).ready(function(){
+        AOS.init({duration: 1000});
+    });
+    </script>
     <script src="assets/script/tos.js"></script>
     <script src="assets/script/zoomtrigger.js"></script>
     <script src="assets/script/togglensfw.js"></script>
     <script src="assets/script/disablevid.js"></script>
-    <script src="assets/script/aos.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="assets/css/index/index.css">
     <link rel="stylesheet" href="assets/css/allRoot/rootSettings.css">
 </head>
 
 <body>
-
+    
     <div class="tosStick">
         <div class="tosBound">
             <div class="tosBar">
@@ -83,14 +88,14 @@
     <div class="hellospacer">
         
     </div>
-
+    
     <div class="bgdropper"></div>
     <!--NORMAL-->
-        <div class="notificationbox" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">
-            <span class="material-icons-round notificationicon">notifications</span>
-                <div class="notificationcontent">
+    <div class="notificationbox" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">
+        <span class="material-icons-round notificationicon">notifications</span>
+        <div class="notificationcontent">
                     <span class="notificationtitle">Changelog</span>
-    
+                    
                     <ol class="notifcationlist">
                         <li class="changelist">Website design revamped</li>
                         <li class="changelist">Complete change in genre. (vector to digital art)</li>
@@ -103,7 +108,7 @@
             </div>
         </div>
         <!--REDMSG-->
-        <div class="notificationbox redmsg" data-aos="fade-up" data-aos-duration="00" data-aos-delay="100">
+        <div class="notificationbox redmsg" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">
             <span class="material-icons-round notificationicon redmsg">warning</span>
                 <div class="notificationcontent">
                     <span class="notificationtitle redmsg">Oh no!</span>
@@ -112,11 +117,11 @@
                         Seems like the website is still under some finishing, things may not work as intended or does not work at all. I assume you're here just to take a peek at what have changed so, you're welcome!
                         <br>Oh and commissions are coming soon c:
                     </p>
-    
+                    
                 </div>
             </div>
         </div>
-    <div class="maincontentbox">
+        <div class="maincontentbox">
         <div class="col" data-aos="fade-up" data-aos-duration="200">
             <div class="imgbatch">
                 <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/portrait1.png" alt="" draggable="false"></div>
@@ -268,7 +273,7 @@
                     </div>
                 </div>
                 <a class="purchasebutton" href="https://forms.gle/G4X9ugYQu8pLYy5cA" target="_blank">
-                    <div class="purchase inactivensfw">
+                    <div class="purchase type2 inactivensfw">
                         <div class="icon"></div>
                         <span>Buy</span>
                     </div>
@@ -292,9 +297,6 @@
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    <script src="assets/script/aos.js"></script>
 </body>
 </html>

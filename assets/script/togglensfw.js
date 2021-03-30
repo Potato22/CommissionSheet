@@ -4,5 +4,6 @@ $(function(){
         $(".switchdot").toggleClass("dotactive");
         $(".nsfwopt").toggleClass("hidensfw");
         $(".purchase").toggleClass("inactivensfw");
+        $(".type2").toggleClass("alittlebitmore");
     })
 })
