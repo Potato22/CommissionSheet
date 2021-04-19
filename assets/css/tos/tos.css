@@ -79,12 +79,15 @@ body {
         display: flex;
         flex-direction: column;
     }
+    .stepblocks.blanks {
+        display: none;
+    }
 }
 /* .stepxscroller::-webkit-scrollbar {
 
 } */
 .fader {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0)95%, rgba(255, 255, 255, 1));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0)90%, rgba(255, 255, 255, 1));
     z-index: 1;
     position: absolute;
     width: 100%;
@@ -111,6 +114,10 @@ body {
     border: 4px solid var(--accentsecondary);
     transition: .2s all cubic-bezier(0,.75,.16,1);
     box-shadow: rgba(0,0,0,.25) 0 6px 24px;
+} .stepblocks.blanks {
+    opacity: 0;
+    user-select: none;
+    width: 30vh
 }
 .steptitle,.msg{
     width: 100%;
