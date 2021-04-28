@@ -1,6 +1,16 @@
 body {
     background: var(--base);
-    animation: welcome 0.8s forwards;
+    -webkit-animation: welcome 0.8s forwards;
+            animation: welcome 0.8s forwards;
+}
+@-webkit-keyframes welcome {
+  from {
+        opacity: 0;
+        background: rgb(0, 0, 0);
+  }
+  to {
+        opacity: 1;
+  }
 }
 @keyframes welcome {
   from {
@@ -156,7 +166,8 @@ ol.notifcationlist {
 .imgsample{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     cursor: pointer;
 }
 .zoomindimmer {
@@ -165,7 +176,8 @@ ol.notifcationlist {
     height: 100vh;
     width: 100%;
     z-index: 1;
-    backdrop-filter: grayscale(1);
+    -webkit-backdrop-filter: grayscale(1);
+            backdrop-filter: grayscale(1);
     display:none;
 }
 .zoomin {
@@ -179,7 +191,8 @@ ol.notifcationlist {
 .zoomincontent {
     max-height: 100vh;
     max-width: 100%;
-    animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
+    -webkit-animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
+            animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
 }
 .zoomincontentAlign {
     width: 100%;
@@ -188,6 +201,16 @@ ol.notifcationlist {
     justify-content: center;
     align-items: center;
     cursor: zoom-out;
+}
+@-webkit-keyframes zoom {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 @keyframes zoom {
     from {
@@ -258,7 +281,10 @@ ol.notifcationlist {
     width: 110px;
     box-shadow: rgba(0,0,0,.25) 0 3px 6px;
     transition: all .2s cubic-bezier(.58,.01,.52,1.55);
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 } .types:hover {
     transition: .2s all cubic-bezier(0,.75,.16,1);
     transform: scale(.96);

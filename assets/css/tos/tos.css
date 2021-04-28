@@ -1,5 +1,15 @@
 body {
-    animation: welcome 0.2s forwards;
+    -webkit-animation: welcome 0.2s forwards;
+            animation: welcome 0.2s forwards;
+}
+@-webkit-keyframes welcome {
+  from {
+      transform: scale(1.05);
+        opacity: 0;
+  }
+  to {
+        opacity: 1;
+  }
 }
 @keyframes welcome {
   from {
@@ -116,7 +126,10 @@ body {
     box-shadow: rgba(0,0,0,.25) 0 6px 24px;
 } .stepblocks.blanks {
     opacity: 0;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     width: 30vh
 }
 .steptitle,.msg{

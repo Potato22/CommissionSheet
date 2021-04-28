@@ -31,6 +31,7 @@ a:link, a:visited {
 }
 
 .tosStick {
+    position: -webkit-sticky;
     position: sticky;
     top: 0px;
     z-index: 90;
@@ -51,7 +52,8 @@ a:link, a:visited {
 .tosBar {
     padding: 0.5em 1em;
     background: rgba(255, 255, 255, 0.863);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-around;
@@ -61,7 +63,10 @@ a:link, a:visited {
     transition: 0.2s all;
     z-index: 2;
     flex-wrap: wrap;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     border-radius: 30px;
     border: 2px solid rgba(0,0,0,0);
 }
@@ -100,12 +105,34 @@ a:link, a:visited {
 }
 
 .ohno {
-    animation: 0.4s shake ease-in-out forwards;
+    -webkit-animation: 0.4s shake ease-in-out forwards;
+            animation: 0.4s shake ease-in-out forwards;
 }
 
 .accept {
     background: rgba(255, 255, 255, 0.863) !important;
-    animation: none !important;
+    -webkit-animation: none !important;
+            animation: none !important;
+}
+@-webkit-keyframes shake {
+    0% {
+        transform: translate(0px, 0);
+    }
+    20% {
+        transform: translate(15px, 0);
+        background: var(--redcode);
+        border: 2px solid var(--redcodeborder);
+    }
+    40% {
+        transform: translate(-10px, 0);
+    }
+    80% {
+        transform: translate(5px, 0);
+    }
+    100% {
+        transform: translate(0px, 0);
+        background: rgba(255, 255, 255, 0.863);
+    }
 }
 @keyframes shake {
     0% {
