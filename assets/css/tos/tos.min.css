@@ -277,10 +277,80 @@ body {
     list-style: disc
 }
 .stack {
-    padding: 1.4rem;
+    padding: 3rem;
 }
 .diagram {
     max-width: 100%;
+    max-height: 60rem;
+}
+.gridimg {
+    margin: 0.5em 3rem;
+    --gridimgsize: clamp(200px, 350px, 500px);
+    width: var(--gridimgsize);
+    height: var(--gridimgsize);
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: .2s all cubic-bezier(.58,.01,.52,1.55);
+    box-shadow: rgba(0,0,0,.25) 0 3px 6px;
+} .gridimg:hover {
+    transition: .2s all cubic-bezier(0,.75,.16,1);
+    transform:scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.178) 0 6px 12px;
+}
+.zoomindimmer {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.856);
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    -webkit-backdrop-filter: grayscale(1);
+            backdrop-filter: grayscale(1);
+    display:none;
+}
+.zoomin {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+    
+}
+.zoomincontent {
+    max-height: 100vh;
+    max-width: 100%;
+    -webkit-animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
+            animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
+}
+.zoomincontentAlign {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+@-webkit-keyframes zoom {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes zoom {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 .proceed {
     display: grid;
