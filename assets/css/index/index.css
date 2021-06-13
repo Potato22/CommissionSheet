@@ -182,25 +182,24 @@ ol.notifcationlist {
 }
 .zoomin {
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 1;
     display: none;
     
 }
-.zoomincontent {
-    max-height: 100vh;
-    max-width: 100%;
-    -webkit-animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
-            animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
-}
 .zoomincontentAlign {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: zoom-out;
+}
+.zoomincontent {
+    height: 100vh;
+    -webkit-animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
+            animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
 }
 @-webkit-keyframes zoom {
     from {
