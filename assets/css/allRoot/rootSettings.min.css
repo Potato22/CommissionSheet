@@ -1,1 +1,212 @@
-body{margin:0;padding:0;border:0;outline:0;max-width:100%}:root{--base:rgb(23, 27, 28);--basesecondary:rgb(61, 61, 61);--textondark:rgb(255, 255, 255);--textsecondaryondark:rgba(202, 202, 202, .8);--textonlight:rgb(19, 19, 19);--textsecondaryonlight:rgb(40, 40, 40);--accent:rgb(125, 201, 252);--accentsecondary:rgb(191, 228, 255);--accentfill:rgb(250, 253, 255);--textaccent:rgb(94, 186, 255);--accentimportant:rgb(52, 133, 255);--accentimportantinteract:rgb(68, 143, 255);--redcode:rgb(255, 225, 225);--redcodeborder:rgb(255, 142, 142);--redcodetitle:rgb(250, 73, 73);--display:Syne;--content:Inter;--contentsecondary:JetBrains Mono}a:link,a:visited{text-decoration:none!important;color:initial}.material-icons-outlined{vertical-align:middle}.tosStick{position:-webkit-sticky;position:sticky;top:0;z-index:90}.tosBound{position:absolute;width:100%;height:100vh;display:flex;justify-content:center;align-items:flex-end}.tosNotice{text-align:center;display:flex;align-items:center}.tosBar{padding:.5em 1em;background:rgba(255,255,255,.863);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);margin-bottom:1rem;display:flex;justify-content:space-around;align-items:center;font-family:var(--content),sans-serif;box-shadow:rgba(0,0,0,.25) 0 2px 6px;transition:.2s all;z-index:2;flex-wrap:wrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border-radius:30px;border:2px solid transparent}.tosButton{border:solid 1px var(--basesecondary);padding:.5rem;transition:all .2s cubic-bezier(.49,.07,.16,1);margin-left:1em;cursor:pointer;border-radius:30px}.tosButton:hover{background:var(--accentimportant);color:var(--textondark);border:solid 1px var(--accentimportant)}.tosIcon{width:32px;height:32px;background:url(../../img/localIcon/typeIcons/exclamation.png);background-repeat:no-repeat;background-position:center;background-size:contain;margin-right:.5em}.dismiss{font-size:.75rem;margin-left:1em;font-weight:700;height:100%;display:flex;align-items:center;cursor:pointer}.dismiss:hover{color:var(--accentimportant)}.ohno{-webkit-animation:.4s shake ease-in-out forwards;animation:.4s shake ease-in-out forwards}.accept{background:rgba(255,255,255,.863)!important;-webkit-animation:none!important;animation:none!important}@-webkit-keyframes shake{0%{transform:translate(0,0)}20%{transform:translate(15px,0);background:var(--redcode);border:2px solid var(--redcodeborder)}40%{transform:translate(-10px,0)}80%{transform:translate(5px,0)}100%{transform:translate(0,0);background:rgba(255,255,255,.863)}}@keyframes shake{0%{transform:translate(0,0)}20%{transform:translate(15px,0);background:var(--redcode);border:2px solid var(--redcodeborder)}40%{transform:translate(-10px,0)}80%{transform:translate(5px,0)}100%{transform:translate(0,0);background:rgba(255,255,255,.863)}}.tosButtonWrap{position:relative;display:flex;height:40px}@media screen and (max-width:800px){.tosButtonWrap{margin-top:.5em}}
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    max-width: 100%
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../../fontlib/Inter.var.woff2) format("truetype-variations");
+    font-weight: 1 1000
+}
+
+@font-face {
+    font-family: Syne;
+    src: url(../../fontlib/Syne[wght].ttf) format("truetype-variations");
+    font-weight: 1 1000
+}
+
+@font-face {
+    font-family: JetBrainsMono;
+    src: url(../../fontlib/JetBrainsMono[wght].ttf) format("truetype-variations");
+    font-weight: 1 1000
+}
+
+:root {
+    --base: rgb(23, 27, 28);
+    --basesecondary: rgb(61, 61, 61);
+    --textondark: rgb(255, 255, 255);
+    --textsecondaryondark: rgba(202, 202, 202, .8);
+    --textonlight: rgb(19, 19, 19);
+    --textsecondaryonlight: rgb(40, 40, 40);
+    --accent: rgb(125, 201, 252);
+    --accentsecondary: rgb(191, 228, 255);
+    --accentfill: rgb(250, 253, 255);
+    --textaccent: rgb(94, 186, 255);
+    --accentimportant: rgb(52, 133, 255);
+    --accentimportantinteract: rgb(68, 143, 255);
+    --redcode: rgb(255, 225, 225);
+    --redcodeborder: rgb(255, 142, 142);
+    --redcodetitle: rgb(250, 73, 73);
+    --display: Syne;
+    --content: Inter;
+    --contentsecondary: JetBrains Mono
+}
+
+a:link,
+a:visited {
+    text-decoration: none !important;
+    color: initial
+}
+
+.material-icons-outlined {
+    vertical-align: middle
+}
+
+.tosStick {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 90
+}
+
+.tosBound {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end
+}
+
+.tosNotice {
+    text-align: center;
+    display: flex;
+    align-items: center
+}
+
+.tosBar {
+    padding: .5em 1em;
+    background: rgba(255, 255, 255, .863);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--content), sans-serif;
+    box-shadow: rgba(0, 0, 0, .25) 0 2px 6px;
+    transition: .2s all;
+    z-index: 2;
+    flex-wrap: wrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 30px;
+    border: 2px solid transparent
+}
+
+.tosButton {
+    border: solid 1px var(--basesecondary);
+    padding: .5rem;
+    transition: all .2s cubic-bezier(.49, .07, .16, 1);
+    margin-left: 1em;
+    cursor: pointer;
+    border-radius: 30px
+}
+
+.tosButton:hover {
+    background: var(--accentimportant);
+    color: var(--textondark);
+    border: solid 1px var(--accentimportant)
+}
+
+.tosIcon {
+    width: 32px;
+    height: 32px;
+    background: url(../../img/localIcon/typeIcons/exclamation.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: .5em
+}
+
+.dismiss {
+    font-size: .75rem;
+    margin-left: 1em;
+    font-weight: 700;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer
+}
+
+.dismiss:hover {
+    color: var(--accentimportant)
+}
+
+.ohno {
+    -webkit-animation: .4s shake ease-in-out forwards;
+    animation: .4s shake ease-in-out forwards
+}
+
+.accept {
+    background: rgba(255, 255, 255, .863) !important;
+    -webkit-animation: none !important;
+    animation: none !important
+}
+
+@-webkit-keyframes shake {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    20% {
+        transform: translate(15px, 0);
+        background: var(--redcode);
+        border: 2px solid var(--redcodeborder)
+    }
+
+    40% {
+        transform: translate(-10px, 0)
+    }
+
+    80% {
+        transform: translate(5px, 0)
+    }
+
+    100% {
+        transform: translate(0, 0);
+        background: rgba(255, 255, 255, .863)
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    20% {
+        transform: translate(15px, 0);
+        background: var(--redcode);
+        border: 2px solid var(--redcodeborder)
+    }
+
+    40% {
+        transform: translate(-10px, 0)
+    }
+
+    80% {
+        transform: translate(5px, 0)
+    }
+
+    100% {
+        transform: translate(0, 0);
+        background: rgba(255, 255, 255, .863)
+    }
+}
+
+.tosButtonWrap {
+    position: relative;
+    display: flex;
+    height: 40px
+}
+
+@media screen and (max-width:800px) {
+    .tosButtonWrap {
+        margin-top: .5em
+    }
+}

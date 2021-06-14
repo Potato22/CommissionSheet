@@ -74,8 +74,8 @@ body {
 .logo {
     width: 250px;
     height: 220px;
-    background: url(../../img/localIcon/Potto.svg);
-    background-position: center;
+    background: url(../../img/localIcon/Pottoceramic_web.svg);
+    background-position: left;
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 1em
