@@ -197,7 +197,8 @@ ol.notifcationlist {
     cursor: zoom-out;
 }
 .zoomincontent {
-    height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
     -webkit-animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
             animation: zoom .5s forwards cubic-bezier(0,.75,.16,1);
 }
