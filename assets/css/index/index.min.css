@@ -193,7 +193,7 @@
   border-radius: 20px;
   margin: 0 3em 1em 3em;
   display: flex;
-  font-family: var(--content), sans-serif;
+  font-family: var(--display), sans-serif;
   font-size: 0.8em;
 }
 
@@ -250,7 +250,7 @@ ol.notifcationlist {
 
 .col {
   color: var(--textD);
-  font-family: var(--content), sans-serif;
+  font-family: var(--display), sans-serif;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -370,7 +370,7 @@ ol.notifcationlist {
 .title {
   font-size: 2rem;
   font-weight: 700;
-  font-family: var(--content), sans-serif;
+  font-family: var(--display), sans-serif;
   margin: 0 0 0.5rem 0;
   display: flex;
   align-items: center;
@@ -526,7 +526,7 @@ ol.notifcationlist {
 .priceType {
   font-weight: bolder;
   font-style: normal;
-  font-family: var(--content), sans-serif;
+  font-family: var(--display), sans-serif;
 }
 
 .typeIcon {
@@ -736,7 +736,7 @@ div[disable-nsfw=true] {
 }
 
 .tosPageLink {
-  font-family: var(--content), sans-serif;
+  font-family: var(--display), sans-serif;
   color: var(--textD) !important;
 }
 .tosPageLink:hover {

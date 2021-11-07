@@ -21,22 +21,32 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
     <script src="assets/script/jquery.min.js"></script>
     <script src="assets/script/tos.js"></script>
-    <script src="assets/script/aos.js"></script>
     <script src="assets/script/zoomtrigger.js"></script>
+    <script src="assets/script/themetoggle.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/allRoot/rootSettings.min.css">
     <link rel="stylesheet" href="assets/css/tos/tos.min.css">
 </head>
 
 <body>
-    <!--IMGZOOMIN-->
+    <!-- theme toggle -->
+    <div class="themetogglecont" style="display:none">
+        <div class="togglecont">
+            <div class="splash"></div>
+            <label class="checkboxtrig">
+                <input type="checkbox" id="ttogle" />
+                <div class="material-icons-outlined icon">light_mode</div>
+        </div>
+    </div>
+    <!-- theme toggle -->
+    <!-- IMGZOOMIN -->
     <div class="zoomindimmer"></div>
     <div class="zoomin">
         <div class="zoomincontentAlign">
             <img class="zoomincontent" src="">
         </div>
     </div>
-    <div class="bgheader"></div>
+    <!-- IMGZOOMIN -->
     <div class="main">
         <div class="minihero">
             <div class="logo"></div>
@@ -44,72 +54,68 @@
         </div>
         <div class="chapters">Common procedure</div>
         <div class="stepsbox">
-            <div class="stepxscroller">
-                <div class="stepblocks">
-                    <div class="icon checkmark"></div>
-                    <div class="stepcontent">
-                        <div class="steptitle">Confirmation</div>
-                        <p class="steptext">Confirmation of your request</p>
-                    </div>
+            <div class="stepblocks">
+                <div class="icon checkmark"></div>
+                <div class="stepcontent">
+                    <div class="steptitle">1. Confirmation</div>
+                    <p class="steptext">Confirmation of your request</p>
                 </div>
-                <div class="stepblocks">
-                    <div class="icon magnifyingglass"></div>
-                    <div class="stepcontent">
-                        <div class="steptitle">Assets review</div>
-                        <p class="steptext">I will <b>review</b> your character design, your idea for the request and,
-                            accessories (if any, regarding your idea for the request) and <b>see if I can work with
-                                it</b></p>
-                    </div>
+            </div>
+            <div class="stepblocks">
+                <div class="icon magnifyingglass"></div>
+                <div class="stepcontent">
+                    <div class="steptitle">2. Assets review</div>
+                    <p class="steptext">I will <b>review</b> your character design, your idea for the request and,
+                        accessories (if any, regarding your idea for the request) and <b>see if I can work with
+                            it</b></p>
                 </div>
-                <!-- <div class="stepblocks">
+            </div>
+            <!-- <div class="stepblocks">
                     <div class="icon chat"></div>
                     <div class="stepcontent">
                         <div class="steptitle">Let out your ideas</div>
                         <p class="steptext">Let me know what you want me to draw</p>
                     </div>
                 </div> -->
-                <div class="stepblocks">
-                    <div class="icon pencil"></div>
-                    <div class="stepcontent">
-                        <div class="steptitle">Approximation</div>
-                        <p class="steptext">I will approximate your idea in a quick rough sketch wireframes and see if
-                            you like it</p>
-                    </div>
+            <div class="stepblocks">
+                <div class="icon pencil"></div>
+                <div class="stepcontent">
+                    <div class="steptitle">3. sketchie</div>
+                    <p class="steptext">I will approximate your idea in a quick rough sketch wireframes and see if
+                        you like it</p>
                 </div>
-                <div class="stepblocks">
-                    <div class="icon tag"></div>
-                    <div class="stepcontent">
-                        <div class="steptitle">Payment</div>
-                        <p class="steptext">If settled, I will send you the invoice and you can start paying me over
-                            <b>Paypal</b></p>
-                    </div>
+            </div>
+            <div class="stepblocks">
+                <div class="icon tag"></div>
+                <div class="stepcontent">
+                    <div class="steptitle">4. Payment</div>
+                    <p class="steptext">If settled, I will send you the invoice and you can start paying me over
+                        <b>Paypal</b></p>
                 </div>
-                <div class="stepblocks">
-                    <div class="icon box"></div>
-                    <div class="stepcontent">
-                        <div class="steptitle">Packaging</div>
-                        <p class="steptext">Once done, I will notify you and pack the finished commission into a zip
-                            file. <b>The file includes the project file (PSD) and the raw finished image</b></p>
-                    </div>
+            </div>
+            <div class="stepblocks">
+                <div class="icon box"></div>
+                <div class="stepcontent">
+                    <div class="steptitle">5. Packaging</div>
+                    <p class="steptext">Once done, I will notify you and pack the finished commission into a zip
+                        file. <b>The file includes the project file (Clip or PSD) and the raw export</b></p>
                 </div>
-                <div class="stepblocks last">
-                    <div class="icon heart"></div>
-                    <div class="stepcontent">
-                        <div class="steptitle">Thank you</div>
-                        <p class="steptext">Thank you for commisioning me!</p>
-                    </div>
+            </div>
+            <div class="stepblocks last">
+                <div class="icon heart"></div>
+                <div class="stepcontent">
+                    <div class="steptitle">Thank you</div>
+                    <p class="steptext">That's it! thank you for commisioning me!</p>
                 </div>
-                <div class="stepblocks last blanks">
+            </div>
+            <!-- <div class="stepblocks last blanks">
                     <div class="icon "></div>
                     <div class="stepcontent">
                         <div class="steptitle">-</div>
                         <p class="steptext">shut up you nerd</p>
                     </div>
                 </div>
-                <div class="fader r"></div>
-            </div>
-            <div class="msg cond">I really wish scrollbars don't have to look so ugly.</div>
-            <div class="msg cond"><b><i>SHIFT + Scroll</b></i></div>
+            </div> -->
         </div>
         <div class="chapters onlight">Rules</div>
         <div class="listbox">
@@ -176,7 +182,8 @@
                             <li class="item">Characters that has no permission for you to use within your request.
                                 <b>Make Sure You Have Full Permission Of The Character Owner To Be Involved In Your
                                     Request.</b></li>
-                            <li class="item">for anyone who craves for free art (Please for god's sake don't do this.)</li>
+                            <li class="item">for anyone who craves for free art (Please for god's sake don't do this.)
+                            </li>
                         </ol>
                     </div>
                 </div>
@@ -238,9 +245,13 @@
             </div>
         </div>
         <div class="chapters onlight">Price Stacking (image)</div>
-        <div class="gridimg">
-            <img src="assets/img/localIcon/diagramstack.png" class="imgsample">
+        <div class="display">
+            <img src="assets/img/localIcon/diagramstack.png" alt="" class="stack">
         </div>
+        <!-- <div class="gridimg">
+            <img class="imgsample" src="./assets/img/localIcon/diagramstack.png" alt="" draggable="false">
+        </div> -->
+
         <div class="proceed">
             <a class="backhome" href="index.html">
                 <div class="tosdone">I agree with all of the terms</div>

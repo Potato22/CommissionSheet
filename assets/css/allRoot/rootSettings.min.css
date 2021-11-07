@@ -38,11 +38,6 @@ body::-webkit-scrollbar-thumb:active {
   font-weight: 1 1000;
 }
 @font-face {
-  font-family: Syne;
-  src: url(../../fontlib/Syne[wght].ttf) format("truetype-variations");
-  font-weight: 1 1000;
-}
-@font-face {
   font-family: JetBrains Mono;
   src: url(../../fontlib/JetBrainsMono[wght].ttf) format("truetype-variations");
   font-weight: 1 1000;
@@ -50,8 +45,8 @@ body::-webkit-scrollbar-thumb:active {
 :root {
   --baseD: rgb(24, 24, 24);
   --baseL: rgba(252, 242, 233, 1);
-  --alphabaseD: rgba(24, 24, 24, 0.7);
-  --alphabaseL: rgba(252, 242, 233, 0.7);
+  --alphabaseD: rgba(24, 24, 24, 0);
+  --alphabaseL: rgba(252, 242, 233, 0);
   --basesecondaryD: rgb(44, 44, 44);
   --basesecondaryL: rgb(199, 194, 189);
   --textD: rgb(255, 255, 255);
@@ -68,6 +63,7 @@ body::-webkit-scrollbar-thumb:active {
   --accentfillL: rgb(255, 252, 250);
   --textaccentD: rgb(94, 186, 255);
   --textaccentL: rgb(255, 167, 94);
+  --red: rgb(255, 92, 92);
   --black: black;
   --blackfL: white;
   --blacktD: black;
@@ -81,7 +77,6 @@ body::-webkit-scrollbar-thumb:active {
   --loaderD: url("../../img/local/spinnerD.gif");
   --loaderL: url("../../img/local/spinnerL.gif");
   --display: Inter;
-  --content: Inter;
   --contentsecondary: JetBrains Mono;
   --sleek: cubic-bezier(0.03, 0.77, 0.34, 1);
   --accel: cubic-bezier(0.72, 0.06, 0.96, 0.57);
@@ -139,7 +134,7 @@ a:link, a:visited {
 
 .tosBar {
   padding: 0.5em 1em;
-  background: rgba(255, 255, 255, 0.863);
+  background: var(--textD);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   margin-bottom: 1rem;
@@ -160,7 +155,7 @@ a:link, a:visited {
 }
 
 .tosButton {
-  border: solid 1px var(--basesecondary);
+  border: solid 1px var(--baseD);
   padding: 0.5rem;
   transition: all 0.2s cubic-bezier(0.49, 0.07, 0.16, 1);
   margin-left: 1em;
@@ -168,9 +163,9 @@ a:link, a:visited {
   border-radius: 30px;
 }
 .tosButton:hover {
-  background: var(--accentimportant);
-  color: var(--textondark);
-  border: solid 1px var(--accentimportant);
+  background: var(--accentD);
+  color: var(--textD);
+  border: solid 1px var(--accentD);
 }
 
 .tosIcon {
@@ -193,7 +188,7 @@ a:link, a:visited {
   cursor: pointer;
 }
 .dismiss:hover {
-  color: var(--accentimportant);
+  color: var(--accentD);
 }
 
 .ohno {
@@ -213,8 +208,8 @@ a:link, a:visited {
   }
   20% {
     transform: translate(15px, 0);
-    background: var(--redcode);
-    border: 2px solid var(--redcodeborder);
+    background: var(--red);
+    border: 2px solid var(--red);
   }
   40% {
     transform: translate(-10px, 0);
@@ -233,8 +228,8 @@ a:link, a:visited {
   }
   20% {
     transform: translate(15px, 0);
-    background: var(--redcode);
-    border: 2px solid var(--redcodeborder);
+    background: var(--red);
+    border: 2px solid var(--red);
   }
   40% {
     transform: translate(-10px, 0);
@@ -261,7 +256,7 @@ a:link, a:visited {
 .themetogglecont {
   height: 100vh;
   position: fixed;
-  z-index: 3;
+  z-index: 0;
   display: flex;
   align-items: flex-end;
   -webkit-user-select: none;
@@ -345,7 +340,7 @@ a:link, a:visited {
     border-width: 1;
   }
 }
-.icon {
+.theme-icon {
   position: relative;
   color: var(--textD);
 }
