@@ -52,14 +52,42 @@
     <script src="assets/script/tos.js"></script>
     <script src="assets/script/zoomtrigger.js"></script>
     <script src="assets/script/togglensfw.js"></script>
-    <script src="assets/script/disablevid.js"></script>
+    <script src="assets/script/themetoggle.js" defer></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/index/index.min.css">
     <link rel="stylesheet" href="assets/css/allRoot/rootSettings.min.css">
+    <!-- DISABLE NSFW TOGGLE WITH SWAPPING NFALSE TO TRUE -->
+    <!-- DISABLE NSFW TOGGLE WITH SWAPPING NFALSE TO TRUE -->
+    <!-- DISABLE NSFW TOGGLE WITH SWAPPING NFALSE TO TRUE -->
+    <script>
+        $(document).scroll(function () {
+            var scrollDistance = $(this).scrollTop();
+            if (scrollDistance >= 300) {
+                $('.heroimage, .forwardwrap').fadeOut();
+                $('.themetogglecont').css({
+                    'opacity': '1'
+                });
+            } else {
+                $('.heroimage, .forwardwrap').fadeIn();
+                $('.themetogglecont').css({
+                    'opacity': '0'
+                });
+            }
+        });
+    </script>
 </head>
 
 <body>
-
+    <!-- theme toggle -->
+    <div class="themetogglecont">
+        <div class="togglecont">
+            <div class="splash"></div>
+            <label class="checkboxtrig">
+                <input type="checkbox" id="ttogle" />
+                <div class="material-icons-outlined icon">light_mode</div>
+        </div>
+    </div>
+    <!-- theme toggle -->
     <div class="tosStick">
         <div class="tosBound">
             <div class="tosBar">
@@ -75,46 +103,55 @@
             </div>
         </div>
     </div>
-    <!--IMGZOOMIN-->
+    <!-- IMGZOOMIN -->
     <div class="zoomindimmer"></div>
     <div class="zoomin">
         <div class="zoomincontentAlign">
             <img class="zoomincontent" src="">
         </div>
     </div>
+    <!-- IMGZOOMIN -->
     <div class="hello">
-        <div class="videocontainer">
-            <!-- <video title="😂I smell like a dirty airvent from 21mile island" class="banner" autoplay muted loop src="assets/vid/4.mp4"></video> -->
-            <video class="banner" autoplay muted loop src="./assets/vid/hero.webm"></video>
+        <div class="heroimage">
+            <div style="background-image:url(assets/img/showcase/fullbod5.png)"></div>
+            <div style="background-image:url(assets/img/showcase/custom1.png)"></div>
+            <div class="offsetbuttom" style="background-image:url(assets/img/showcase/fullbod3.png)"></div>
+            <div style="background-image:url(assets/img/showcase/fullbod1.png)"></div>
+            <div style="background-image:url(assets/img/showcase/portrait1.png)"></div>
         </div>
         <div class="hero">
             <div class="logo"></div>
-            <span class="introduction">Hello,</span>
-            <p class="message">Welcome to my commission sheet!</p>
+            <span class="introduction">Commissions</span>
+            <!-- <p class="message">Welcome to my commission sheet!</p> -->
         </div>
     </div>
+    <a class="forwardattrwrap" href="#start">
+        <div class="forwardwrap">
+            <div class="forward">
+                <div class="capsule">
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </a>
     <div class="hellospacer">
 
     </div>
-
-    <div class="bgdropper">
+    <div id="start" class="bgdropper">
         <!--NORMAL-->
-        <!-- <div class="notificationbox" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">
+        <div class="notificationbox" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">
             <span class="material-icons-outlined notificationicon">notifications</span>
             <div class="notificationcontent">
                 <span class="notificationtitle">Changelog</span>
                 <ol class="notifcationlist">
                     <li class="changelist">Website design revamped</li>
-                    <li class="changelist">Complete change in genre. (vector to digital art)</li>
-                    <li class="changelist">Updated TOS <a href="tos.html"><b><u>Check here</u></b></a></li>
-                    <li class="changelist">Added toggle options in the Form pages</li>
                     <li class="changelist">Price change</li>
-                    <li class="changelist">NSFW is available</li>
+                    <li class="changelist">New dark mode babey! Toggle themes on the bottom left. :D</li>
                 </ol>
             </div>
-        </div> -->
+        </div>
         <!--REDMSG-->
-        <!-- <div class="notificationbox redmsg" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">
+        <!-- <div class="notificationbox redmsg" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">
         <span class="material-icons-outlined notificationicon redmsg">warning</span>
         <div class="notificationcontent">
             <span class="notificationtitle redmsg">Oh no!</span>
@@ -123,7 +160,7 @@
     </div>
     <div class="maincontentbox">
         <!-- ##ROW## -->
-        <div class="col" data-aos="fade-up" data-aos-duration="200">
+        <div class="col" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="500">
             <div class="imgbatch">
                 <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb1.png" alt=""
                         draggable="false"></div>
@@ -144,7 +181,8 @@
                 </p>
                 <p class="desc sub descsubspecial">
                     <b>Q</b>: How do these work? <br>
-                    <b>A</b>: Price stacks on each sketches, for example you ordered 5 SFW sketches into a canvas, the price will
+                    <b>A</b>: Price stacks on each sketches, for example you ordered 5 SFW sketches into a canvas, the
+                    price will
                     be: <br><code>(10*<i>5</i>) = <b><i>$50.00</i></b></code>
                 </p>
 
@@ -180,7 +218,6 @@
                 </div>
                 <a class="purchasebutton" href="https://forms.gle/99jvxKKrJTvxdm3M6" target="_blank">
                     <div class="purchase inactivensfw">
-                        <div class="icon"></div>
                         <span>Buy</span>
                     </div>
                 </a>
@@ -189,7 +226,7 @@
         <!-- ##ROW## -->
         <!-- ##ROW## -->
 
-        <div class="col" data-aos="fade-up" data-aos-duration="200">
+        <div class="col" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200">
             <div class="imgbatch">
                 <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/portrait1.png" alt=""
                         draggable="false"></div>
@@ -201,8 +238,10 @@
                         draggable="false"></div>
             </div>
             <div class="infobox">
-                <div class="title"><span class="bestseller">Best
-                        Selling!</span><span class="pdisabled"> Waiting for new slots...</span>Portrait</div>
+                <div class="title">
+                    <span class="pdisabled">N/A</span>
+                    <span class="bestseller">Best Selling!</span>
+                    Portrait</div>
                 <span class="desc">Portrait class features the character's face and partial neck.</span>
                 <p class="desc sub">
                     Only simple backgrounds are available for this class, no charges for backgrounds.<br>
@@ -260,7 +299,6 @@
                 </div>
                 <a class="purchasebutton" href="https://forms.gle/99jvxKKrJTvxdm3M6" target="_blank">
                     <div class="purchase inactivensfw pd">
-                        <div class="icon"></div>
                         <span>Buy</span>
                     </div>
                 </a>
@@ -269,7 +307,7 @@
         <!-- ##ROW## -->
 
         <!-- ##ROW## -->
-        <div class="col" data-aos="fade-up" data-aos-duration="200">
+        <div class="col" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200">
             <div class="imgbatch">
                 <div class="gridimg"><img src="./assets/img/showcase/fullbod1.png" alt="" draggable="false"
                         class="imgsample"></div>
@@ -281,7 +319,7 @@
                         class="imgsample"></div>
             </div>
             <div class="infobox">
-                <div class="title"><span class="pdisabled"> Waiting for new slots...</span>Full Body</div>
+                <div class="title"><span class="pdisabled"> N/A</span>Full Body</div>
                 <span class="desc">Full Body class features the character's full body, and lets them charm!</span>
                 <p class="desc sub">
                     accessories may vary the main initial price, <b>which starts from $5 and up.</b><br>
@@ -378,7 +416,6 @@
                 </div>
                 <a class="purchasebutton" href="https://forms.gle/G4X9ugYQu8pLYy5cA" target="_blank">
                     <div class="purchase type2 inactivensfw pd">
-                        <div class="icon"></div>
                         <span>Buy</span>
                     </div>
                 </a>
@@ -410,6 +447,12 @@
     </div>
     </div>
     <script src="assets/script/aos.js"></script>
+    <script src="assets/script/smooth-scroll.js"></script>
+            <script>
+            var scroll = new SmoothScroll('a[href*="#"]', {
+                speed: 800,
+            });
+        </script>
 </body>
 
 </html>

@@ -1,0 +1,22 @@
+{
+  "name": "commissionpagepotto",
+  "version": "3.2.1",
+  "description": "Commission page display",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Potato22/CommissionSheet.git"
+  },
+  "author": "Potto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Potato22/CommissionSheet/issues"
+  },
+  "homepage": "https://github.com/Potato22/CommissionSheet#readme",
+  "devDependencies": {
+    "sass": "^1.43.4"
+  }
+}

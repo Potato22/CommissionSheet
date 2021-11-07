@@ -1,1 +1,353 @@
-body{margin:0;padding:0;border:0;outline:0;max-width:100%}@font-face{font-family:Inter;src:url(../../fontlib/Inter.var.woff2) format("truetype-variations");font-weight:1 1000}@font-face{font-family:Syne;src:url(../../fontlib/Syne[wght].ttf) format("truetype-variations");font-weight:1 1000}@font-face{font-family:JetBrainsMono;src:url(../../fontlib/JetBrainsMono[wght].ttf) format("truetype-variations");font-weight:1 1000}:root{--base:rgb(23, 27, 28);--basesecondary:rgb(61, 61, 61);--textondark:rgb(255, 255, 255);--textsecondaryondark:rgba(202, 202, 202, .8);--textonlight:rgb(19, 19, 19);--textsecondaryonlight:rgb(40, 40, 40);--accent:rgb(125, 201, 252);--accentsecondary:rgb(191, 228, 255);--accentfill:rgb(250, 253, 255);--textaccent:rgb(94, 186, 255);--accentimportant:rgb(52, 133, 255);--accentimportantinteract:rgb(68, 143, 255);--redcode:rgb(255, 225, 225);--redcodeborder:rgb(255, 142, 142);--redcodetitle:rgb(250, 73, 73);--display:Syne;--content:Inter;--contentsecondary:JetBrains Mono}a:link,a:visited{text-decoration:none!important;color:initial}.material-icons-outlined{vertical-align:middle}.tosStick{position:-webkit-sticky;position:sticky;top:0;z-index:90}.tosBound{position:absolute;width:100%;height:100vh;display:flex;justify-content:center;align-items:flex-end}.tosNotice{text-align:center;display:flex;align-items:center}.tosBar{padding:.5em 1em;background:rgba(255,255,255,.863);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);margin-bottom:1rem;display:flex;justify-content:space-around;align-items:center;font-family:var(--content),sans-serif;box-shadow:rgba(0,0,0,.25) 0 2px 6px;transition:.2s all;z-index:2;flex-wrap:wrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border-radius:30px;border:2px solid transparent}.tosButton{border:solid 1px var(--basesecondary);padding:.5rem;transition:all .2s cubic-bezier(.49,.07,.16,1);margin-left:1em;cursor:pointer;border-radius:30px}.tosButton:hover{background:var(--accentimportant);color:var(--textondark);border:solid 1px var(--accentimportant)}.tosIcon{width:32px;height:32px;background:url(../../img/localIcon/typeIcons/exclamation.png);background-repeat:no-repeat;background-position:center;background-size:contain;margin-right:.5em}.dismiss{font-size:.75rem;margin-left:1em;font-weight:700;height:100%;display:flex;align-items:center;cursor:pointer}.dismiss:hover{color:var(--accentimportant)}.ohno{-webkit-animation:.4s shake ease-in-out forwards;animation:.4s shake ease-in-out forwards}.accept{background:rgba(255,255,255,.863)!important;-webkit-animation:none!important;animation:none!important}@-webkit-keyframes shake{0%{transform:translate(0,0)}20%{transform:translate(15px,0);background:var(--redcode);border:2px solid var(--redcodeborder)}40%{transform:translate(-10px,0)}80%{transform:translate(5px,0)}100%{transform:translate(0,0);background:rgba(255,255,255,.863)}}@keyframes shake{0%{transform:translate(0,0)}20%{transform:translate(15px,0);background:var(--redcode);border:2px solid var(--redcodeborder)}40%{transform:translate(-10px,0)}80%{transform:translate(5px,0)}100%{transform:translate(0,0);background:rgba(255,255,255,.863)}}.tosButtonWrap{position:relative;display:flex;height:40px}@media screen and (max-width:800px){.tosButtonWrap{margin-top:.5em}}
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  max-width: 100%;
+  background: var(--baseD);
+  -webkit-animation: welcome 0.8s forwards;
+  animation: welcome 0.8s forwards;
+}
+body[data-aos-easing=sleek] [data-aos] {
+  transition-timing-function: var(--sleek);
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--baseD);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--basesecondaryD);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--accentD);
+}
+body::-webkit-scrollbar-thumb:active {
+  background: var(--accentsecondaryD);
+}
+
+[data-aos][data-aos][data-aos-easing=sleek] {
+  transition-timing-function: var(--sleek);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../../fontlib/Inter.var.woff2) format("truetype-variations");
+  font-weight: 1 1000;
+}
+@font-face {
+  font-family: Syne;
+  src: url(../../fontlib/Syne[wght].ttf) format("truetype-variations");
+  font-weight: 1 1000;
+}
+@font-face {
+  font-family: JetBrains Mono;
+  src: url(../../fontlib/JetBrainsMono[wght].ttf) format("truetype-variations");
+  font-weight: 1 1000;
+}
+:root {
+  --baseD: rgb(24, 24, 24);
+  --baseL: rgba(252, 242, 233, 1);
+  --alphabaseD: rgba(24, 24, 24, 0.7);
+  --alphabaseL: rgba(252, 242, 233, 0.7);
+  --basesecondaryD: rgb(44, 44, 44);
+  --basesecondaryL: rgb(199, 194, 189);
+  --textD: rgb(255, 255, 255);
+  --textL: rgb(19, 19, 19);
+  --textpersistentD: rgb(255, 255, 255);
+  --textpersistentL: rgb(19, 19, 19);
+  --textsecondaryD: rgb(202, 202, 202);
+  --textsecondaryL: rgb(40, 40, 40);
+  --accentD: rgb(90, 171, 224);
+  --accentL: rgb(252, 193, 125);
+  --accentsecondaryD: rgb(107, 172, 214);
+  --accentsecondaryL: rgb(248, 193, 129);
+  --accentfillD: rgb(29, 31, 32);
+  --accentfillL: rgb(255, 252, 250);
+  --textaccentD: rgb(94, 186, 255);
+  --textaccentL: rgb(255, 167, 94);
+  --black: black;
+  --blackfL: white;
+  --blacktD: black;
+  --white: white;
+  --textfL: rgb(19, 19, 19);
+  --texttD: rgb(255, 255, 255);
+  --basefL: rgb(252, 242, 233);
+  --basetD: rgb(24, 24, 24);
+  --boxshadowD: rgba(0, 0, 0, 0) 0 0 0px;
+  --boxshadowL: rgba(0, 0, 0, 0.25) 0 2px 12px;
+  --loaderD: url("../../img/local/spinnerD.gif");
+  --loaderL: url("../../img/local/spinnerL.gif");
+  --display: Inter;
+  --content: Inter;
+  --contentsecondary: JetBrains Mono;
+  --sleek: cubic-bezier(0.03, 0.77, 0.34, 1);
+  --accel: cubic-bezier(0.72, 0.06, 0.96, 0.57);
+  --anchorhead: cubic-bezier(0.24, 0.01, 0.01, 1);
+}
+
+[data-theme=light] {
+  --baseD: var(--baseL);
+  --alphabaseD: var(--alphabaseL);
+  --basesecondaryD: var(--basesecondaryL);
+  --textD: var(--textL);
+  --textsecondaryD: var(--textsecondaryL);
+  --accentD: var(--accentL);
+  --accentsecondaryD: var(--accentsecondaryL);
+  --accentfillD: var(--accentfillL);
+  --textaccentD: var(--textaccentL);
+  --blackfL: var(--blacktD);
+  --black: var(--white);
+  --textfL: var(--texttD);
+  --basefL: var(--basetD);
+  --boxshadowD: var(--boxshadowL);
+  --loaderD: var(--loaderL);
+}
+
+a:link, a:visited {
+  text-decoration: none !important;
+  color: initial;
+}
+
+.material-icons-outlined {
+  vertical-align: middle;
+}
+
+.tosStick {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.tosBound {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.tosNotice {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.tosBar {
+  padding: 0.5em 1em;
+  background: rgba(255, 255, 255, 0.863);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: var(--content), sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 2px 6px;
+  transition: 0.2s all;
+  z-index: 2;
+  flex-wrap: wrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 30px;
+  border: 2px solid transparent;
+}
+
+.tosButton {
+  border: solid 1px var(--basesecondary);
+  padding: 0.5rem;
+  transition: all 0.2s cubic-bezier(0.49, 0.07, 0.16, 1);
+  margin-left: 1em;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.tosButton:hover {
+  background: var(--accentimportant);
+  color: var(--textondark);
+  border: solid 1px var(--accentimportant);
+}
+
+.tosIcon {
+  width: 32px;
+  height: 32px;
+  background: url(../../img/localIcon/typeIcons/exclamation.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 0.5em;
+}
+
+.dismiss {
+  font-size: 0.75rem;
+  margin-left: 1em;
+  font-weight: 700;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.dismiss:hover {
+  color: var(--accentimportant);
+}
+
+.ohno {
+  -webkit-animation: 0.4s shake ease-in-out forwards;
+  animation: 0.4s shake ease-in-out forwards;
+}
+
+.accept {
+  background: rgba(255, 255, 255, 0.863) !important;
+  -webkit-animation: none !important;
+  animation: none !important;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(15px, 0);
+    background: var(--redcode);
+    border: 2px solid var(--redcodeborder);
+  }
+  40% {
+    transform: translate(-10px, 0);
+  }
+  80% {
+    transform: translate(5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+    background: rgba(255, 255, 255, 0.863);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(15px, 0);
+    background: var(--redcode);
+    border: 2px solid var(--redcodeborder);
+  }
+  40% {
+    transform: translate(-10px, 0);
+  }
+  80% {
+    transform: translate(5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+    background: rgba(255, 255, 255, 0.863);
+  }
+}
+.tosButtonWrap {
+  position: relative;
+  display: flex;
+  height: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .tosButtonWrap {
+    margin-top: 0.5em;
+  }
+}
+.themetogglecont {
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0;
+  transition: all 0.2s var(--sleek);
+}
+
+#ttogle {
+  display: none;
+}
+
+.togglecont {
+  position: relative;
+  --borderwidth: 2.6px;
+  border-top: solid var(--borderwidth) var(--textD);
+  border-right: solid var(--borderwidth) var(--textD);
+  width: 30px;
+  height: 30px;
+  border-radius: 0 20px 0 0;
+  display: grid;
+  place-items: center;
+  transform-origin: bottom left;
+  transition: all 0.2s cubic-bezier(0.57, 0.07, 0.41, 1.95);
+}
+.togglecont:hover {
+  transform: scale(1.1);
+  border-radius: 0 10px 0 0;
+}
+.togglecont:active {
+  transform: scale(1.3);
+  border-radius: 0 5px 0 0;
+}
+
+.checkboxtrig {
+  min-width: 30px;
+  min-height: 30px;
+  display: grid;
+  place-items: center;
+}
+
+.splash {
+  position: absolute;
+  --circle: 200px;
+  width: var(--circle);
+  height: var(--circle);
+  transform: scale(0);
+  border-radius: 50%;
+  background: var(--basefL);
+  z-index: -1;
+}
+
+.splashanim {
+  -webkit-animation: splash 0.8s var(--sleek);
+  animation: splash 0.8s var(--sleek);
+}
+
+@-webkit-keyframes splash {
+  from {
+    transform: scale(0);
+    opacity: 1;
+    border-width: 2;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+    border-width: 1;
+  }
+}
+@keyframes splash {
+  from {
+    transform: scale(0);
+    opacity: 1;
+    border-width: 2;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+    border-width: 1;
+  }
+}
+.icon {
+  position: relative;
+  color: var(--textD);
+}
+
+/*# sourceMappingURL=rootSettings.min.css.map */
