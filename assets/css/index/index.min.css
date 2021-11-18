@@ -270,7 +270,6 @@ ol.notifcationlist {
 
 .gridimg {
   margin: 0.5em;
-  background: #e7e7e7;
   --gridimgsize:225px;
   width: var(--gridimgsize);
   height: var(--gridimgsize);
@@ -396,6 +395,16 @@ ol.notifcationlist {
   user-select: none;
 }
 
+.limited {
+  color: var(--textD);
+  border: 1px solid var(--white);
+  font-size: 0.4em;
+  border-radius: 20px;
+  padding: 0.4em;
+  margin-right: 0.5em;
+  user-select: none;
+}
+
 .desc {
   line-height: 1.7;
   transition: color 0.2s var(--sleek);
@@ -489,6 +498,7 @@ ol.notifcationlist {
   user-select: none;
   opacity: 0;
   min-width: 140px;
+  z-index: 1;
 }
 .infobutton:hover::before {
   transition: all 0.2s;
@@ -521,6 +531,12 @@ ol.notifcationlist {
 .types:hover {
   transition: 0.2s all cubic-bezier(0, 0.75, 0.16, 1);
   border: 1px solid var(--accentD);
+}
+
+.tna {
+  filter: brightness(0.5);
+  transform: scale(0.9);
+  pointer-events: none;
 }
 
 .priceType {
@@ -603,7 +619,7 @@ div[disable-nsfw=true] {
   background-position: center;
   background-repeat: no-repeat;
 }
-.typeIcon.lineart {
+.typeIcon.clsketch {
   background: url(../../img/localIcon/typeIcons/lineart.png);
   background-size: cover;
   background-position: center;
