@@ -397,7 +397,7 @@ ol.notifcationlist {
 
 .limited {
   color: var(--textD);
-  border: 1px solid var(--white);
+  border: 1px solid var(--textD);
   font-size: 0.4em;
   border-radius: 20px;
   padding: 0.4em;
