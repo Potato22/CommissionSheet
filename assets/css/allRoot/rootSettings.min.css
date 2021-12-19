@@ -64,6 +64,7 @@ body::-webkit-scrollbar-thumb:active {
   --textaccentD: rgb(94, 186, 255);
   --textaccentL: rgb(255, 167, 94);
   --red: rgb(255, 92, 92);
+  --conditionalred: rgba(255, 92, 92, 0);
   --black: black;
   --blackfL: white;
   --blacktD: black;
@@ -99,6 +100,7 @@ body::-webkit-scrollbar-thumb:active {
   --basefL: var(--basetD);
   --boxshadowD: var(--boxshadowL);
   --loaderD: var(--loaderL);
+  --conditionalred: var(--red);
 }
 
 a:link, a:visited {
@@ -130,6 +132,7 @@ a:link, a:visited {
   text-align: center;
   display: flex;
   align-items: center;
+  color: var(--black);
 }
 
 .tosBar {
@@ -156,6 +159,7 @@ a:link, a:visited {
 
 .tosButton {
   border: solid 1px var(--baseD);
+  color: var(--black);
   padding: 0.5rem;
   transition: all 0.2s cubic-bezier(0.49, 0.07, 0.16, 1);
   margin-left: 1em;
@@ -177,6 +181,16 @@ a:link, a:visited {
   background-size: contain;
   margin-right: 0.5em;
 }
+.tosIcon::before {
+  content: "";
+  background: var(--conditionalred);
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  z-index: -1;
+  margin-left: -1rem;
+  border-radius: 5px;
+}
 
 .dismiss {
   font-size: 0.75rem;
@@ -186,6 +200,7 @@ a:link, a:visited {
   display: flex;
   align-items: center;
   cursor: pointer;
+  color: var(--black);
 }
 .dismiss:hover {
   color: var(--accentD);
@@ -219,7 +234,7 @@ a:link, a:visited {
   }
   100% {
     transform: translate(0, 0);
-    background: rgba(255, 255, 255, 0.863);
+    background: var(--blackfL);
   }
 }
 @keyframes shake {
@@ -239,7 +254,7 @@ a:link, a:visited {
   }
   100% {
     transform: translate(0, 0);
-    background: rgba(255, 255, 255, 0.863);
+    background: var(--blackfL);
   }
 }
 .tosButtonWrap {
