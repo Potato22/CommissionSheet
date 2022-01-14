@@ -7,12 +7,12 @@ if (currentTheme) {
   
     if (currentTheme === 'light') {
         toggleSwitch.checked = true;
-        $("theme-icon").text("dark_mode")
-        //$(".videobanner").attr("src", "assets/video/pottogravity.webm")
+        $(".theme-icon").text("dark_mode")
+        $(".themetogglecont").attr('title', 'Change to Dark Mode');
         console.log('applied "'+ currentTheme +'"')
     } else {
-        $("theme-icon").text("light_mode")
-        //$(".videobanner").attr("src", "assets/video/pottogravitydark.webm")
+        $(".theme-icon").text("light_mode")
+        $(".themetogglecont").attr('title', 'Change to Light Mode');
         console.log('applied "'+ currentTheme +'"')
     }
 }
@@ -26,7 +26,8 @@ function switchTheme(e) {
         setTimeout((function () {
             $(".splash").removeClass("splashanim")
         }), 500)
-        $("theme-icon").text("dark_mode")
+        $(".theme-icon").text("dark_mode");
+        $(".themetogglecont").attr('title', 'Change to Dark Mode');
         console.log('addMem "light"')
     } else {
         document.documentElement.setAttribute('data-theme', 'dark');
@@ -36,7 +37,8 @@ function switchTheme(e) {
         setTimeout((function () {
             $(".splash").removeClass("splashanim")
         }), 500)
-        $("theme-icon").text("light_mode")
+        $(".theme-icon").text("light_mode")
+        $(".themetogglecont").attr('title', 'Change to Light Mode');
         console.log('addMem "dark"')
     }
 }

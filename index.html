@@ -8,16 +8,8 @@
 <!--incompetence in web developing.    -->
 <!--                                   -->
 <!--if you expect to find something in -->
-<!--here, there won't be much but      -->
-<!--there is something c:              -->
-<!--                                   -->
-<!--But aside from that, there's       -->
-<!--nothing else to see. Good luck     -->
-<!--finding 'good stuff' in here if you-->
-<!--still insist to want to find it    -->
-<!--                                   -->
-<!--I hope your day has been going well-->
-<!--, nice to meet you.                -->
+<!--here, afraid i'd have to           -->
+<!--disappoint you.                    -->
 <!--                                   -->
 <!--  -Potto                           -->
 <!DOCTYPE html>
@@ -57,8 +49,8 @@
     <link rel="stylesheet" href="assets/css/index/index.min.css">
     <link rel="stylesheet" href="assets/css/allRoot/rootSettings.min.css">
     <!-- DISABLE NSFW TOGGLE WITH SWAPPING NFALSE TO TRUE -->
-    <!-- DISABLE NSFW TOGGLE WITH SWAPPING NFALSE TO TRUE -->
-    <!-- DISABLE NSFW TOGGLE WITH SWAPPING NFALSE TO TRUE -->
+    <!-- DISABLE LIMITER TOGGLE WITH SWAPPING tna TO tna0 -->
+    <!-- DISABLE BUTTON LOCK TOGGLE WITH SWAPPING pbd TO pbd0 -->
     <script>
         $(document).scroll(function () {
             var scrollDistance = $(this).scrollTop();
@@ -79,7 +71,7 @@
 
 <body>
     <!-- theme toggle -->
-    <div class="themetogglecont">
+    <div id="ttc" class="themetogglecont" title="Change to Light Mode">
         <div class="togglecont">
             <div class="splash"></div>
             <label class="checkboxtrig">
@@ -114,9 +106,9 @@
     <div class="hello">
         <div class="heroimage">
             <div style="background-image:url(assets/img/showcase/portrait1.png)"></div>
+            <div style="background-image:url(assets/img/showcase/custom3.png)"></div>
+            <div class="offsetbottom" style="background-image:url(assets/img/showcase/fullbod3.png)"></div>
             <div style="background-image:url(assets/img/showcase/fullbod5.png)"></div>
-            <div style="background-image:url(assets/img/showcase/custom1.png)"></div>
-            <div class="offsetbuttom" style="background-image:url(assets/img/showcase/fullbod3.png)"></div>
             <div style="background-image:url(assets/img/showcase/fullbod1.png)"></div>
         </div>
         <div class="hero">
@@ -148,7 +140,6 @@
                     <li class="changelist">Website design revamped</li>
                     <li class="changelist">Price change</li>
                     <li class="changelist">New dark mode babey! Toggle themes on the bottom left. :D</li>
-                    <li class="changelist">Limited service :( (Some types are disabled)</li>
                 </ol>
             </div>
         </div>
@@ -175,11 +166,12 @@
             </div>
             <div class="infobox">
                 <div class="title">
-                    <span class="pdisabled">N/A</span>
+                    <!-- <span class="pdisabled">N/A</span> -->
                     <span class="new">New!</span>
                     Sketch Book
                 </div>
-                <span class="desc">Compile a bunch of little rough doodles and sketches of your adorable ponies into a
+                <span class="desc">Compile a bunch of little <b>rough</b> doodles and <b>simple</b> sketches of your
+                    adorable ponies into a
                     single canvas.</span>
                 <p class="desc sub">
                     Backgrounds are disabled for this class.<br>
@@ -188,8 +180,9 @@
                 <p class="desc sub descsubspecial">
                     <b>Q</b>: How do these work? <br>
                     <b>A</b>: Price stacks on each sketches, for example you ordered 5 SFW sketches into a canvas, the
-                    price will
-                    be: <br><code>(10*<i>5</i>) = <b><i>$50.00</i></b></code>
+                    price will be: <br><code>(10*<i>5</i>) = <b><i>$50.00</i></b></code>
+                    <br><br>
+                    max sketches in a canvas: 5
                 </p>
 
                 <div class="optionstitle">
@@ -205,7 +198,7 @@
                 <div class="typechoice">
                     <div class="types sketch" title="Sketchie sketchie">
                         <div class="typeIcon sketch"></div>
-                        <span class="typeName">per/Sketch</span>
+                        <span class="typeName">per/sketch</span>
                         <span class="priceType">$10.00</span>
                     </div>
                 </div>
@@ -219,11 +212,11 @@
                     <div class="types nsfwcomm" title="NSFW requires more effort to execute">
                         <div class="typeIcon nsfwcomm"></div>
                         <span class="typeName">nsfw per/Sketch</span>
-                        <span class="priceType">$15.00+</span>
+                        <span class="priceType"><i>initial+</i>($2)</span>
                     </div>
                 </div>
-                <a class="purchasebutton" href="https://forms.gle/99jvxKKrJTvxdm3M6" target="_blank">
-                    <div class="purchase inactivensfw pd">
+                <a class="purchasebutton" href="https://forms.gle/MrRhLqmmHRCc7f5r8" target="_blank">
+                    <div class="purchase inactivensfw pbd0">
                         <span>Buy</span>
                     </div>
                 </a>
@@ -247,7 +240,7 @@
                 <div class="title">
                     <!-- <span class="pdisabled">N/A</span> -->
                     <span class="bestseller">Best Selling!</span>
-                    <span class="limited">LIMITED SERVICE</span>
+                    <!-- <span class="limited">LIMITED SERVICE</span> -->
                     Portrait</div>
                 <span class="desc">Portrait class features the character's face and partial neck.</span>
                 <p class="desc sub">
@@ -275,12 +268,12 @@
                         <span class="typeName">Clean Sketch</span>
                         <span class="priceType">$30.00</span>
                     </div>
-                    <div class="types flatcolor tna" title="Flat color, minimal shading">
+                    <div class="types flatcolor tna0" title="Flat color, minimal shading">
                         <div class="typeIcon flatcolor"></div>
                         <span class="typeName">Flat color</span>
                         <span class="priceType">$40.00</span>
                     </div>
-                    <div class="types shaded tna" title="Fully shaded">
+                    <div class="types shaded tna0" title="Fully shaded">
                         <div class="typeIcon shaded"></div>
                         <span class="typeName">Fully Shaded</span>
                         <span class="priceType">$50.00</span>
@@ -328,7 +321,7 @@
             <div class="infobox">
                 <div class="title">
                     <!-- <span class="pdisabled">N/A</span> -->
-                    <span class="limited">LIMITED SERVICE</span>
+                    <!-- <span class="limited">LIMITED SERVICE</span> -->
                     Full Body
                 </div>
                 <span class="desc">Full Body class features the character's full body, and lets them charm!</span>
@@ -358,12 +351,12 @@
                         <span class="typeName">Clean Sketch</span>
                         <span class="priceType">$40.00</span>
                     </div>
-                    <div class="types flatcolor tna" title="Flat color, minimal shading">
+                    <div class="types flatcolor tna0" title="Flat color, minimal shading">
                         <div class="typeIcon flatcolor"></div>
                         <span class="typeName">Flat color</span>
                         <span class="priceType">$50.00</span>
                     </div>
-                    <div class="types shaded tna" title="Fully shaded">
+                    <div class="types shaded tna0" title="Fully shaded">
                         <div class="typeIcon shaded"></div>
                         <span class="typeName">Fully Shaded</span>
                         <span class="priceType">$65.00</span>
@@ -381,22 +374,22 @@
                     Backgrounds (Optional)
                 </div>
                 <div class="typechoice bgshader">
-                    <div class="types bgsimple tna" title="Gradients, Particles, Box color, etc">
+                    <div class="types bgsimple tna0" title="Gradients, Particles, Box color, etc">
                         <div class="typeIcon bgsimple"></div>
                         <span class="typeName">Simple</span>
                         <span class="priceType">$0.00</span>
                     </div>
-                    <div class="types default tna" title="Flat unshaded, minimal detail">
+                    <div class="types default tna0" title="Flat unshaded, minimal detail">
                         <div class="typeIcon default"></div>
                         <span class="typeName">Flat</span>
                         <span class="priceType">$20.00+</span>
                     </div>
-                    <div class="types bgflatcolor tna" title="Flat color, minimal shading, average detail">
+                    <div class="types bgflatcolor tna0" title="Flat color, minimal shading, average detail">
                         <div class="typeIcon bgflatcolor"></div>
                         <span class="typeName">Basic</span>
                         <span class="priceType">$50.00+</span>
                     </div>
-                    <div class="types bgfullshade tna" title="mm yes detail">
+                    <div class="types bgfullshade tna0" title="mm yes detail">
                         <div class="typeIcon bgfullshade"></div>
                         <span class="typeName">Full</span>
                         <span class="priceType">$80.00+</span>
@@ -414,7 +407,7 @@
                         <span class="typeName">NSFW commission</span>
                         <span class="priceType">$15.00+</span>
                     </div>
-                    <div class="types add tna" title="Very conditional (some sfw pose can be turned into nsfw)">
+                    <div class="types add tna0" title="Very conditional (some sfw pose can be turned into nsfw)">
                         <div class="typeIcon add"></div>
                         <span class="typeName">Add NSFW ver from SFW</span>
                         <span class="priceType">$5.00+</span>
@@ -450,9 +443,12 @@
                 <span class="copyright">©Potto</span>
                 <a href="tos.html" class="tosPageLink"><span>Terms of Service</span></a>
 
-                <span class="messageend">if you have any further questions please contact me on twitter, thank you!</span>
+                <span class="messageend">if you have any further questions please contact me on twitter, thank
+                    you!</span>
                 <br>
-                <span class="messageend">"holy fuck I feel like I'm looking at Tony Stark's Commission site"<br> -respectfully, <a style="color: var(--textaccentD)" target="_blank" href="https://twitter.com/smolducko">Cottonsweets</a></span>
+                <span class="messageend">"holy fuck I feel like I'm looking at Tony Stark's Commission site"<br>
+                    -respectfully, <a style="color: var(--textaccentD)" target="_blank"
+                        href="https://twitter.com/smolducko">Cottonsweets</a></span>
             </div>
         </div>
     </div>
