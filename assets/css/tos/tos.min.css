@@ -90,14 +90,23 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-@media screen and (max-width: 680px) {
-  .stepxscroller {
-    display: flex;
+@media screen and (max-width: 1200px) {
+  .stepsbox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 740px) {
+  .stepsbox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .collist {
     flex-direction: column;
   }
 
-  .stepblocks.blanks {
-    display: none;
+  .coltitle {
+    text-align: center;
+    width: 100%;
   }
 }
 .stepblocks {
