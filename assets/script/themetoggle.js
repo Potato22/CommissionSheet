@@ -8,11 +8,11 @@ if (currentTheme) {
     if (currentTheme === 'light') {
         toggleSwitch.checked = true;
         $(".theme-icon").text("dark_mode")
-        $(".themetogglecont").attr('title', 'Change to Dark Mode');
+        $(".togglecont").attr('title', 'Change to Dark Mode');
         console.log('applied "'+ currentTheme +'"')
     } else {
         $(".theme-icon").text("light_mode")
-        $(".themetogglecont").attr('title', 'Change to Light Mode');
+        $(".togglecont").attr('title', 'Change to Light Mode');
         console.log('applied "'+ currentTheme +'"')
     }
 }
@@ -27,7 +27,7 @@ function switchTheme(e) {
             $(".splash").removeClass("splashanim")
         }), 500)
         $(".theme-icon").text("dark_mode");
-        $(".themetogglecont").attr('title', 'Change to Dark Mode');
+        $(".togglecont").attr('title', 'Change to Dark Mode');
         console.log('addMem "light"')
     } else {
         document.documentElement.setAttribute('data-theme', 'dark');
@@ -38,7 +38,7 @@ function switchTheme(e) {
             $(".splash").removeClass("splashanim")
         }), 500)
         $(".theme-icon").text("light_mode")
-        $(".themetogglecont").attr('title', 'Change to Light Mode');
+        $(".togglecont").attr('title', 'Change to Light Mode');
         console.log('addMem "dark"')
     }
 }

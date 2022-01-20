@@ -49,8 +49,6 @@ body::-webkit-scrollbar-thumb:active {
   --alphabaseL: rgba(252, 242, 233, 0);
   --basesecondaryD: rgb(44, 44, 44);
   --basesecondaryL: rgb(158, 154, 149);
-  --textD: rgb(255, 255, 255);
-  --textL: rgb(19, 19, 19);
   --textpersistentD: rgb(255, 255, 255);
   --textpersistentL: rgb(19, 19, 19);
   --textsecondaryD: rgb(202, 202, 202);
@@ -70,7 +68,9 @@ body::-webkit-scrollbar-thumb:active {
   --blacktD: black;
   --white: white;
   --textfL: rgb(19, 19, 19);
+  --textD: rgb(255, 255, 255);
   --texttD: rgb(255, 255, 255);
+  --textL: rgb(19, 19, 19);
   --basefL: rgb(252, 242, 233);
   --basetD: rgb(24, 24, 24);
   --boxshadowD: rgba(0, 0, 0, 0) 0 0 0px;
@@ -282,8 +282,31 @@ a:link, a:visited {
   transition: all 0.2s var(--sleek);
 }
 
-#ttogle {
+#ttogle, #nsfwswitch {
   display: none;
+}
+
+.nsfwswitch {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  padding: 0.1rem 0.8rem;
+  font-family: var(--contentsecondary);
+  font-size: 0.7em;
+  --borderwidth: 2.6px;
+  border-top: solid var(--borderwidth) var(--textD);
+  border-left: solid var(--borderwidth) var(--textD);
+  border-right: solid var(--borderwidth) var(--textD);
+  border-radius: 10px 10px 0 0;
+  color: var(--textD);
+  transition: all 0.2s cubic-bezier(0.57, 0.07, 0.41, 1.95);
+}
+.nsfwswitch:hover {
+  padding: 0.4rem 0.8rem;
+}
+.nsfwswitch:active {
+  background: var(--textD);
+  color: var(--textfL);
 }
 
 .togglecont {

@@ -32,6 +32,7 @@
         content="https://raw.githubusercontent.com/Potato22/commission/master/assets/img/pagethumb.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
     <script src="assets/script/jquery.min.js"></script>
+    <script src="assets/script/vue.js"></script>
     <script src="https://kit.fontawesome.com/14f5f92fc3.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -45,6 +46,7 @@
     <script src="assets/script/zoomtrigger.js"></script>
     <script src="assets/script/togglensfw.js"></script>
     <script src="assets/script/themetoggle.js" defer></script>
+    <!-- <script src="assets/script/float.js" defer></script> -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/index/index.min.css">
     <link rel="stylesheet" href="assets/css/allRoot/rootSettings.min.css">
@@ -70,16 +72,23 @@
 </head>
 
 <body>
-    <!-- theme toggle -->
-    <div id="ttc" class="themetogglecont" title="Change to Light Mode">
-        <div class="togglecont">
+    <!-- toggles -->
+    <div class="themetogglecont">
+        <div class="togglecont" title="Change to Light Mode">
             <div class="splash"></div>
             <label class="checkboxtrig">
                 <input type="checkbox" id="ttogle" />
                 <div class="material-icons-outlined theme-icon">light_mode</div>
+            </label>
         </div>
+        <!-- <div class="nsfwswitch">
+            <label @click="nstoggle = !nstoggle" class="nstrig">
+                <input type="checkbox" id="nsfwswitch" />
+                <div class="togglestring">show/hide NSFW</div>
+            </label>
+        </div> -->
     </div>
-    <!-- theme toggle -->
+    <!-- toggles -->
     <div class="tosStick">
         <div class="tosBound">
             <div class="tosBar">
@@ -198,8 +207,13 @@
                 <div class="typechoice">
                     <div class="types sketch" title="Sketchie sketchie">
                         <div class="typeIcon sketch"></div>
-                        <span class="typeName">per/sketch</span>
+                        <span class="typeName">per/Sketch</span>
                         <span class="priceType">$10.00</span>
+                    </div>
+                    <div class="types flatcolor tna0" title="Flat color, minimal shading">
+                        <div class="typeIcon flatcolor"></div>
+                        <span class="typeName">per/Colored</span>
+                        <span class="priceType">$15.00</span>
                     </div>
                 </div>
                 <div class="nsfw" disable-nsfw="nfalse">
@@ -211,8 +225,16 @@
                 <div class="typechoice nsfwopt hidensfw">
                     <div class="types nsfwcomm" title="NSFW requires more effort to execute">
                         <div class="typeIcon nsfwcomm"></div>
-                        <span class="typeName">nsfw per/Sketch</span>
-                        <span class="priceType"><i>initial+</i>($2)</span>
+                        <span class="typeName">per/nsfw sketch</span>
+                        <span class="priceType">$15.00</span>
+                    </div>
+                    <div class="types nsfwcomm" title="NSFW requires more effort to execute">
+                        <div style="display: flex;">
+                            <div class="typeIcon nsfwcomm"></div>
+                            <div class="typeIcon flatcolor"></div>
+                        </div>
+                        <span class="typeName">per/color nsfw</span>
+                        <span class="priceType">$20.00</span>
                     </div>
                 </div>
                 <a class="purchasebutton" href="https://forms.gle/MrRhLqmmHRCc7f5r8" target="_blank">
@@ -279,11 +301,13 @@
                         <span class="priceType">$50.00</span>
                     </div>
                 </div>
-                <div class="nsfw" disable-nsfw="nfalse">
-                    <div class="nsfwtoggle">
-                        <div class="switchdot"></div>
+                <div id="nsfwstate" class="nsfwoptions" v-if="enabled">
+                    <div class="nsfw" disable-nsfw="nfalse">
+                        <div class="nsfwtoggle">
+                            <div class="switchdot"></div>
+                        </div>
+                        <div class="optionstitle">NSFW (Optional)</div>
                     </div>
-                    <div class="optionstitle">NSFW (Optional)</div>
                 </div>
                 <div class="typechoice nsfwopt hidensfw">
                     <div class="types nsfwcomm" title="NSFW requires more effort to execute">

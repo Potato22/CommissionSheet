@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Potato22/CommissionSheet#readme",
   "devDependencies": {
     "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "vue": "^2.6.14"
   }
 }
