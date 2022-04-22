@@ -1,36 +1,39 @@
-//FATAL
-//CHANGE TO SESSIONSTORAGE
-//https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
-function setItem(name, value, days) {
-    var d = new Date;
-    d.setTime(d.getTime() + 24*60*60*1000*days);
-    document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+const TOS_EXPIRY = 24 * 60 * 60 * 1000;
+
+function isTOSAccepted() {
+  const tosDate = localStorage.getItem('tosAcceptedAt');
+
+
+  return tosDate && (new Date(tosDate).getTime() - Date.now()) <= TOS_EXPIRY;
 }
-function getItem(name) {
-    var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-    return v ? v[2] : null;
+
+function acceptTOS() {
+  localStorage.setItem('tosAcceptedAt', (new Date()).toISOString());
 }
+
 
 $(function() {
     $(".tosButton").click(function(e){
         window.location.href = "tos.html";
     })
-    if(getItem("tos")=="true"){
+    if(isTOSAccepted()) {
+        console.log("[tosDEBUG] tos already dismissed at "+localStorage.getItem('tosAcceptedAt'))
         $('.tosBar').addClass("accept");
         $('.tosBound').fadeOut("fast");
+    } else {
+        console.log("[tosDEBUG] no written data")
     }
 
 
-    $(".tosButton, .dismiss").click(function(e){
+    $(".tosButton, .dismiss").click(function(){
         $('.tosBar').addClass("accept");
         setTimeout(function(){
             $('.tosBound').fadeOut("fast");
         }, 100);
-        setItem("tos", "true", 1);
+        acceptTOS();
     });
 
-    $( ".tosBound" ).click(function(e) {
-        e.preventDefault();
+    $( ".tosBound" ).click(function() {
         $('.tosBar').addClass( "ohno" );
         $('.tosBound').addClass("yikes");
         setTimeout(function() {
@@ -39,3 +42,4 @@ $(function() {
         }, 400);
     });
 });
+console.log("[tosDEBUG] tosDismissed:"+localStorage.getItem('tosAcceptedAt'))
