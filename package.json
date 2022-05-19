@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/Potato22/CommissionSheet#readme",
   "devDependencies": {
-    "sass": "^1.43.4"
+    "sass": "^1.51.0",
+    "sass-loader": "^13.0.0",
+    "webpack": "^5.72.1"
   },
   "dependencies": {
+    "sass-dart": "^1.0.0-alpha.1",
     "vue": "^2.6.14"
   }
 }
