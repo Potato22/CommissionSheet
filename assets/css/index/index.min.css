@@ -197,7 +197,7 @@
   font-size: 0.8em;
 }
 
-.redmsg {
+.notificationbox.redmsg {
   background: var(--redcode);
   border-color: var(--redcodeborder);
 }
@@ -214,11 +214,10 @@
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--textD);
-  transform: translate(0, 100px);
 }
 
 .notificationicon.redmsg, .notificationtitle.redmsg {
-  color: var(--redcodetitle);
+  color: var(--blacktD);
 }
 
 ol.notifcationlist {
@@ -230,6 +229,7 @@ ol.notifcationlist {
 
 .notificationtext {
   margin: 0 0;
+  font-size: 0.9rem;
 }
 
 .notificationbox {
@@ -758,5 +758,7 @@ div[disable-nsfw=true] {
 .tosPageLink:hover {
   text-decoration: underline !important;
 }
+
+/*# sourceMappingURL=index.min.css.map */
 
 /*# sourceMappingURL=index.min.css.map */

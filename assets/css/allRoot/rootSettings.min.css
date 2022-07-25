@@ -62,6 +62,8 @@ body::-webkit-scrollbar-thumb:active {
   --textaccentD: rgb(94, 186, 255);
   --textaccentL: rgb(255, 167, 94);
   --red: rgb(255, 92, 92);
+  --redcode: rgb(255, 158, 158);
+  --redcodeborder: rgb(255, 92, 92);
   --conditionalred: rgba(255, 92, 92, 0);
   --black: black;
   --blackfL: white;
@@ -106,6 +108,10 @@ body::-webkit-scrollbar-thumb:active {
 a:link, a:visited {
   text-decoration: none !important;
   color: initial;
+}
+
+code {
+  font-size: 0.85rem;
 }
 
 .material-icons-outlined {
@@ -280,13 +286,17 @@ a:link, a:visited {
   user-select: none;
   opacity: 0;
   transition: all 0.2s var(--sleek);
+  z-index: 1;
 }
 
-#ttogle, #nsfwswitch {
+#ttogle,
+#nsfwchk {
   display: none;
 }
 
 .nsfwswitch {
+  width: 60px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   margin-left: 1em;
@@ -300,11 +310,17 @@ a:link, a:visited {
   border-radius: 10px 10px 0 0;
   color: var(--textD);
   transition: all 0.2s cubic-bezier(0.57, 0.07, 0.41, 1.95);
+  background: var(--baseD);
 }
 .nsfwswitch:hover {
   padding: 0.4rem 0.8rem;
 }
 .nsfwswitch:active {
+  background: var(--textD);
+  color: var(--textfL);
+}
+
+.nssactive {
   background: var(--textD);
   color: var(--textfL);
 }
