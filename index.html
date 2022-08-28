@@ -80,12 +80,20 @@
                 <div class="material-icons-outlined theme-icon">light_mode</div>
             </label>
         </div>
-        <!-- <div class="nsfwswitch">
-            <label @click="nstoggle = !nstoggle" class="nstrig">
-                <input type="checkbox" id="nsfwswitch" />
-                <div class="togglestring">show/hide NSFW</div>
-            </label>
-        </div> -->
+        <!-- turns out label only covers very little, not the entire parent. Who would've thought -->
+        <a href="tos.html" target="_blank" class="floatwindows">
+            <div>
+                <div class="floatwindowsstring">Open TOS</div>
+            </div>
+        </a>
+        <div class="floatwindows noreact loadindicator">
+            <!-- loader -->
+            <div class="loadblock">
+                <div class="outer"></div>
+                <div class="inner"></div>
+            </div>
+            <div class="floatwindowsstring">Still loading...</div>
+        </div>
     </div>
     <!-- toggles -->
     <div class="tosStick">
@@ -113,9 +121,9 @@
     <!-- IMGZOOMIN -->
     <div class="hello">
         <div class="heroimage">
-            <div style="background-image:url(assets/img/showcase/custom3.png)"></div>
+            <div style="background-image:url(assets/img/showcase/custom3.jpg)"></div>
+            <div style="background-image:url(assets/img/showcase/custom1.jpg)"></div>
             <div style="background-image:url(assets/img/showcase/fullbod1.png)"></div>
-            <div style="background-image:url(assets/img/showcase/custom1.png)"></div>
             <div style="background-image:url(assets/img/showcase/fullbod2.png)"></div>
             <div style="background-image:url(assets/img/showcase/custom2.png)"></div>
         </div>
@@ -152,330 +160,336 @@
             </div>
         </div> -->
         <!--REDMSG-->
-        <div class="notificationbox redmsg" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">
-        <span class="material-icons-outlined notificationicon redmsg">warning</span>
-        <div class="notificationcontent">
-            <span class="notificationtitle redmsg">Quick Disclaimer</span>
-            <p class="notificationtext">I'm currently studying for a few more years. So a turnaround can be as long as weeks to months. I am unfortunately incapable of multitasking multiple arts simultaneously and will vary greatly depending on my situation.</p><br>
-            <code><b>This inevitably nullifies my time limit of 2 months, as mentioned in the TOS.</b></code>
-        </div>
-    </div>
-    <div class="maincontentbox">
-        <!-- ##ROW## -->
-        <div class="col" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="500">
-            <div class="imgbatch">
-                <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb1.png" alt=""
-                        draggable="false"></div>
-                <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb2.png" alt=""
-                        draggable="false"></div>
-                <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb3.png" alt=""
-                        draggable="false"></div>
-                <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb4.png" alt=""
-                        draggable="false"></div>
+        <div class="notificationbox redmsg" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200"
+            data-aos-delay="200">
+            <span class="material-icons-outlined notificationicon redmsg">warning</span>
+            <div class="notificationcontent">
+                <span class="notificationtitle redmsg">Quick Disclaimer</span>
+                <p class="notificationtext">I'm currently studying for a few more years. So a turnaround can be as long
+                    as weeks to months. I am unfortunately incapable of multitasking multiple arts simultaneously and
+                    will vary greatly depending on my situation.</p><br>
+                <code><b>This inevitably nullifies my time limit of 2 months, as mentioned in the TOS.</b></code>
             </div>
-            <div class="infobox">
-                <div class="title">
-                    <!-- <span class="pdisabled">N/A</span> -->
-                    <span class="new">New!</span>
-                    Sketch Book
+        </div>
+        <div class="maincontentbox">
+            <!-- ##ROW## -->
+            <div class="col" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="500">
+                <div class="imgbatch">
+                    <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb1.png" alt=""
+                            draggable="false"></div>
+                    <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb2.png" alt=""
+                            draggable="false"></div>
+                    <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb3.png" alt=""
+                            draggable="false"></div>
+                    <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb4.png" alt=""
+                            draggable="false"></div>
                 </div>
-                <span class="desc">Compile a bunch of little <b>rough</b> doodles and <b>simple</b> sketches of your
-                    adorable ponies into a
-                    single canvas.</span>
-                <p class="desc sub">
-                    Backgrounds are disabled for this class.<br>
-                    Accessories may vary the main initial price, <b>which starts from $0 and up.</b>
-                </p>
-                <p class="desc sub descsubspecial">
-                    <b>Q</b>: How do these work? <br>
-                    <b>A</b>: Price stacks on each sketches, for example you ordered 5 SFW sketches into a canvas, the
-                    price will be: <br><code>(10*<i>5</i>) = <b><i>$50.00</i></b></code>
-                    <br><br>
-                    <code>current maximum amount of sketches: 5</code>
-                </p>
+                <div class="infobox">
+                    <div class="title">
+                        <!-- <span class="pdisabled">N/A</span> -->
+                        <span class="new">New!</span>
+                        Sketch Book
+                    </div>
+                    <span class="desc">Compile a bunch of little <b>rough</b> doodles and <b>simple</b> sketches of your
+                        adorable ponies into a
+                        single canvas.</span>
+                    <p class="desc sub">
+                        Backgrounds are disabled for this class.<br>
+                        Accessories may vary the main initial price, <b>which starts from $0 and up.</b>
+                    </p>
+                    <p class="desc sub descsubspecial">
+                        <b>Q</b>: How do these work? <br>
+                        <b>A</b>: Price stacks on each sketches, for example you ordered 5 SFW sketches into a canvas,
+                        the
+                        price will be: <br><code>(10*<i>5</i>) = <b><i>$50.00</i></b></code>
+                        <br><br>
+                        <code>current maximum amount of sketches: 5</code>
+                    </p>
 
-                <div class="optionstitle">
-                    <!--infobutton-->
-                    <div class="inforcontainer">
-                        <div class="infobutton" aria-label="Complexity might add.">
-                            <span class="material-icons-outlined">info</span>
+                    <div class="optionstitle">
+                        <!--infobutton-->
+                        <div class="inforcontainer">
+                            <div class="infobutton" aria-label="Complexity might add.">
+                                <span class="material-icons-outlined">info</span>
+                            </div>
                         </div>
+                        <!--infobutton-->
+                        Initial Prices
                     </div>
-                    <!--infobutton-->
-                    Initial Prices
-                </div>
-                <div class="typechoice">
-                    <div class="types sketch" title="Sketchie sketchie">
-                        <div class="typeIcon sketch"></div>
-                        <span class="typeName">per/Sketch</span>
-                        <span class="priceType">$10.00</span>
-                    </div>
-                    <div class="types flatcolor tna0" title="Flat color, minimal shading">
-                        <div class="typeIcon flatcolor"></div>
-                        <span class="typeName">per/Colored</span>
-                        <span class="priceType">$15.00</span>
-                    </div>
-                </div>
-                <div class="nsfw" disable-nsfw="nfalse">
-                    <div class="nsfwtoggle">
-                        <div class="switchdot"></div>
-                    </div>
-                    <div class="optionstitle">NSFW (Optional)</div>
-                </div>
-                <div class="typechoice nsfwopt hidensfw">
-                    <div class="types nsfwcomm" title="NSFW requires more effort to execute">
-                        <div class="typeIcon nsfwcomm"></div>
-                        <span class="typeName">per/nsfw sketch</span>
-                        <span class="priceType">$15.00</span>
-                    </div>
-                    <div class="types nsfwcomm" title="NSFW requires more effort to execute">
-                        <div style="display: flex;">
-                            <div class="typeIcon nsfwcomm"></div>
+                    <div class="typechoice">
+                        <div class="types sketch" title="Sketchie sketchie">
+                            <div class="typeIcon sketch"></div>
+                            <span class="typeName">per/Sketch</span>
+                            <span class="priceType">$10.00</span>
+                        </div>
+                        <div class="types flatcolor tna0" title="Flat color, minimal shading">
                             <div class="typeIcon flatcolor"></div>
-                        </div>
-                        <span class="typeName">per/color nsfw</span>
-                        <span class="priceType">$20.00</span>
-                    </div>
-                </div>
-                <a class="purchasebutton" href="https://forms.gle/MrRhLqmmHRCc7f5r8" target="_blank">
-                    <div class="purchase inactivensfw pbd0">
-                        <span>Order</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- ##ROW## -->
-        <!-- ##ROW## -->
-
-        <div class="col" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200">
-            <div class="imgbatch">
-                <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/portrait1.png" alt=""
-                        draggable="false"></div>
-                <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/portrait2.png" alt=""
-                        draggable="false"></div>
-                <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/portrait3.png" alt=""
-                        draggable="false"></div>
-                <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/portrait4.png" alt=""
-                        draggable="false"></div>
-            </div>
-            <div class="infobox">
-                <div class="title">
-                    <!-- <span class="pdisabled">N/A</span> -->
-                    <span class="bestseller">Best Selling!</span>
-                    <!-- <span class="limited">LIMITED SERVICE</span> -->
-                    Headshot</div>
-                <span class="desc">Headshot features the character's face and bust.</span>
-                <p class="desc sub">
-                    Only simple backgrounds are available for this class, no charges for backgrounds.<br>
-                    Accessories may vary the main initial price, <b>which starts from $0 and up.</b><br>
-                </p>
-                <div class="optionstitle">
-                    <!--infobutton-->
-                    <div class="inforcontainer">
-                        <div class="infobutton" aria-label="Complexity might add.">
-                            <span class="material-icons-outlined">info</span>
+                            <span class="typeName">per/Colored</span>
+                            <span class="priceType">$15.00</span>
                         </div>
                     </div>
-                    <!--infobutton-->
-                    Initial Prices
-                </div>
-                <div class="typechoice">
-                    <div class="types sketch" title="Sketchie sketchie">
-                        <div class="typeIcon sketch"></div>
-                        <span class="typeName">Sketch</span>
-                        <span class="priceType">$25.00</span>
-                    </div>
-                    <div class="types clsketch" title="Cleaner lines">
-                        <div class="typeIcon clsketch"></div>
-                        <span class="typeName">Lineart</span>
-                        <span class="priceType">$30.00</span>
-                    </div>
-                    <div class="types flatcolor tna0" title="Flat color, minimal shading">
-                        <div class="typeIcon flatcolor"></div>
-                        <span class="typeName">Flat color</span>
-                        <span class="priceType">$40.00</span>
-                    </div>
-                    <div class="types shaded tna0" title="Fully shaded">
-                        <div class="typeIcon shaded"></div>
-                        <span class="typeName">Fully Shaded</span>
-                        <span class="priceType">$50.00</span>
-                    </div>
-                </div>
-                <div id="nsfwstate" class="nsfwoptions" v-if="enabled">
                     <div class="nsfw" disable-nsfw="nfalse">
                         <div class="nsfwtoggle">
                             <div class="switchdot"></div>
                         </div>
                         <div class="optionstitle">NSFW (Optional)</div>
                     </div>
-                </div>
-                <div class="typechoice nsfwopt hidensfw">
-                    <div class="types nsfwcomm" title="NSFW requires more effort to execute">
-                        <div class="typeIcon nsfwcomm"></div>
-                        <span class="typeName">NSFW commission</span>
-                        <span class="priceType">$5.00+</span>
-                    </div>
-                    <div class="types addnsfw" title="Wanted to add several versions of your nsfw? (cum, face, etc)">
-                        <div class="typeIcon addnsfw"></div>
-                        <span class="typeName">Add additional nsfw ver</span>
-                        <span class="priceType">$3.00+</span>
-                    </div>
-                </div>
-                <a class="purchasebutton" href="https://forms.gle/99jvxKKrJTvxdm3M6" target="_blank">
-                    <div class="purchase inactivensfw">
-                        <span>Order</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- ##ROW## -->
-
-        <!-- ##ROW## -->
-        <div class="col" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200">
-            <div class="imgbatch">
-                <div class="gridimg"><img src="./assets/img/showcase/fullbod1.png" alt="" draggable="false"
-                        class="imgsample"></div>
-                <div class="gridimg"><img src="./assets/img/showcase/fullbod2.png" alt="" draggable="false"
-                        class="imgsample"></div>
-                <div class="gridimg"><img src="./assets/img/showcase/fullbod3.png" alt="" draggable="false"
-                        class="imgsample"></div>
-                <div class="gridimg"><img src="./assets/img/showcase/fullbod4.png" alt="" draggable="false"
-                        class="imgsample"></div>
-            </div>
-            <div class="infobox">
-                <div class="title">
-                    <!-- <span class="pdisabled">N/A</span> -->
-                    <!-- <span class="limited">LIMITED SERVICE</span> -->
-                    Full Body
-                </div>
-                <span class="desc">Full Body features the character's full body, and lets them charm!</span>
-                <p class="desc sub">
-                    accessories may vary the main initial price, <b>which starts from $5 and up.</b><br>
-                    In default, the finished piece will be a transparent png file.<br>
-                    Additional characters will be charged with <b>80%.</b><br>
-                </p>
-                <div class="optionstitle">
-                    <!--infobutton-->
-                    <div class="inforcontainer">
-                        <div class="infobutton" aria-label="Complexity might add.">
-                            <span class="material-icons-outlined">info</span>
+                    <div class="typechoice nsfwopt hidensfw">
+                        <div class="types nsfwcomm" title="NSFW requires more effort to execute">
+                            <div class="typeIcon nsfwcomm"></div>
+                            <span class="typeName">per/nsfw sketch</span>
+                            <span class="priceType">$15.00</span>
+                        </div>
+                        <div class="types nsfwcomm" title="NSFW requires more effort to execute">
+                            <div style="display: flex;">
+                                <div class="typeIcon nsfwcomm"></div>
+                                <div class="typeIcon flatcolor"></div>
+                            </div>
+                            <span class="typeName">per/color nsfw</span>
+                            <span class="priceType">$20.00</span>
                         </div>
                     </div>
-                    <!--infobutton-->
-                    Initial Prices
+                    <a class="purchasebutton" href="https://forms.gle/MrRhLqmmHRCc7f5r8" target="_blank">
+                        <div class="purchase inactivensfw pbd0">
+                            <span>Order</span>
+                        </div>
+                    </a>
                 </div>
-                <div class="typechoice">
-                    <div class="types sketch" title="Sketchie sketchie">
-                        <div class="typeIcon sketch"></div>
-                        <span class="typeName">Sketch</span>
-                        <span class="priceType">$30.00</span>
-                    </div>
-                    <div class="types clsketch" title="Cleaner lines">
-                        <div class="typeIcon clsketch"></div>
-                        <span class="typeName">Lineart</span>
-                        <span class="priceType">$40.00</span>
-                    </div>
-                    <div class="types flatcolor tna0" title="Flat color, minimal shading">
-                        <div class="typeIcon flatcolor"></div>
-                        <span class="typeName">Flat color</span>
-                        <span class="priceType">$50.00</span>
-                    </div>
-                    <div class="types shaded tna0" title="Fully shaded">
-                        <div class="typeIcon shaded"></div>
-                        <span class="typeName">Fully Shaded</span>
-                        <span class="priceType">$65.00</span>
-                    </div>
+            </div>
+            <!-- ##ROW## -->
+            <!-- ##ROW## -->
+
+            <div class="col" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200">
+                <div class="imgbatch">
+                    <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/portrait1.png" alt=""
+                            draggable="false"></div>
+                    <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/portrait2.png" alt=""
+                            draggable="false"></div>
+                    <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/portrait3.png" alt=""
+                            draggable="false"></div>
+                    <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/portrait4.png" alt=""
+                            draggable="false"></div>
                 </div>
-                <div class="optionstitle">
-                    <!--infobutton-->
-                    <div class="inforcontainer">
-                        <div class="infobutton important"
-                            aria-label="'Full' high detailed backgrounds are only compatible with fully shaded characters.">
-                            <span class="material-icons-outlined">info</span>
+                <div class="infobox">
+                    <div class="title">
+                        <!-- <span class="pdisabled">N/A</span> -->
+                        <span class="bestseller">Best Selling!</span>
+                        <!-- <span class="limited">LIMITED SERVICE</span> -->
+                        Headshot</div>
+                    <span class="desc">Headshot features the character's face and bust.</span>
+                    <p class="desc sub">
+                        Only simple backgrounds are available for this class, no charges for backgrounds.<br>
+                        Accessories may vary the main initial price, <b>which starts from $0 and up.</b><br>
+                    </p>
+                    <div class="optionstitle">
+                        <!--infobutton-->
+                        <div class="inforcontainer">
+                            <div class="infobutton" aria-label="Complexity might add.">
+                                <span class="material-icons-outlined">info</span>
+                            </div>
+                        </div>
+                        <!--infobutton-->
+                        Initial Prices
+                    </div>
+                    <div class="typechoice">
+                        <div class="types sketch" title="Sketchie sketchie">
+                            <div class="typeIcon sketch"></div>
+                            <span class="typeName">Sketch</span>
+                            <span class="priceType">$25.00</span>
+                        </div>
+                        <div class="types clsketch" title="Cleaner lines">
+                            <div class="typeIcon clsketch"></div>
+                            <span class="typeName">Lineart</span>
+                            <span class="priceType">$30.00</span>
+                        </div>
+                        <div class="types flatcolor tna0" title="Flat color, minimal shading">
+                            <div class="typeIcon flatcolor"></div>
+                            <span class="typeName">Flat color</span>
+                            <span class="priceType">$40.00</span>
+                        </div>
+                        <div class="types shaded tna0" title="Fully shaded">
+                            <div class="typeIcon shaded"></div>
+                            <span class="typeName">Fully Shaded</span>
+                            <span class="priceType">$50.00</span>
                         </div>
                     </div>
-                    <!--infobutton-->
-                    Backgrounds (Optional)
+                    <div id="nsfwstate" class="nsfwoptions" v-if="enabled">
+                        <div class="nsfw" disable-nsfw="nfalse">
+                            <div class="nsfwtoggle">
+                                <div class="switchdot"></div>
+                            </div>
+                            <div class="optionstitle">NSFW (Optional)</div>
+                        </div>
+                    </div>
+                    <div class="typechoice nsfwopt hidensfw">
+                        <div class="types nsfwcomm" title="NSFW requires more effort to execute">
+                            <div class="typeIcon nsfwcomm"></div>
+                            <span class="typeName">NSFW commission</span>
+                            <span class="priceType">$5.00+</span>
+                        </div>
+                        <div class="types addnsfw"
+                            title="Wanted to add several versions of your nsfw? (cum, face, etc)">
+                            <div class="typeIcon addnsfw"></div>
+                            <span class="typeName">Add additional nsfw ver</span>
+                            <span class="priceType">$3.00+</span>
+                        </div>
+                    </div>
+                    <a class="purchasebutton" href="https://forms.gle/99jvxKKrJTvxdm3M6" target="_blank">
+                        <div class="purchase inactivensfw">
+                            <span>Order</span>
+                        </div>
+                    </a>
                 </div>
-                <div class="typechoice bgshader">
-                    <div class="types bgsimple tna0" title="Gradients, Particles, Box color, etc">
-                        <div class="typeIcon bgsimple"></div>
-                        <span class="typeName">Simple</span>
-                        <span class="priceType">$0.00</span>
-                    </div>
-                    <div class="types default tna0" title="Flat unshaded, minimal detail">
-                        <div class="typeIcon default"></div>
-                        <span class="typeName">Flat</span>
-                        <span class="priceType">$20.00+</span>
-                    </div>
-                    <div class="types bgflatcolor tna0" title="Flat color, minimal shading, average detail">
-                        <div class="typeIcon bgflatcolor"></div>
-                        <span class="typeName">Basic</span>
-                        <span class="priceType">$50.00+</span>
-                    </div>
-                    <div class="types bgfullshade tna0" title="mm yes detail">
-                        <div class="typeIcon bgfullshade"></div>
-                        <span class="typeName">Full</span>
-                        <span class="priceType">$80.00+</span>
-                    </div>
-                </div>
-                <div class="nsfw" disable-nsfw="nfalse">
-                    <div class="nsfwtoggle">
-                        <div class="switchdot"></div>
-                    </div>
-                    <div class="optionstitle">NSFW (Optional)</div>
-                </div>
-                <div class="typechoice nsfwopt hidensfw">
-                    <div class="types nsfwcomm" title="NSFW requires more effort to execute">
-                        <div class="typeIcon nsfwcomm"></div>
-                        <span class="typeName">NSFW commission</span>
-                        <span class="priceType">$15.00+</span>
-                    </div>
-                    <div class="types add tna0" title="Very conditional (some sfw pose can be turned into nsfw)">
-                        <div class="typeIcon add"></div>
-                        <span class="typeName">Add NSFW ver from SFW</span>
-                        <span class="priceType">$5.00+</span>
-                    </div>
-                    <div class="types addnsfw" title="Wanted to add several versions of your nsfw? (cum, face, etc)">
-                        <div class="typeIcon addnsfw"></div>
-                        <span class="typeName">Add additional NSFW ver</span>
-                        <span class="priceType">$10.00+</span>
-                    </div>
-                </div>
-                <a class="purchasebutton" href="https://forms.gle/G4X9ugYQu8pLYy5cA" target="_blank">
-                    <div class="purchase type2 inactivensfw">
-                        <span>Order</span>
-                    </div>
-                </a>
             </div>
-        </div>
-        <!-- ##ROW## -->
+            <!-- ##ROW## -->
 
-        <div class="endOfPage">
-            <hr class="end">
-        </div>
-        <div class="footer">
-            <div class="flexbox1">
-                <div class="socials">
-                    <a href="https://twitter.com/Potto2292" target="_blank">
-                        <div class="socicon"><i class="fab fa-twitter"></i></div>
-                    </a>
-                    <a href="https://www.deviantart.com/Potato2292" target="_blank">
-                        <div class="socicon"><i class="fab fa-deviantart"></i></div>
+            <!-- ##ROW## -->
+            <div class="col" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200">
+                <div class="imgbatch">
+                    <div class="gridimg"><img src="./assets/img/showcase/fullbod1.png" alt="" draggable="false"
+                            class="imgsample"></div>
+                    <div class="gridimg"><img src="./assets/img/showcase/fullbod2.png" alt="" draggable="false"
+                            class="imgsample"></div>
+                    <div class="gridimg"><img src="./assets/img/showcase/fullbod3.png" alt="" draggable="false"
+                            class="imgsample"></div>
+                    <div class="gridimg"><img src="./assets/img/showcase/fullbod4.png" alt="" draggable="false"
+                            class="imgsample"></div>
+                </div>
+                <div class="infobox">
+                    <div class="title">
+                        <!-- <span class="pdisabled">N/A</span> -->
+                        <!-- <span class="limited">LIMITED SERVICE</span> -->
+                        Full Body
+                    </div>
+                    <span class="desc">Full Body features the character's full body, and lets them charm!</span>
+                    <p class="desc sub">
+                        accessories may vary the main initial price, <b>which starts from $5 and up.</b><br>
+                        In default, the finished piece will be a transparent png file.<br>
+                        Additional characters will be charged with <b>80%.</b><br>
+                    </p>
+                    <div class="optionstitle">
+                        <!--infobutton-->
+                        <div class="inforcontainer">
+                            <div class="infobutton" aria-label="Complexity might add.">
+                                <span class="material-icons-outlined">info</span>
+                            </div>
+                        </div>
+                        <!--infobutton-->
+                        Initial Prices
+                    </div>
+                    <div class="typechoice">
+                        <div class="types sketch" title="Sketchie sketchie">
+                            <div class="typeIcon sketch"></div>
+                            <span class="typeName">Sketch</span>
+                            <span class="priceType">$30.00</span>
+                        </div>
+                        <div class="types clsketch" title="Cleaner lines">
+                            <div class="typeIcon clsketch"></div>
+                            <span class="typeName">Lineart</span>
+                            <span class="priceType">$40.00</span>
+                        </div>
+                        <div class="types flatcolor tna0" title="Flat color, minimal shading">
+                            <div class="typeIcon flatcolor"></div>
+                            <span class="typeName">Flat color</span>
+                            <span class="priceType">$50.00</span>
+                        </div>
+                        <div class="types shaded tna0" title="Fully shaded">
+                            <div class="typeIcon shaded"></div>
+                            <span class="typeName">Fully Shaded</span>
+                            <span class="priceType">$65.00</span>
+                        </div>
+                    </div>
+                    <div class="optionstitle">
+                        <!--infobutton-->
+                        <div class="inforcontainer">
+                            <div class="infobutton important"
+                                aria-label="'Full' high detailed backgrounds are only compatible with fully shaded characters.">
+                                <span class="material-icons-outlined">info</span>
+                            </div>
+                        </div>
+                        <!--infobutton-->
+                        Backgrounds (Optional)
+                    </div>
+                    <div class="typechoice bgshader">
+                        <div class="types bgsimple tna0" title="Gradients, Particles, Box color, etc">
+                            <div class="typeIcon bgsimple"></div>
+                            <span class="typeName">Simple</span>
+                            <span class="priceType">$0.00</span>
+                        </div>
+                        <div class="types default tna0" title="Flat unshaded, minimal detail">
+                            <div class="typeIcon default"></div>
+                            <span class="typeName">Flat</span>
+                            <span class="priceType">$20.00+</span>
+                        </div>
+                        <div class="types bgflatcolor tna0" title="Flat color, minimal shading, average detail">
+                            <div class="typeIcon bgflatcolor"></div>
+                            <span class="typeName">Basic</span>
+                            <span class="priceType">$50.00+</span>
+                        </div>
+                        <div class="types bgfullshade tna0" title="mm yes detail">
+                            <div class="typeIcon bgfullshade"></div>
+                            <span class="typeName">Full</span>
+                            <span class="priceType">$80.00+</span>
+                        </div>
+                    </div>
+                    <div class="nsfw" disable-nsfw="nfalse">
+                        <div class="nsfwtoggle">
+                            <div class="switchdot"></div>
+                        </div>
+                        <div class="optionstitle">NSFW (Optional)</div>
+                    </div>
+                    <div class="typechoice nsfwopt hidensfw">
+                        <div class="types nsfwcomm" title="NSFW requires more effort to execute">
+                            <div class="typeIcon nsfwcomm"></div>
+                            <span class="typeName">NSFW commission</span>
+                            <span class="priceType">$15.00+</span>
+                        </div>
+                        <div class="types add tna0" title="Very conditional (some sfw pose can be turned into nsfw)">
+                            <div class="typeIcon add"></div>
+                            <span class="typeName">Add NSFW ver from SFW</span>
+                            <span class="priceType">$5.00+</span>
+                        </div>
+                        <div class="types addnsfw"
+                            title="Wanted to add several versions of your nsfw? (cum, face, etc)">
+                            <div class="typeIcon addnsfw"></div>
+                            <span class="typeName">Add additional NSFW ver</span>
+                            <span class="priceType">$10.00+</span>
+                        </div>
+                    </div>
+                    <a class="purchasebutton" href="https://forms.gle/G4X9ugYQu8pLYy5cA" target="_blank">
+                        <div class="purchase type2 inactivensfw">
+                            <span>Order</span>
+                        </div>
                     </a>
                 </div>
-                <span class="copyright">©Potto</span>
-                <a href="tos.html" class="tosPageLink"><span>Terms of Service</span></a>
+            </div>
+            <!-- ##ROW## -->
 
-                <span class="messageend">if you have any further questions please contact me on twitter, thank
-                    you!</span>
-                <br>
-                <!-- <span class="messageend">"holy fuck I feel like I'm looking at Tony Stark's Commission site"<br>
+            <div class="endOfPage">
+                <hr class="end">
+            </div>
+            <div class="footer">
+                <div class="flexbox1">
+                    <div class="socials">
+                        <a href="https://twitter.com/Potto2292" target="_blank">
+                            <div class="socicon"><i class="fab fa-twitter"></i></div>
+                        </a>
+                        <a href="https://www.deviantart.com/Potato2292" target="_blank">
+                            <div class="socicon"><i class="fab fa-deviantart"></i></div>
+                        </a>
+                    </div>
+                    <span class="copyright">©Potto</span>
+                    <a href="tos.html" class="tosPageLink"><span>Terms of Service</span></a>
+
+                    <span class="messageend">if you have any further questions please contact me on twitter, thank
+                        you!</span>
+                    <br>
+                    <!-- <span class="messageend">"holy fuck I feel like I'm looking at Tony Stark's Commission site"<br>
                     -respectfully, <a style="color: var(--textaccentD)" target="_blank"
                         href="https://twitter.com/smolducko">Cottonsweets</a></span> -->
+                </div>
             </div>
         </div>
-    </div>
     </div>
     </div>
     <script src="assets/script/aos.js"></script>
@@ -484,6 +498,11 @@
         var scroll = new SmoothScroll('a[href*="#"]', {
             speed: 800,
         });
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            $(".loadindicator").fadeOut('slow');
+        })
     </script>
 </body>
 
