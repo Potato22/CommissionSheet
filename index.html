@@ -43,12 +43,14 @@
     </script>
     <script src="assets/script/tos.js"></script>
     <script src="assets/script/zoomtrigger.js"></script>
-    <script src="assets/script/togglensfw.js"></script>
     <script src="assets/script/themetoggle.js" defer></script>
+    <script src="assets/script/nsfwtoggle.js" defer></script>
     <!-- <script src="assets/script/float.js" defer></script> -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="assets/css/index/index.min.css">
-    <link rel="stylesheet" href="assets/css/allRoot/rootSettings.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/index/index.min.css"> -->
+    <link rel="stylesheet" href="assets/css/index/index.css">
+    <!-- <link rel="stylesheet" href="assets/css/allRoot/rootSettings.min.css"> -->
+    <link rel="stylesheet" href="assets/css/allRoot/rootSettings.css">
     <!-- DISABLE NSFW TOGGLE WITH SWAPPING NFALSE TO TRUE -->
     <!-- DISABLE LIMITER TOGGLE WITH SWAPPING tna TO tna0 -->
     <!-- DISABLE BUTTON LOCK TOGGLE WITH SWAPPING pbd TO pbd0 -->
@@ -60,11 +62,23 @@
                 $('.themetogglecont').css({
                     'opacity': '1'
                 });
+                setTimeout(
+                    function () {
+                        $('.hero').fadeOut('100');
+                        $('.hero').css('transform', `scale(.8)`);
+                    }, 100
+                )
             } else {
                 $('.heroimage, .forwardwrap').fadeIn();
                 $('.themetogglecont').css({
                     'opacity': '0'
                 });
+                setTimeout(
+                    function () {
+                        $('.hero').fadeIn();
+                        $('.hero').css('transform', `scale(1)`);
+                    }, 100
+                )
             }
         });
     </script>
@@ -86,6 +100,10 @@
                 <div class="floatwindowsstring">Open TOS</div>
             </div>
         </a>
+        <label class="checkboxtrig floatwindows ntogglecont">
+            <input type="checkbox" id="ntoggle" />
+            <div class="floatwindowsstring">NSFW</div>
+        </label>
         <div class="floatwindows noreact loadindicator">
             <!-- loader -->
             <div class="loadblock">
@@ -147,18 +165,17 @@
     </div>
     <div id="start" class="bgdropper">
         <!--NORMAL-->
-        <!-- <div class="notificationbox" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200"
+        <div class="notificationbox" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200"
             data-aos-delay="200">
             <span class="material-icons-outlined notificationicon">notifications</span>
             <div class="notificationcontent">
                 <span class="notificationtitle">Changelog</span>
                 <ol class="notifcationlist">
-                    <li class="changelist">Website design revamped</li>
-                    <li class="changelist">Price change</li>
-                    <li class="changelist">New dark mode babey! Toggle themes on the bottom left. :D</li>
+                    <li class="changelist">Page functionality improved</li>
+                    <li class="changelist">Accepting TOS after 7 days will reset and ask you again to ensure any updates to TOS will be more likely to be read</li>
                 </ol>
             </div>
-        </div> -->
+        </div>
         <!--REDMSG-->
         <div class="notificationbox redmsg" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200"
             data-aos-delay="200">
@@ -167,7 +184,7 @@
                 <span class="notificationtitle redmsg">Quick Disclaimer</span>
                 <p class="notificationtext">I'm currently studying for a few more years. So a turnaround can be as long
                     as weeks to months. I am unfortunately incapable of multitasking multiple arts simultaneously and
-                    will vary greatly depending on my situation.</p><br>
+                    will vary greatly depending on my situation.</p>
                 <code><b>This inevitably nullifies my time limit of 2 months, as mentioned in the TOS.</b></code>
             </div>
         </div>
@@ -175,13 +192,17 @@
             <!-- ##ROW## -->
             <div class="col" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="500">
                 <div class="imgbatch">
-                    <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb1.png" alt=""
+                    <div class="gridimg replaceimg"><img class="imgsample" src="./assets/img/showcase/sb1.png" alt=""
                             draggable="false"></div>
-                    <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb2.png" alt=""
+                    <div class="gridimg replaceimg"><img class="imgsample" src="./assets/img/showcase/sb2.png" alt=""
                             draggable="false"></div>
                     <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb3.png" alt=""
                             draggable="false"></div>
                     <div class="gridimg"><img class="imgsample" src="./assets/img/showcase/sb4.png" alt=""
+                            draggable="false"></div>
+                    <div class="gridimg nsfwimg hideimg"><img class="imgsample" src="./assets/img/showcase/sb5.png" alt=""
+                            draggable="false"></div>
+                    <div class="gridimg nsfwimg hideimg"><img class="imgsample" src="./assets/img/showcase/sb6.png" alt=""
                             draggable="false"></div>
                 </div>
                 <div class="infobox">
@@ -228,13 +249,10 @@
                             <span class="priceType">$15.00</span>
                         </div>
                     </div>
-                    <div class="nsfw" disable-nsfw="nfalse">
-                        <div class="nsfwtoggle">
-                            <div class="switchdot"></div>
-                        </div>
-                        <div class="optionstitle">NSFW (Optional)</div>
-                    </div>
-                    <div class="typechoice nsfwopt hidensfw">
+
+                    <div class="optionstitle nsfwopttitle hidensfw">NSFW (Optional)</div>
+
+                    <div class="typechoice nsfwopt hidensfw ">
                         <div class="types nsfwcomm" title="NSFW requires more effort to execute">
                             <div class="typeIcon nsfwcomm"></div>
                             <span class="typeName">per/nsfw sketch</span>
@@ -250,7 +268,7 @@
                         </div>
                     </div>
                     <a class="purchasebutton" href="https://forms.gle/MrRhLqmmHRCc7f5r8" target="_blank">
-                        <div class="purchase inactivensfw pbd0">
+                        <div class="purchase inactivensfw  pbd0">
                             <span>Order</span>
                         </div>
                     </a>
@@ -273,7 +291,7 @@
                 <div class="infobox">
                     <div class="title">
                         <!-- <span class="pdisabled">N/A</span> -->
-                        <span class="bestseller">Best Selling!</span>
+                        <!-- <span class="bestseller">Best Selling!</span> -->
                         <!-- <span class="limited">LIMITED SERVICE</span> -->
                         Headshot</div>
                     <span class="desc">Headshot features the character's face and bust.</span>
@@ -314,14 +332,9 @@
                         </div>
                     </div>
                     <div id="nsfwstate" class="nsfwoptions" v-if="enabled">
-                        <div class="nsfw" disable-nsfw="nfalse">
-                            <div class="nsfwtoggle">
-                                <div class="switchdot"></div>
-                            </div>
-                            <div class="optionstitle">NSFW (Optional)</div>
-                        </div>
+                        <div class="optionstitle nsfwopttitle hidensfw">NSFW (Optional)</div>
                     </div>
-                    <div class="typechoice nsfwopt hidensfw">
+                    <div class="typechoice nsfwopt hidensfw ">
                         <div class="types nsfwcomm" title="NSFW requires more effort to execute">
                             <div class="typeIcon nsfwcomm"></div>
                             <span class="typeName">NSFW commission</span>
@@ -335,7 +348,7 @@
                         </div>
                     </div>
                     <a class="purchasebutton" href="https://forms.gle/99jvxKKrJTvxdm3M6" target="_blank">
-                        <div class="purchase inactivensfw">
+                        <div class="purchase inactivensfw inactivensfw ">
                             <span>Order</span>
                         </div>
                     </a>
@@ -346,18 +359,27 @@
             <!-- ##ROW## -->
             <div class="col" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200">
                 <div class="imgbatch">
-                    <div class="gridimg"><img src="./assets/img/showcase/fullbod1.png" alt="" draggable="false"
+                    <div class="gridimg replaceimg"><img src="./assets/img/showcase/fullbod1.png" alt="" draggable="false"
                             class="imgsample"></div>
-                    <div class="gridimg"><img src="./assets/img/showcase/fullbod2.png" alt="" draggable="false"
+                    <div class="gridimg replaceimg"><img src="./assets/img/showcase/fullbod2.png" alt="" draggable="false"
                             class="imgsample"></div>
-                    <div class="gridimg"><img src="./assets/img/showcase/fullbod3.png" alt="" draggable="false"
+                    <div class="gridimg replaceimg"><img src="./assets/img/showcase/fullbod3.png" alt="" draggable="false"
                             class="imgsample"></div>
-                    <div class="gridimg"><img src="./assets/img/showcase/fullbod4.png" alt="" draggable="false"
+                    <div class="gridimg replaceimg"><img src="./assets/img/showcase/fullbod4.png" alt="" draggable="false"
+                            class="imgsample"></div>
+                    <div class="gridimg nsfwimg hideimg"><img src="./assets/img/showcase/fullbod5.png" alt="" draggable="false"
+                            class="imgsample"></div>
+                    <div class="gridimg nsfwimg hideimg"><img src="./assets/img/showcase/fullbod6.png" alt="" draggable="false"
+                            class="imgsample"></div>
+                    <div class="gridimg nsfwimg hideimg"><img src="./assets/img/showcase/fullbod7.png" alt="" draggable="false"
+                            class="imgsample"></div>
+                    <div class="gridimg nsfwimg hideimg"><img src="./assets/img/showcase/fullbod8.png" alt="" draggable="false"
                             class="imgsample"></div>
                 </div>
                 <div class="infobox">
                     <div class="title">
                         <!-- <span class="pdisabled">N/A</span> -->
+                        <span class="bestseller">Best Selling!</span>
                         <!-- <span class="limited">LIMITED SERVICE</span> -->
                         Full Body
                     </div>
@@ -432,13 +454,8 @@
                             <span class="priceType">$80.00+</span>
                         </div>
                     </div>
-                    <div class="nsfw" disable-nsfw="nfalse">
-                        <div class="nsfwtoggle">
-                            <div class="switchdot"></div>
-                        </div>
-                        <div class="optionstitle">NSFW (Optional)</div>
-                    </div>
-                    <div class="typechoice nsfwopt hidensfw">
+                    <div class="optionstitle nsfwopttitle hidensfw">NSFW (Optional)</div>
+                    <div class="typechoice nsfwopt hidensfw ">
                         <div class="types nsfwcomm" title="NSFW requires more effort to execute">
                             <div class="typeIcon nsfwcomm"></div>
                             <span class="typeName">NSFW commission</span>
@@ -457,7 +474,7 @@
                         </div>
                     </div>
                     <a class="purchasebutton" href="https://forms.gle/G4X9ugYQu8pLYy5cA" target="_blank">
-                        <div class="purchase type2 inactivensfw">
+                        <div class="purchase inactivensfw">
                             <span>Order</span>
                         </div>
                     </a>
@@ -502,7 +519,7 @@
     <script>
         window.addEventListener('load', function () {
             setTimeout(
-                function() {
+                function () {
                     $(".loadindicator").fadeOut('slow');
                 }, 5000
             )
