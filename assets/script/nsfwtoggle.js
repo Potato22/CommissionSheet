@@ -31,7 +31,7 @@ if (currentNstate) {
 
 function nSwitch(e) {
     if (e.target.checked) {
-        if (confirm("You are about to view mature content on this page, please ensure you are 18 years old or older before proceeding and make sure you read the TOS.") == true) {
+        if (confirm("You are about to view mature content PRIMARILY FOR EXAMPLE IMAGES on this page although censored to stay within GitHub's TOS, please ensure you are 18 years old or older before proceeding and make sure you read the TOS.") == true) {
             localStorage.setItem('nstate', 'true');
             $(".nsfwopt, .nsfwopttitle").removeClass("hidensfw");
             $(".purchase").removeClass("inactivensfw");
