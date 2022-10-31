@@ -22,6 +22,7 @@
     "webpack": "^5.72.1"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "sass-dart": "^1.0.0-alpha.1",
     "vue": "^2.6.14"
   }
