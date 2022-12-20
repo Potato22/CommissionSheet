@@ -44,7 +44,7 @@ body::-webkit-scrollbar-thumb:active {
 }
 :root {
   --baseD: rgb(24, 24, 24);
-  --baseL: rgb(255, 251, 248);
+  --baseL: rgba(252, 242, 233, 1);
   --alphabaseD: rgba(24, 24, 24, 0);
   --alphabaseL: rgba(252, 242, 233, 0);
   --basesecondaryD: rgb(44, 44, 44);
