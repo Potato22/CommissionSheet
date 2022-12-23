@@ -1,5 +1,10 @@
-const toggleSwitch = document.querySelector("#ttogle"),
-    currentTheme = localStorage.getItem("theme");
+const toggleSwitch = document.querySelector("#ttogle")
+currentTheme = localStorage.getItem("theme");
+
+//DEFAULT
+if (currentTheme == null) {
+    currentTheme = "dark"
+}
 
 function switchTheme(t) {
     t.target.checked ? (document.documentElement.setAttribute("data-theme", "light"), localStorage.setItem("theme", "light"), $(".invertIcon").css(
