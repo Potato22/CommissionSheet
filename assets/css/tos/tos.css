@@ -148,7 +148,7 @@
 
 .msg {
   font-size: 0.7em;
-  color: grey;
+  color: var(--accentD);
 }
 
 .add {
@@ -229,6 +229,10 @@
 .collist:hover {
   border: 1px solid var(--accentD);
   background: var(--basesecondaryD);
+}
+
+.colcontent {
+  line-height: 2.8em;
 }
 
 .num {
