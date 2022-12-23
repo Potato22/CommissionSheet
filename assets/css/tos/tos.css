@@ -99,11 +99,9 @@
   .stepsbox {
     grid-template-columns: repeat(1, 1fr);
   }
-
   .collist {
     flex-direction: column;
   }
-
   .coltitle {
     text-align: center;
     width: 100%;
@@ -302,6 +300,4 @@
   margin: 2em 0;
 }
 
-/*# sourceMappingURL=tos.min.css.map */
-
-/*# sourceMappingURL=tos.css.map */
+/*# sourceMappingURL=tos.min.css.map *//*# sourceMappingURL=tos.css.map */

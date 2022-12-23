@@ -226,6 +226,25 @@ code {
   animation: none !important;
 }
 
+@-webkit-keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(15px, 0);
+    filter: var(--pulseD);
+  }
+  40% {
+    transform: translate(-10px, 0);
+  }
+  80% {
+    transform: translate(5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 @keyframes shake {
   0% {
     transform: translate(0, 0);
@@ -254,6 +273,4 @@ code {
   .tosButtonWrap {
     margin-top: 0.5em;
   }
-}
-
-/*# sourceMappingURL=rootSettings.css.map */
+}/*# sourceMappingURL=rootSettings.css.map */
