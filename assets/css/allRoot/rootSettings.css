@@ -63,6 +63,7 @@ body::-webkit-scrollbar-thumb:active {
   --accentfillL: rgb(255, 252, 250);
   --textaccentD: rgb(94, 186, 255);
   --textaccentL: rgb(255, 167, 94);
+  --grey: rgb(99, 99, 99);
   --red: rgb(255, 92, 92);
   --redcode: rgb(255, 158, 158);
   --redcodeborder: rgb(255, 92, 92);
@@ -226,25 +227,6 @@ code {
   animation: none !important;
 }
 
-@-webkit-keyframes shake {
-  0% {
-    transform: translate(0, 0);
-  }
-  20% {
-    transform: translate(15px, 0);
-    filter: var(--pulseD);
-  }
-  40% {
-    transform: translate(-10px, 0);
-  }
-  80% {
-    transform: translate(5px, 0);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
 @keyframes shake {
   0% {
     transform: translate(0, 0);
@@ -273,4 +255,6 @@ code {
   .tosButtonWrap {
     margin-top: 0.5em;
   }
-}/*# sourceMappingURL=rootSettings.css.map */
+}
+
+/*# sourceMappingURL=rootSettings.css.map */

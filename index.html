@@ -201,7 +201,8 @@
                                 <div class="typeIcon flatcolor"></div>
                             </div><span class="typeName">per/color nsfw</span><span class="priceType">$20.00</span>
                         </div>
-                    </div><a class="purchasebutton" href="https://forms.gle/MrRhLqmmHRCc7f5r8" target="_blank">
+                    </div>
+                    <a class="purchaseButtonContainer" data-disableOrder="" href="https://forms.gle/MrRhLqmmHRCc7f5r8" target="_blank">
                         <div class="purchase inactivensfw">
                             <span>Order</span>
                         </div>
@@ -264,7 +265,7 @@
                             <div class="typeIcon addnsfw invertIcon"></div><span class="typeName">Add additional nsfw
                                 ver</span><span class="priceType">$3.00</span>
                         </div>
-                    </div><a class="purchasebutton" href="https://forms.gle/99jvxKKrJTvxdm3M6" target="_blank">
+                    </div><a class="purchaseButtonContainer" data-disableOrder="" href="https://forms.gle/99jvxKKrJTvxdm3M6" target="_blank">
                         <div class="purchase inactivensfw">
                             <span>Order</span>
                         </div>
@@ -364,7 +365,7 @@
                                 ver</span><span class="priceType">+$10.00</span>
                         </div>
                     </div>
-                    <a class="purchasebutton" href="https://forms.gle/G4X9ugYQu8pLYy5cA" target="_blank">
+                    <a class="purchaseButtonContainer" data-disableOrder="" href="https://forms.gle/G4X9ugYQu8pLYy5cA" target="_blank">
                         <div class="purchase inactivensfw">
                             <span>Order</span>
                         </div>
@@ -394,6 +395,15 @@
         var scroll = new SmoothScroll('a[href*="#"]', {
             speed: 800,
         });
+    </script>
+    <script>
+        let disableOrders = "true"
+        //flicking this to false will not do anyting, the form will still be closed. This is only for visual feedback.
+        const purchcontainer = $('.purchaseButtonContainer');
+        purchcontainer.attr({'data-disableorder':disableOrders})
+        const purchoff = purchcontainer.data('disableorder');
+        const disablereason = "... The slots are out or is just closed, come back later!"
+        if (purchoff == true) { purchcontainer.attr({'aria-label':disablereason, 'href':'JavaScript:void(0);', 'target':''})}
     </script>
     <script>
         window.addEventListener('load', function () {
