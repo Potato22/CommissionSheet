@@ -5,7 +5,6 @@ body {
   outline: 0;
   max-width: 100%;
   background: var(--baseD);
-  -webkit-animation: welcome 0.8s forwards;
   animation: welcome 0.8s forwards;
 }
 body[data-aos-easing=sleek] [data-aos] {
@@ -81,6 +80,8 @@ body::-webkit-scrollbar-thumb:active {
   --boxshadowD: rgba(0, 0, 0, 0) 0 0 0px;
   --boxshadowL: rgba(0, 0, 0, 0.25) 0 2px 12px;
   --invertTrue: invert(1);
+  --brightnessD: brightness(.5);
+  --brightnessL: brightness(1.5);
   --pulseD: brightness(5);
   --pulseL: brightness(.5);
   --loaderD: url("../../img/local/spinnerD.gif");
@@ -111,6 +112,7 @@ body::-webkit-scrollbar-thumb:active {
   --loaderD: var(--loaderL);
   --conditionalred: var(--red);
   --invertTrue: var(--invertFalse);
+  --brightnessD: var(--brightnessL);
   --pulseD: var(--pulseL);
 }
 
@@ -127,7 +129,6 @@ code {
 }
 
 .tosStick {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 90;
@@ -163,7 +164,6 @@ code {
   flex-wrap: wrap;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   border-radius: 30px;
   border: 3px solid var(--blackfL);
@@ -210,20 +210,18 @@ code {
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: var(--accentD);
+  color: var(--textaccentD);
 }
 .dismiss:hover {
   color: var(--blackfL);
 }
 
 .ohno {
-  -webkit-animation: 0.4s shake ease-in-out forwards;
   animation: 0.4s shake ease-in-out forwards;
 }
 
 .accept {
   background: rgba(255, 255, 255, 0.863) !important;
-  -webkit-animation: none !important;
   animation: none !important;
 }
 
@@ -255,6 +253,4 @@ code {
   .tosButtonWrap {
     margin-top: 0.5em;
   }
-}
-
-/*# sourceMappingURL=rootSettings.css.map */
+}/*# sourceMappingURL=rootSettings.css.map */

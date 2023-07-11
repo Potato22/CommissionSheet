@@ -1,12 +1,3 @@
-@-webkit-keyframes welcome {
-  from {
-    transform: scale(1.05);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes welcome {
   from {
     transform: scale(1.05);
@@ -131,12 +122,12 @@
   opacity: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   width: 30vh;
 }
 
-.msg, .steptitle {
+.msg,
+.steptitle {
   width: 100%;
   text-align: center;
   font-size: 2rem;
@@ -230,9 +221,15 @@
 }
 
 .colcontent {
-  line-height: 2.8em;
+  line-height: 2em;
 }
 
+@media screen and (max-width: 1300px) {
+  .colcontent {
+    line-height: 2.5em;
+    margin-bottom: 1.5rem;
+  }
+}
 .num {
   font-family: var(--display), sans-serif;
   font-size: 4rem;
@@ -300,4 +297,4 @@
   margin: 2em 0;
 }
 
-/*# sourceMappingURL=tos.min.css.map *//*# sourceMappingURL=tos.css.map */
+/*# sourceMappingURL=tos.css.map */
