@@ -19,7 +19,7 @@
   "devDependencies": {
     "sass": "^1.51.0",
     "sass-loader": "^13.0.0",
-    "webpack": "^5.72.1"
+    "webpack": "^5.76.0"
   },
   "dependencies": {
     "aos": "^2.3.4",
