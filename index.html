@@ -20,6 +20,9 @@
     <script src="assets/script/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/14f5f92fc3.js" crossorigin="anonymous"></script>
     <script src="assets/script/aos.min.js"></script>
+    <script type="module" src="./assets/script/toast.mjs" defer></script>
+    <link rel="stylesheet" href="assets/css/allRoot/toast.css">
+    <script type="module" src="./assets/script/newtos.js" defer></script>
     <script>
         $(document).ready(function () {
             AOS.init({
@@ -27,7 +30,7 @@
             })
         });
     </script>
-    <script src="assets/script/tos.js"></script>
+    <!-- <script src="assets/script/tos.js"></script> -->
     <script src="assets/script/zoomtrigger.js"></script>
     <script src="assets/script/themetoggle.js" defer></script>
     <script src="assets/script/nsfwtoggle.js" defer></script>
@@ -61,6 +64,25 @@
 </head>
 
 <body>
+    <div class="toastAlign">
+        <div class="toastTransformWrap">
+            <!-- positioning -->
+            <div class="toastWrap">
+                <!-- animation -->
+                <div class="toast">
+                    <div class="toastDashes">
+                        <!-- Something -->
+                        <div class="toastIcon"></div>
+                        <div class="toastTitle"></div>
+                        <div class="toastText"></div>
+                        <div class="toastButtons">
+                            <!-- buttons gets injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="themetogglecont">
         <div class="togglecont" title="Change to Light Mode">
             <div class="splash"></div><label class="checkboxtrig"><input type="checkbox" id="ttogle" />
@@ -88,7 +110,7 @@
             <div class="floatwindowsstring">Still loading...</div>
         </div>
     </div>
-    <div class="tosStick">
+    <!-- <div class="tosStick">
         <div class="tosBound">
             <div class="tosBar">
                 <span class="tosNotice">
@@ -101,7 +123,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="zoomindimmer"></div>
     <div class="zoomin">
         <div class="zoomincontentAlign"><img class="zoomincontent" src=""></div>
@@ -206,7 +228,8 @@
                         </div>
                     </div>
                     <div class="detailBoxes">
-                        <div class="detailItem">Anthro is available, but will add a significant extra... (~$10)</b><br></div>
+                        <div class="detailItem">Anthro is available, but will add a significant extra... (~$10)</b><br>
+                        </div>
                     </div>
                     <div class="optionstitle nsfwopttitle hidensfw">NSFW (Optional)</div>
                     <div class="typechoice nsfwopt hidensfw ">
@@ -357,7 +380,8 @@
                         </div>
                     </div>
                     <div class="detailBoxes">
-                        <div class="detailItem">Anthro is available, but will add a significant extra... (~$10)</b><br></div>
+                        <div class="detailItem">Anthro is available, but will add a significant extra... (~$10)</b><br>
+                        </div>
                     </div>
                     <div class="optionstitle">
                         <div class="inforcontainer">
@@ -425,7 +449,15 @@
             </div>
         </div>
     </div>
-    </div>
+    <div class="ghostLoader" style="background: url(./internals/assets/local/stop.svg);"></div>
+    <div class="ghostLoader" style="background: url(./internals/assets/local/warn.svg);"></div>
+    <script>
+        setTimeout(() => {
+        const ghostLoaders = document.querySelectorAll('.ghostLoader');
+        ghostLoaders.forEach(loader => loader.remove());
+    }, 1000);
+    </script>
+</body>
     <script src="assets/script/aos.js"></script>
     <script src="assets/script/smooth-scroll.js"></script>
     <script>
@@ -441,6 +473,5 @@
             }, 5000)
         })
     </script>
-</body>
 
 </html>

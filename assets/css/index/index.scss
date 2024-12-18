@@ -129,7 +129,7 @@
 }
 
 .introduction {
-  font-family: var(--display), sans-serif;
+  font-family: var(--fontDisplay), sans-serif;
   font-weight: 100;
   font-size: 2em;
   color: var(--texttD);
@@ -192,7 +192,7 @@
 }
 
 .message {
-  font-family: var(--display), sans-serif;
+  font-family: var(--fontDisplay), sans-serif;
   font-weight: 500;
   font-size: 4em;
   color: var(--textD);
@@ -214,7 +214,7 @@
   border-radius: 20px;
   margin: 0 3em 1em 3em;
   display: flex;
-  font-family: var(--display), sans-serif;
+  font-family: var(--fontDisplay), sans-serif;
   font-size: 1.2em;
 }
 
@@ -273,7 +273,7 @@ ol.notifcationlist {
 
 .col {
   color: var(--textD);
-  font-family: var(--display), sans-serif;
+  font-family: var(--fontDisplay), sans-serif;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -400,7 +400,7 @@ ol.notifcationlist {
 .title {
   font-size: 2em;
   font-weight: 700;
-  font-family: var(--display), sans-serif;
+  font-family: var(--fontDisplay), sans-serif;
   margin: 0 0 0.5em 0;
   display: flex;
   align-items: center;
@@ -632,7 +632,7 @@ ol.notifcationlist {
 .priceType {
   font-weight: bolder;
   font-style: normal;
-  font-family: var(--display), sans-serif;
+  font-family: var(--fontDisplay), sans-serif;
 }
 
 .typeIcon {
@@ -1042,7 +1042,7 @@ ol.notifcationlist {
 }
 
 .copyright {
-  font-family: var(--display), sans-serif;
+  font-family: var(--fontDisplay), sans-serif;
   font-size: 0.8em;
   margin-bottom: 0.2em;
   color: var(--textD);
@@ -1063,7 +1063,7 @@ ol.notifcationlist {
 }
 
 .tosPageLink {
-  font-family: var(--display), sans-serif;
+  font-family: var(--fontDisplay), sans-serif;
   color: var(--textD) !important;
 
   &:hover {

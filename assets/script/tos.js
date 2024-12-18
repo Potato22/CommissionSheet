@@ -1,5 +1,4 @@
-const ONE_DAY = 864e5,
-    TOS_EXPIRY = 6048e5;
+const ONE_DAY = 864e5, TOS_EXPIRY = 6048e5;
 
 function isTOSAccepted() {
     const t = localStorage.getItem("tosAcceptedAt");
