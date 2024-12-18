@@ -14,9 +14,12 @@
 }
 
 .hellospacer {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   position: relative;
   height: 100vh;
 }
@@ -27,9 +30,12 @@
   height: 100vh;
   overflow: hidden;
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   filter: brightness(0.5);
 }
 .heroimage > div {
@@ -87,10 +93,14 @@
 .hero {
   height: 100vh;
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   transition: 1s var(--sleek);
 }
 
@@ -107,22 +117,26 @@
 .introduction {
   font-family: var(--display), sans-serif;
   font-weight: 100;
-  font-size: 2rem;
+  font-size: 2em;
   color: var(--texttD);
   line-height: 1.4;
 }
 
 .forwardwrap {
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
   width: 100%;
   height: 100vh;
   position: absolute;
 }
 
 .forward {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   width: 100%;
   height: 60px;
   z-index: 1;
@@ -133,8 +147,10 @@
   height: 30px;
   border: solid 1px var(--white);
   border-radius: 10px;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .dot {
@@ -166,7 +182,7 @@
 .message {
   font-family: var(--display), sans-serif;
   font-weight: 500;
-  font-size: 4rem;
+  font-size: 4em;
   color: var(--textD);
   line-height: 1.4;
   max-width: 400px;
@@ -185,9 +201,10 @@
   border: solid 2px var(--accentD);
   border-radius: 20px;
   margin: 0 3em 1em 3em;
+  display: -ms-flexbox;
   display: flex;
   font-family: var(--display), sans-serif;
-  font-size: 0.8em;
+  font-size: 1.2em;
 }
 
 .notificationbox.redmsg {
@@ -197,14 +214,15 @@
 
 .notificationicon {
   color: var(--textD);
-  font-size: 2rem;
+  font-size: 2em;
   min-width: 48px;
   display: grid;
   place-items: center left;
+  margin-right: 0.5em;
 }
 
 .notificationtitle {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 700;
   color: var(--textD);
 }
@@ -215,7 +233,7 @@
 }
 
 ol.notifcationlist {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 1em;
   margin: 0;
   list-style: disc;
   color: var(--textD);
@@ -223,7 +241,7 @@ ol.notifcationlist {
 
 .notificationtext {
   margin: 0 0;
-  font-size: 0.9rem;
+  font-size: 1em;
 }
 
 .notificationbox {
@@ -246,9 +264,12 @@ ol.notifcationlist {
   color: var(--textD);
   font-family: var(--display), sans-serif;
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
   margin: 2em 0;
 }
 
@@ -258,8 +279,10 @@ ol.notifcationlist {
   --imgbatchsize: 750px;
   width: var(--imgbatchsize);
   height: var(--imgbatchsize);
-  justify-content: center;
-  align-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .gridimg {
@@ -269,9 +292,12 @@ ol.notifcationlist {
   height: var(--gridimgsize);
   overflow: hidden;
   border-radius: 15px;
+  display: -ms-flexbox;
   display: flex;
-  align-content: center;
-  justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   transition: 0.2s all cubic-bezier(0.58, 0.01, 0.52, 1.55);
   box-shadow: rgba(0, 0, 0, 0.25) 0 3px 6px;
 }
@@ -324,9 +350,12 @@ ol.notifcationlist {
 .zoomincontentAlign {
   width: 100%;
   height: 100%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   cursor: zoom-out;
 }
 @keyframes zoom {
@@ -343,19 +372,24 @@ ol.notifcationlist {
   margin: 0 1em;
   max-width: 600px;
   text-align: end;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: end;
+      align-items: flex-end;
   transition: color 0.2s var(--sleek);
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 700;
   font-family: var(--display), sans-serif;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5em 0;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .new {
@@ -367,6 +401,7 @@ ol.notifcationlist {
   margin-right: 0.5em;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -379,6 +414,7 @@ ol.notifcationlist {
   margin-right: 0.5em;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -391,6 +427,7 @@ ol.notifcationlist {
   margin-right: 0.5em;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -404,7 +441,24 @@ ol.notifcationlist {
   color: var(--textD);
   margin-top: 0;
   margin-bottom: 1em;
-  font-size: 0.8rem;
+  font-size: 0.8em;
+}
+
+.detailBoxes {
+  text-align: center;
+  width: 80%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 0.5em;
+}
+
+.detailItem {
+  border: solid 1px var(--blackfL);
+  border-radius: 10px;
+  margin: 0.5em;
+  padding: 0.5em;
 }
 
 .descsubspecial {
@@ -412,7 +466,7 @@ ol.notifcationlist {
   color: var(--textD);
   border-radius: 10px;
   text-align: left !important;
-  padding: 1rem;
+  padding: 1em;
   transition: background 0.2s var(--sleek);
 }
 
@@ -454,13 +508,14 @@ ol.notifcationlist {
   content: attr(aria-label);
   transition: all 0.1s 0.3s;
   color: var(--texttD);
-  font-size: 0.8rem;
-  padding: 0.3rem 0.6rem;
+  font-size: 0.8em;
+  padding: 0.3em 0.6em;
   border-radius: 12px;
-  margin: -2rem 0 0 -11rem;
+  margin: -2em 0 0 -11em;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   opacity: 0;
   min-width: 140px;
@@ -481,16 +536,23 @@ ol.notifcationlist {
 
 .optionstitle {
   margin: 1em 0 0.5em 0;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.nsfwoptions {
+  margin-top: 1em;
 }
 
 .infobutton {
   position: relative;
   color: var(--accentD);
-  margin-right: 0.3rem;
+  margin-right: 0.3em;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   text-align: center;
   line-height: 1.4;
@@ -507,13 +569,14 @@ ol.notifcationlist {
   content: attr(aria-label);
   transition: all 0.1s 0.3s;
   color: var(--texttD);
-  font-size: 0.8rem;
-  padding: 0.3rem 0.6rem;
+  font-size: 0.8em;
+  padding: 0.3em 0.6em;
   border-radius: 12px;
-  margin: 1.6rem 0 0 -4rem;
+  margin: 1.6em 0 0 -4em;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   opacity: 0;
   min-width: 140px;
@@ -527,14 +590,19 @@ ol.notifcationlist {
 }
 
 .typechoice {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 
 .types {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   padding: 0.2em;
   margin: 0 0.5em;
   background: var(--baseD);
@@ -545,6 +613,7 @@ ol.notifcationlist {
   transition: all 0.2s var(--boing);
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   color: var(--textD);
 }
@@ -578,11 +647,11 @@ ol.notifcationlist {
   transition: all 0.1s;
   opacity: 1;
   transform: translate(0, 0);
-  margin-bottom: 2em;
-  margin-top: 0.5rem;
   height: 100px;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .nsfwopt .typeName {
   font-size: 0.9em;
@@ -680,10 +749,13 @@ ol.notifcationlist {
   width: 100%;
   position: fixed;
   z-index: 0;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   opacity: 0;
   transition: all 0.2s var(--sleek);
@@ -691,8 +763,10 @@ ol.notifcationlist {
   pointer-events: none;
 }
 .themetogglecont > .primaryfloat {
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
 }
 
 #ttogle,
@@ -703,11 +777,14 @@ ol.notifcationlist {
 .loadblock {
   width: 14px;
   height: 14px;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   position: relative;
-  margin-right: 0.5rem;
+  margin-right: 0.5em;
 }
 
 .outer {
@@ -754,9 +831,10 @@ ol.notifcationlist {
 }
 .floatwindows {
   text-align: center;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 1em;
-  padding: 0.1rem 0.8rem;
+  padding: 0.1em 0.8em;
   font-family: var(--contentsecondary);
   font-size: 0.7em;
   pointer-events: auto;
@@ -771,14 +849,14 @@ ol.notifcationlist {
           backdrop-filter: blur(10px) var(--brightnessD);
 }
 .floatwindows:hover {
-  padding: 0.4rem 0.8rem;
+  padding: 0.4em 0.8em;
 }
 .floatwindows:active {
   color: var(--textfL);
 }
 
 .floatwindows.pottolink:hover {
-  padding: 1rem 0.8rem;
+  padding: 1em 0.8em;
   animation: pottolinko 1s;
 }
 .floatwindows.pottolink:active {
@@ -798,7 +876,7 @@ ol.notifcationlist {
   }
 }
 .noreact {
-  padding: 0.3rem 0.8rem !important;
+  padding: 0.3em 0.8em !important;
   --borderwidth: 0;
   border-top: none var(--borderwidth) var(--textD);
   border-left: none var(--borderwidth) var(--textD);
@@ -880,26 +958,32 @@ ol.notifcationlist {
 
 @media screen and (max-width: 1204px) {
   .col {
-    flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
   }
   .infobox {
-    align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
     text-align: center;
   }
   .desc.sub {
     text-align: center;
   }
   .typechoice {
-    justify-content: center;
-    flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .types {
     margin: 0.5em;
   }
 }
 .endOfPage {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .end {
@@ -908,25 +992,32 @@ ol.notifcationlist {
 }
 
 .footer {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   margin-top: 2em;
 }
 
 .flexbox1 {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .socials {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .copyright {
   font-family: var(--display), sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   margin-bottom: 0.2em;
   color: var(--textD);
 }

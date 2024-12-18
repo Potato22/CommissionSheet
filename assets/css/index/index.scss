@@ -131,7 +131,7 @@
 .introduction {
   font-family: var(--display), sans-serif;
   font-weight: 100;
-  font-size: 2rem;
+  font-size: 2em;
   color: var(--texttD);
   line-height: 1.4;
 }
@@ -194,7 +194,7 @@
 .message {
   font-family: var(--display), sans-serif;
   font-weight: 500;
-  font-size: 4rem;
+  font-size: 4em;
   color: var(--textD);
   line-height: 1.4;
   max-width: 400px;
@@ -215,7 +215,7 @@
   margin: 0 3em 1em 3em;
   display: flex;
   font-family: var(--display), sans-serif;
-  font-size: 0.8em;
+  font-size: 1.2em;
 }
 
 .notificationbox.redmsg {
@@ -225,14 +225,15 @@
 
 .notificationicon {
   color: var(--textD);
-  font-size: 2rem;
+  font-size: 2em;
   min-width: 48px;
   display: grid;
   place-items: center left;
+  margin-right: .5em;
 }
 
 .notificationtitle {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 700;
   color: var(--textD);
 }
@@ -243,7 +244,7 @@
 }
 
 ol.notifcationlist {
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 1em;
   margin: 0;
   list-style: disc;
   color: var(--textD);
@@ -251,7 +252,7 @@ ol.notifcationlist {
 
 .notificationtext {
   margin: 0 0;
-  font-size: .9rem;
+  font-size: 1em;
 }
 
 .notificationbox {
@@ -397,10 +398,10 @@ ol.notifcationlist {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 700;
   font-family: var(--display), sans-serif;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5em 0;
   display: flex;
   align-items: center;
 }
@@ -445,15 +446,32 @@ ol.notifcationlist {
   color: var(--textD);
   margin-top: 0;
   margin-bottom: 1em;
-  font-size: 0.8rem;
+  font-size: 0.8em;
 }
 
+//.desc.sub {
+//  margin-top: 2em;
+//}
+.detailBoxes {
+  text-align: center;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: .5em;
+}
+.detailItem {
+  border: solid 1px var(--blackfL);
+  //background: var(--blackfL);
+  border-radius: 10px;
+  margin: .5em;
+  padding: .5em;
+}
 .descsubspecial {
   background: var(--basesecondaryD);
   color: var(--textD);
   border-radius: 10px;
   text-align: left !important;
-  padding: 1rem;
+  padding: 1em;
   transition: background 0.2s var(--sleek);
 }
 
@@ -499,10 +517,10 @@ ol.notifcationlist {
     content: attr(aria-label);
     transition: all 0.1s .3s;
     color: var(--texttD);
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
+    font-size: 0.8em;
+    padding: 0.3em 0.6em;
     border-radius: 12px;
-    margin: -2rem 0 0 -11rem;
+    margin: -2em 0 0 -11em;
     pointer-events: none;
     user-select: none;
     opacity: 0;
@@ -532,11 +550,13 @@ ol.notifcationlist {
   display: flex;
   align-items: center;
 }
-
+.nsfwoptions {
+  margin-top: 1em;
+}
 .infobutton {
   position: relative;
   color: var(--accentD);
-  margin-right: 0.3rem;
+  margin-right: 0.3em;
   user-select: none;
   text-align: center;
   line-height: 1.4;
@@ -555,10 +575,10 @@ ol.notifcationlist {
     content: attr(aria-label);
     transition: all 0.1s .3s;
     color: var(--texttD);
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
+    font-size: 0.8em;
+    padding: 0.3em 0.6em;
     border-radius: 12px;
-    margin: 1.6rem 0 0 -4rem;
+    margin: 1.6em 0 0 -4em;
     pointer-events: none;
     user-select: none;
     opacity: 0;
@@ -628,8 +648,8 @@ ol.notifcationlist {
   transition: all 0.1s;
   opacity: 1;
   transform: translate(0, 0);
-  margin-bottom: 2em;
-  margin-top: 0.5rem;
+  //margin-bottom: 2em;
+  //margin-top: 0.5em;
   height: 100px;
   display: flex;
   align-items: center;
@@ -770,7 +790,7 @@ ol.notifcationlist {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-right: .5rem;
+  margin-right: .5em;
 }
 
 .outer {
@@ -824,7 +844,7 @@ ol.notifcationlist {
   text-align: center;
   display: flex;
   margin-left: 1em;
-  padding: .1rem .8rem;
+  padding: .1em .8em;
   font-family: var(--contentsecondary);
   font-size: .7em;
   pointer-events: auto;
@@ -840,7 +860,7 @@ ol.notifcationlist {
   backdrop-filter: blur(10px) var(--brightnessD);
 
   &:hover {
-    padding: .4rem .8rem;
+    padding: .4em .8em;
   }
 
   &:active {
@@ -849,7 +869,7 @@ ol.notifcationlist {
 }
 .floatwindows.pottolink {
   &:hover {
-    padding: 1rem .8rem;
+    padding: 1em .8em;
     animation: pottolinko 1s;
   }
   &:active {
@@ -869,7 +889,7 @@ ol.notifcationlist {
   }
 }
 .noreact {
-  padding: .3rem .8rem !important;
+  padding: .3em .8em !important;
 
   --borderwidth: 0;
   border-top: none var(--borderwidth) var(--textD);
@@ -1023,7 +1043,7 @@ ol.notifcationlist {
 
 .copyright {
   font-family: var(--display), sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   margin-bottom: 0.2em;
   color: var(--textD);
 }
