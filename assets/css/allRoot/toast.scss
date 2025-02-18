@@ -11,7 +11,7 @@
     //opacity: 0;
     display: none;
     transition: .3s opacity, .5s backdrop-filter;
-    backdrop-filter: grayscale(100%);
+    //backdrop-filter: grayscale(100%);
 
     &.toasted {
         opacity: 0 !important;

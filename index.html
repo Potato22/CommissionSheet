@@ -151,7 +151,7 @@
     <div class="hellospacer"></div>
     <script>
         let disableOrders = "true"
-        const disablereason = "Ordering a new query is not available right now... come back later!"
+        const disablereason = "Inquiry automation is disabled, please ask personally through twitter or discord!"
         //Hello nerd, flicking this to false will not do anyting, the form will still be closed. This is only for visual cue.
     </script>
     <div id="start" class="bgdropper">
@@ -168,12 +168,11 @@
             </div>
         </div> -->
         <!--RED-->
-        <div class="notificationbox redmsg" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200"
-            data-aos-delay="200"><span class="material-icons-outlined notificationicon redmsg">warning</span>
-            <div class="notificationcontent"><span class="notificationtitle redmsg">The waiting line blew up and killed
-                    me in the process</span>
-                <p class="notificationtext">Commissions are paused indefinitely! Extremely limited and can only be
-                    queried personally. Even then I cannot guarantee if I can work for you... Sorry!</b></code>
+        <div class="notificationbox" data-aos-easing="sleek" data-aos="fade-up" data-aos-duration="200"
+            data-aos-delay="200"><span class="material-icons-outlined notificationicon">warning</span>
+            <div class="notificationcontent">
+                <span class="notificationtitle">Commissions are very limited!</span>
+                <p class="notificationtext">Automated inquiry is not available and I could not guarantee I could work with you... Sorry!
             </div>
         </div>
         <div class="maincontentbox">
@@ -285,19 +284,19 @@
                     <div class="typechoice">
                         <div class="types sketch" title="Sketchie sketchie">
                             <div class="typeIcon sketch invertIcon"></div><span class="typeName">Sketch</span><span
-                                class="priceType">$20.00</span>
+                                class="priceType">$15.00</span>
                         </div>
                         <div class="types clsketch" title="Cleaner lines">
                             <div class="typeIcon clsketch invertIcon"></div><span class="typeName">Lineart</span><span
-                                class="priceType">$30.00</span>
+                                class="priceType">$20.00</span>
                         </div>
                         <div class="types flatcolor tna0" title="Flat color, minimal shading">
                             <div class="typeIcon flatcolor"></div><span class="typeName">Flat color</span><span
-                                class="priceType">$40.00</span>
+                                class="priceType">$35.00</span>
                         </div>
                         <div class="types shaded tna0" title="Fully shaded">
                             <div class="typeIcon shaded"></div><span class="typeName">Fully Shaded</span><span
-                                class="priceType">$50.00</span>
+                                class="priceType">$45.00</span>
                         </div>
                     </div>
                     <div id="nsfwstate" class="nsfwoptions" v-if="enabled">
@@ -438,11 +437,14 @@
             </div>
             <div class="footer">
                 <div class="flexbox1">
-                    <div class="socials"><a href="https://twitter.com/Potto2292" target="_blank">
+                    <div class="socials">
+                        <a href="https://twitter.com/Potto2292" target="_blank">
                             <div class="socicon"><i class="fab fa-twitter"></i></div>
-                        </a><a href="https://www.deviantart.com/Potato2292" target="_blank">
+                        </a>
+                        <!-- <a href="https://www.deviantart.com/Potato2292" target="_blank">
                             <div class="socicon"><i class="fab fa-deviantart"></i></div>
-                        </a></div><span class="copyright">©Potto</span><a href="tos.html"
+                        </a> -->
+                    </div><span class="copyright">©Potto</span><a href="tos.html"
                         class="tosPageLink"><span>Terms of Service</span></a><span class="messageend">if you have any
                         further questions please contact me on twitter, thank you!</span><br>
                 </div>

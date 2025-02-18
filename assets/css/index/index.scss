@@ -253,6 +253,7 @@ ol.notifcationlist {
 .notificationtext {
   margin: 0 0;
   font-size: 1em;
+  color: var(--textD)
 }
 
 .notificationbox {
@@ -520,7 +521,7 @@ ol.notifcationlist {
     font-size: 0.8em;
     padding: 0.3em 0.6em;
     border-radius: 12px;
-    margin: -2em 0 0 -11em;
+    margin: -2em 0 0 -180px;
     pointer-events: none;
     user-select: none;
     opacity: 0;

@@ -12,8 +12,6 @@
   transition: 0.3s opacity, 0.5s -webkit-backdrop-filter;
   transition: 0.3s opacity, 0.5s backdrop-filter;
   transition: 0.3s opacity, 0.5s backdrop-filter, 0.5s -webkit-backdrop-filter;
-  -webkit-backdrop-filter: grayscale(100%);
-          backdrop-filter: grayscale(100%);
 }
 .toastAlign.toasted {
   opacity: 0 !important;
